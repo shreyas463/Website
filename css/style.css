@@ -1001,6 +1001,130 @@ body {
     }
 }
 
+/* Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+    /* Navigation */
+    .navbar {
+        padding: 0.5rem 1rem;
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 80%;
+        height: 100vh;
+        background: var(--bg-color);
+        flex-direction: column;
+        padding: 2rem;
+        transition: var(--transition);
+        z-index: 1001;
+    }
+
+    .nav-links.active {
+        left: 0;
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+        z-index: 1002;
+    }
+
+    /* Hero Section */
+    .hero {
+        padding: 4rem 1rem 2rem;
+    }
+
+    .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .profile-image {
+        width: 150px;
+        height: 150px;
+    }
+
+    .section-title {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    /* Skills and Timeline */
+    .skills-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .timeline-item {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1.5rem;
+    }
+
+    .company-logo {
+        width: 60px;
+        height: 60px;
+        margin-bottom: 1rem;
+    }
+
+    /* Education */
+    .education-cards {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    /* Publications */
+    .publication-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    /* Connect Section */
+    .connect-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .connect-card {
+        padding: 1.5rem;
+    }
+
+    /* Certifications */
+    .certifications-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    /* General Spacing */
+    .hero, .about, .experience, .education, .publications, .testimonials, .certifications {
+        margin: 1rem 0;
+        padding: 1.5rem;
+        border-radius: 1.5rem;
+    }
+
+    .container {
+        padding: 0 1rem;
+    }
+}
+
+/* Small phones */
+@media screen and (max-width: 480px) {
+    .hero {
+        padding: 3rem 1rem 1.5rem;
+    }
+
+    .section-title {
+        font-size: 1.75rem;
+    }
+
+    .profile-image {
+        width: 120px;
+        height: 120px;
+    }
+}
+
 /* Cursor trail effect */
 .cursor-trail {
     position: fixed;
@@ -1518,4 +1642,34 @@ body {
 
 .nav-links a:hover::after {
     width: 100%;
+}
+
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.hamburger span {
+    display: block;
+    height: 2px;
+    width: 100%;
+    background-color: var(--text-color);
+    transition: var(--transition);
+}
+
+.hamburger.active span:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
 }
