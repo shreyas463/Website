@@ -1,16 +1,29 @@
 document.addEventListener('DOMContentLoaded', () => {
+    console.log('DOM loaded, initializing sliders');
     initializeSliders();
 });
 
 function initializeSliders() {
     const sliders = document.querySelectorAll('.image-slider');
+    console.log(`Found ${sliders.length} sliders`);
     
-    sliders.forEach(slider => {
+    sliders.forEach((slider, sliderIndex) => {
         const images = slider.querySelectorAll('.slider-image');
         const dots = slider.querySelectorAll('.slider-dot');
         const prevBtn = slider.querySelector('.slider-arrow.prev');
         const nextBtn = slider.querySelector('.slider-arrow.next');
         let currentIndex = 0;
+        
+        console.log(`Slider ${sliderIndex}: ${images.length} images, ${dots.length} dots`);
+        
+        // Make sure first image is visible
+        if (images.length > 0) {
+            images[0].classList.add('active');
+        }
+        
+        if (dots.length > 0) {
+            dots[0].classList.add('active');
+        }
         
         // Set up event listeners for dots
         dots.forEach((dot, index) => {
@@ -21,15 +34,19 @@ function initializeSliders() {
         });
         
         // Set up event listeners for arrows
-        prevBtn.addEventListener('click', () => {
-            currentIndex = (currentIndex - 1 + images.length) % images.length;
-            updateSlider();
-        });
+        if (prevBtn) {
+            prevBtn.addEventListener('click', () => {
+                currentIndex = (currentIndex - 1 + images.length) % images.length;
+                updateSlider();
+            });
+        }
         
-        nextBtn.addEventListener('click', () => {
-            currentIndex = (currentIndex + 1) % images.length;
-            updateSlider();
-        });
+        if (nextBtn) {
+            nextBtn.addEventListener('click', () => {
+                currentIndex = (currentIndex + 1) % images.length;
+                updateSlider();
+            });
+        }
         
         // Auto-advance the slider every 5 seconds
         let intervalId = setInterval(() => {
