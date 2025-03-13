@@ -435,7 +435,7 @@ body {
 .profile-image img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: fill;
 }
 
 .hero-text h1 {
@@ -582,6 +582,25 @@ body {
     overflow: hidden;
     background: rgba(30, 41, 59, 0.8);
     padding: 0.75rem;
+}
+
+.calsys-logo {
+    width: 80px;
+    height: 80px;
+    flex-shrink: 0;
+    border-radius: 12px;
+    overflow: hidden;
+    background: rgba(30, 41, 59, 0.8);
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.calsys-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .timeline-content {
@@ -2961,4 +2980,27 @@ a.skill-tag:hover {
 
 .slider-arrow.next {
     right: 10px;
+}
+
+/* CALSys Lab button with red styling */
+.calsys-button {
+    background: rgba(220, 38, 38, 0.8) !important; /* Red background */
+    color: white !important;
+    padding: 0.5rem 1.2rem !important;
+    border-radius: 8px !important;
+    font-weight: 600 !important;
+    transition: all 0.3s ease !important;
+    box-shadow: 0 4px 6px rgba(220, 38, 38, 0.3) !important;
+}
+
+.calsys-button:hover {
+    background: rgba(220, 38, 38, 1) !important; /* Darker red on hover */
+    transform: translateY(-3px) !important;
+    box-shadow: 0 6px 12px rgba(220, 38, 38, 0.4) !important;
+}
+
+.no-decoration {
+    text-decoration: none !important;
+    border-bottom: none !important;
+    border: none !important;
 }
