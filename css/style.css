@@ -656,6 +656,17 @@ body {
     font-size: 0.95rem;
 }
 
+a.skill-tag {
+    text-decoration: none;
+    display: inline-block;
+    transition: var(--transition);
+}
+
+a.skill-tag:hover {
+    background: var(--primary-color);
+    transform: translateY(-2px);
+}
+
 @media screen and (max-width: 768px) {
     .timeline-item {
         padding: 1.5rem;
