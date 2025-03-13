@@ -188,6 +188,8 @@ body {
     font-family: 'Inter', sans-serif;
     line-height: 1.6;
     overflow-x: hidden;
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
 .hero, .about, .experience, .education, .publications, .testimonials, .certifications {
@@ -1208,6 +1210,8 @@ body {
 
     .description {
         font-size: 1.1rem;
+        padding: 0 1rem;
+        max-width: 100%;
     }
 
     .nav-links {
@@ -1215,21 +1219,59 @@ body {
     }
 
     .hero {
-        padding: 4rem 1.5rem;
+        padding: 4rem 1rem;
+        min-height: auto;
+    }
+    
+    .hero-content {
+        width: 100%;
+        padding: 0;
+    }
+    
+    .hero-grid {
+        gap: 2rem;
+        width: 100%;
+    }
+    
+    .hero-text {
+        width: 100%;
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        hyphens: auto;
+    }
+    
+    .hero-text p {
+        width: 100%;
+        max-width: 100%;
+        padding: 0 0.5rem;
+        font-size: 1rem;
+        overflow-wrap: break-word;
+        word-wrap: break-word;
     }
 
     .hero-stats {
         grid-template-columns: 1fr;
+        width: 100%;
+        gap: 1rem;
     }
 
     .social-links {
         flex-direction: column;
         align-items: center;
+        width: 100%;
+        gap: 0.75rem;
     }
 
     .social-btn {
-        width: 100%;
+        width: 80%;
         justify-content: center;
+        margin-bottom: 0.5rem;
+    }
+    
+    .profile-image {
+        width: 150px;
+        height: 150px;
+        margin: 0 auto 1.5rem;
     }
 }
 
@@ -1344,16 +1386,55 @@ body {
 /* Small phones */
 @media screen and (max-width: 480px) {
     .hero {
-        padding: 3rem 1rem 1.5rem;
+        padding: 3rem 0.75rem;
     }
-
-    .section-title {
-        font-size: 1.75rem;
+    
+    .hero-text h1 {
+        font-size: 2rem;
     }
-
+    
+    .tagline {
+        font-size: 1.25rem;
+    }
+    
+    .description {
+        font-size: 0.95rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .hero-text p {
+        font-size: 0.9rem;
+        line-height: 1.5;
+        padding: 0 0.25rem;
+    }
+    
     .profile-image {
         width: 120px;
         height: 120px;
+        margin: 0 auto 1rem;
+    }
+    
+    .social-btn {
+        width: 90%;
+        padding: 0.6rem 1rem;
+        font-size: 0.9rem;
+    }
+    
+    .section-title {
+        font-size: 1.75rem;
+        margin-bottom: 2rem;
+    }
+    
+    .stat-card {
+        padding: 0.75rem;
+    }
+    
+    .stat-card h3 {
+        font-size: 1.5rem;
+    }
+    
+    .stat-card p {
+        font-size: 0.8rem;
     }
 }
 
