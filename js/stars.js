@@ -9,8 +9,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Star properties
     const stars = [];
-    const numStars = 980;
-    const starSize = 3.5;
+    const numStars = 900;
+    const starSize = 2.5;
     const starSpeed = 0.05;
 
     // Initialize stars
