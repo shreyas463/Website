@@ -15,10 +15,10 @@ document.addEventListener('DOMContentLoaded', () => {
     // Lightning properties
     const lightnings = [];
     const maxLightnings = 80; // Maximum number of lightnings visible at once
-    const lightningFrequency = 1000; // New lightning every 1 second on average
+    const lightningFrequency = 500; // New lightning every 0.5 seconds on average
     const burstFrequency = 1000; // Random burst effect every 1 second
-    let lastLightningTime = 3000;
-    let lastBurstTime = 3000;
+    let lastLightningTime = 5000;
+    let lastBurstTime = 5000;
 
     // Make canvas interactive
     canvas.style.pointerEvents = 'auto';
