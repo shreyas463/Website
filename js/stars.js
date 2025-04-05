@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Star properties
     const stars = [];
     const numStars = 980;
-    const starSize = 4.5;
+    const starSize = 5.5;
     const starSpeed = 0.05;
 
     // Initialize stars
@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function drawStars() {
         ctx.clearRect(0, 0, width, height);
-        ctx.fillStyle = 'rgba(197, 23, 23, 0.8)';
+        ctx.fillStyle = 'rgba(255, 255, 255, 0.8)';
 
         stars.forEach(star => {
             ctx.beginPath();
