@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Lightning properties
     const lightnings = [];
-    const maxLightnings = 80; // Maximum number of lightnings visible at once
+    const maxLightnings = 20; // Maximum number of lightnings visible at once
     const lightningFrequency = 500; // New lightning every 0.5 seconds on average
     const burstFrequency = 1000; // Random burst effect every 1 second
     let lastLightningTime = 5000;
