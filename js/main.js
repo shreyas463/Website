@@ -2,36 +2,18 @@
 document.addEventListener('DOMContentLoaded', () => {
     const landingPage = document.querySelector('.landing-page');
     const mainContent = document.querySelector('.main-content');
-    const enterBtn = document.querySelector('.enter-btn');
-    const glitchText = document.querySelector('.glitch-text');
-
-    // Add hover effect for glitch animation
-    glitchText.addEventListener('mouseenter', () => {
-        glitchText.classList.add('glitch-animate');
-    });
-
-    glitchText.addEventListener('mouseleave', () => {
-        glitchText.classList.remove('glitch-animate');
-    });
+    const enterBtn = document.querySelector('.aurora-enter-btn');
 
     // Handle enter button click
     enterBtn.addEventListener('click', () => {
-        console.log('Enter button clicked'); // Debug log
-        
-        // Fade out landing page
         landingPage.style.opacity = '0';
-        landingPage.style.transform = 'scale(1.1)';
-        
-        // Show and fade in main content
-        mainContent.classList.remove('hidden');
-        requestAnimationFrame(() => {
-            mainContent.style.opacity = '1';
-        });
-        
-        // Hide landing page after transition
+        landingPage.style.transform = 'scale(1.05)';
         setTimeout(() => {
             landingPage.style.display = 'none';
-        }, 1000);
+            mainContent.classList.remove('hidden');
+            mainContent.style.opacity = '1';
+            // Optionally, load additional scripts here if needed
+        }, 800);
     });
 });
 
@@ -148,38 +130,5 @@ document.querySelectorAll('.timeline-item').forEach(item => {
     
     item.addEventListener('mouseleave', () => {
         item.style.transform = 'scale(1)';
-    });
-});
-
-document.addEventListener('DOMContentLoaded', () => {
-    const landingPage = document.querySelector('.landing-page');
-    const mainContent = document.querySelector('.main-content');
-    const enterBtn = document.querySelector('.enter-btn');
-    const glitchText = document.querySelector('.glitch-text');
-
-    // Add hover effect for glitch animation
-    glitchText.addEventListener('mouseenter', () => {
-        glitchText.classList.add('glitch-animate');
-    });
-
-    glitchText.addEventListener('mouseleave', () => {
-        glitchText.classList.remove('glitch-animate');
-    });
-
-    // Handle enter button click
-    enterBtn.addEventListener('click', () => {
-        // Fade out landing page
-        landingPage.style.opacity = '0';
-        landingPage.style.transform = 'scale(1.1)';
-        
-        // Show main content
-        mainContent.classList.remove('hidden');
-        mainContent.style.opacity = '0';
-        
-        // Use setTimeout to ensure proper transition timing
-        setTimeout(() => {
-            landingPage.style.display = 'none';
-            mainContent.style.opacity = '1';
-        }, 1000);
     });
 });
