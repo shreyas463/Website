@@ -4,9 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shreyas Chaudhary</title>
-    <link rel="icon" href="homepage_logo/sc.ico" type="image/x-icon">
+    <link rel="icon" href="homepage_logo/scc.ico" type="image/jpeg">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/project-link-overrides.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
@@ -27,862 +26,341 @@
     <div class="landing-page">
         <div class="aurora-bg"></div>
         <h1 class="aurora-name">SHREYAS CHAUDHARY</h1>
-        <div class="aurora-subtitle">Software Engineer | ML Enthusiast</div>
-        <button class="aurora-enter-btn">ENTER</button>
+        <div class="aurora-subtitle">Software Engineer | Full Stack Developer | Agentic Coding Enthusiast</div>
+        <button class="aurora-enter-btn" id="enterBtn">Enter</button>
     </div>
 
-    <div class="main-content hidden">
-        <nav class="navbar">
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <div class="nav-content">
-                <div class="nav-links">
-                    <a href="#home">Home</a>
-                    <a href="#experience">Experience</a>
-                    <a href="#education">Education</a>
-                    <a href="#publications">Publications</a>
-                    <a href="#skills">Skills</a>
-                    <a href="#contact">Contact</a>
-                    <a href="#testimonials">Testimonials</a>
-                    <a href="#certifications">Certifications</a>
-                    <a href="#projects">Projects</a>
+    <!-- BEGIN Bootstrap Resume Content (hidden by default) -->
+    <div id="bootstrap-main" style="display:none;">
+        <!-- Bootstrap and vendor CSS links -->
+        <link href="PersonalWebsite/assets/vendor/aos/aos.css" rel="stylesheet">
+        <link href="PersonalWebsite/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link href="PersonalWebsite/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+        <link href="PersonalWebsite/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+        <link href="PersonalWebsite/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+        <link href="PersonalWebsite/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+        <link href="PersonalWebsite/assets/css/style.css" rel="stylesheet">
+        <style>
+          /* Remove custom site CSS from Bootstrap section to avoid conflicts */
+          #bootstrap-main .skills-tag, #bootstrap-main .skill-tag, #bootstrap-main .skills-grid, #bootstrap-main .skill-card {
+            all: unset;
+          }
+        </style>
+        <div class="container-fluid">
+          <div class="row">
+            <!-- Sidebar -->
+            <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-dark sidebar collapse">
+              <div class="position-sticky pt-3">
+                <ul class="nav flex-column">
+                  <li class="nav-item"><a class="nav-link active text-light" href="#about"><i class="bi bi-person"></i> About</a></li>
+                  <li class="nav-item"><a class="nav-link text-light" href="#education"><i class="bi bi-mortarboard"></i> Education</a></li>
+                  <li class="nav-item"><a class="nav-link text-light" href="#experience"><i class="bi bi-briefcase"></i> Experience</a></li>
+                  <li class="nav-item"><a class="nav-link text-light" href="#skills"><i class="bi bi-lightbulb"></i> Skills</a></li>
+                  <li class="nav-item"><a class="nav-link text-light" href="#projects"><i class="bi bi-kanban"></i> Projects</a></li>
+                  <li class="nav-item"><a class="nav-link text-light" href="#publications"><i class="bi bi-journal-text"></i> Publications</a></li>
+                  <li class="nav-item"><a class="nav-link text-light" href="#certifications"><i class="bi bi-award"></i> Certifications</a></li>
+                  <li class="nav-item"><a class="nav-link text-light" href="#testimonials"><i class="bi bi-chat-quote"></i> Testimonials</a></li>
+                  <li class="nav-item"><a class="nav-link text-light" href="#contact"><i class="bi bi-envelope"></i> Contact</a></li>
+                </ul>
+              </div>
+            </nav>
+            <!-- Main content -->
+            <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+              <!-- About Section -->
+              <section id="about" class="pt-4 pb-4 mt-5 mb-5 p-4" style="background: linear-gradient(120deg, #1e215d 0%, #3a8fd8 40%, #7f53ac 70%, #5ffbf1 100%); border-radius: 1.5rem;">
+                <div class="row align-items-center">
+                  <div class="col-md-3 text-center mb-3 mb-md-0">
+                    <img src="homepage_logo/new photo.JPG" alt="Shreyas Chaudhary" style="width: 140px; height: 140px; object-fit: cover; border-radius: 50%; border: 4px solid #5ffbf1; box-shadow: 0 4px 24px #5ffbf188;">
+                  </div>
+                  <div class="col-md-9">
+                    <h2 class="card-title text-white">About</h2>
+                    <p class="card-text text-white" style="font-size: 1.1rem;">Master's student in Computer Science at Cal Poly Pomona, passionate about software engineering and machine learning. I'm a software engineer based in the United States with a passion for developing and maintaining high-impact, complex applications. I am captivated by the latest advancements in scientific realm, closely following pioneering research that reshapes the boundaries of human knowledge. My hobbies include playing soccer, gymming, and watching Formula 1. I also enjoy watching tv shows and world news!</p>
+                  </div>
                 </div>
-            </div>
-        </nav>
-
-        <section id="home" class="hero">
-            <div class="hero-content">
-                <div class="hero-grid">
-                    <div class="hero-text">
-                        <div class="profile-image">
-                            <img src="homepage_logo/new photo.JPG" alt="Shreyas">
-                        </div>
-                        <h1>Hi, I'm Shreyas</h1>
-                        <p class="tagline">Software Engineer</p>
-                        <p class="description">Master's student in Computer Science at Cal Poly Pomona, passionate about software engineering and machine learning.</p>
-                        <p>I'm a software engineer based in the United States with a passion for developing and maintaining high-impact, complex applications. I am captivated by the latest advancements in scientific realm, closely following pioneering research that reshapes the boundaries of human knowledge. My hobbies include playing soccer, gymming, and watching Formula 1. I also enjoy watching tv shows and world news!</p>
-                        <div class="social-links">
-                            <a href="https://github.com/shreyas463" target="_blank" class="social-btn">
-                                <i class="fab fa-github"></i>
-                                GitHub
-                            </a>
-                            <a href="https://www.linkedin.com/in/shreyaschaudharysc/" target="_blank" class="social-btn">
-                                <i class="fab fa-linkedin"></i>
-                                LinkedIn
-                            </a>
-                            <a href="mailto:shreyaschaudhary3@gmail.com" class="social-btn">
-                                <i class="fas fa-envelope"></i>
-                                Email
-                            </a>
-                        </div>
-                    </div>
-                    <div class="hero-stats">
-                        <div class="stat-card">
-                            <h3>Yes</h3>
-                            <p>Open to Relocation</p>
-                        </div>
-                        <div class="stat-card">
-                            <h3>2</h3>
-                            <p>Research Papers</p>
-                        </div>
-
-                    </div>
+              </section>
+              <!-- Education Section -->
+              <section id="education" class="pt-4 pb-4 mb-5 p-4" style="background: linear-gradient(120deg, #1e215d 0%, #3a8fd8 40%, #7f53ac 70%, #5ffbf1 100%); border-radius: 1.5rem;">
+                <div class="card-body text-white">
+                  <h2 class="card-title text-white">Education</h2>
+                  <div class="mb-3">
+                    <h5>Master of Science - MS, Computer Science</h5>
+                    <div class="date-glossy">Aug 2023 - Jun 2025</div>
+                    <div>California State Polytechnic University-Pomona</div>
+                    <div>GPA: 4.0</div>
+                    <div>Key Courses: Advanced Computer Architecture, Information Retrieval, Human-Computer Interaction, Big Data Analytics & Cloud Computing, Advanced Algorithm and Analysis, Advanced Software Engineering, Mobile App Development, Computational Social Systems</div>
+                    <div>Activities: Chess Club, CALsys lab</div>
+                  </div>
+                  <div>
+                    <h5>Bachelor of Engineering - BE, Computer Science</h5>
+                    <div class="date-glossy">2019 - 2023</div>
+                    <div>New Horizon College of Engineering</div>
+                    <div>GPA: 3.75/4.0 &nbsp; CGPA: 8.63/10.0</div>
+                    <div>Activities: Mobile App Development Club, Robotics Club</div>
+                  </div>
                 </div>
-            </div>
-        </section>
-
-        <section id="experience" class="experience">
-            <div class="container">
-                <h2 class="section-title">Work Experience</h2>
-                <div class="experience-grid">
-                    <div class="timeline-item">
-                        <div class="company-logo">
-                            <img src="homepage_logo/gllogo.png" alt="GlobalLogic Logo">
-                        </div>
-                        <div class="timeline-content">
-                            <h3 class="timeline-title">Software Engineer Intern</h3>
-                            <div class="timeline-company">GlobalLogic • Internship</div>
-                            <div class="timeline-duration">Jun 2024 - Aug 2024 • 3 mos</div>
-                            <div class="timeline-location">Charlotte, North Carolina, United States</div>
-                            <div class="timeline-description">
-                                <ul>
-                                    <li>Designed and developed a Minimum Viable Product (MVP) for GlobalLogic's Learning Experience platform, impacting over 29,000 users. Integrated secure Google OAuth authentication, collaborating closely with design and product teams to ensure alignment with business and user requirements.</li>
-                                    <li>Collaborated with a cross-functional software team in engineering the MVP using React, Node.js, TypeScript, and Next.js for streamlined request handling. Architected the solution with Firestore to meet dynamic database requirements, ensuring scalability and robust performance.</li>
-                                    <li>Executed the complete Software Development Lifecycle (SDLC) over six agile sprints, from planning and development through testing and client pitch. Successfully delivered a fully functional prototype that exceeded stakeholder expectations and set the stage for further enhancements.</li>
-                                </ul>
-                            </div>
-                            <div class="skills-tag">
-                                <span class="skill-tag">React.js</span>
-                                <span class="skill-tag">TypeScript</span>
-                                <span class="skill-tag">Node.js</span>
-                                <span class="skill-tag">Next.js</span>
-                                <span class="skill-tag">Firestore</span>
-                                <span class="skill-tag">Python</span>
-                                <span class="skill-tag">Google OAuth</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="timeline-item">
-                        <div class="calsys-logo">
-                            <img src="homepage_logo/calsys2site2.jpg" alt="CALSys Lab Logo">
-                        </div>
-                        <div class="timeline-content">
-                            <h3 class="timeline-title">Student Volunteer</h3>
-                            <div class="timeline-company">
-                                <a href="https://www.cpp.edu/calsys/researchers.shtml" target="_blank" style="color: var(--primary-color); text-decoration: none;">CALSys Lab</a>, Cal Poly Pomona
-                            </div>
-                            <div class="timeline-duration">Jan 2025 - Present</div>
-                            <div class="timeline-description">
-                                <ul>
-                                    <li>Designing and building a cyberinfrastructure that scrapes malicious hacker data from the darkweb for the production of cyber-threat intelligence models</li>
-                                    <li>Developing recommender systems to find and recommend credible websites including criminal hacking content</li>
-                                    <li>Conducting research on cybersecurity threats and vulnerabilities to enhance threat intelligence capabilities</li>
-                                    <li>Collaborating with faculty and other researchers on cybersecurity projects and publications</li>
-                                </ul>
-                            </div>
-                            <div class="skills-tag">
-                                <span class="skill-tag">Tor-Selenium</span>
-                                <span class="skill-tag">Data Scraping</span>
-                                <span class="skill-tag">Machine Learning</span>
-                                <span class="skill-tag">Python</span>
-                                <span class="skill-tag">Recommender Systems</span>
-                                <span class="skill-tag">Threat Intelligence</span>
-                                <a href="https://www.cpp.edu/calsys/researchers.shtml" target="_blank" class="skill-tag calsys-button">CALSys Lab</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="timeline-item">
-                        <div class="company-logo">
-                            <img src="homepage_logo/cpplogo.png" alt="CPP Logo">
-                        </div>
-                        <div class="timeline-content">
-                            <h3 class="timeline-title">Graduate Research Assistant</h3>
-                            <div class="timeline-company">California State Polytechnic University-Pomona • Full-time</div>
-                            <div class="timeline-duration">Aug 2024 - Present • 7 mos</div>
-                            <div class="timeline-description">
-                                <ul>
-                                    <li>Developing a campus-based autonomous ride-sharing platform with real-time vehicle tracking, AI-driven obstacle detection, and ROS2-based control systems</li>
-                                    <li>Integrated YOLOv8 with ROS2 and NAV2, reducing collision rates by 15%</li>
-                                    <li>Developed teleoperation interface using Next.js, TypeScript, and Python</li>
-                                    <li>Improved GPS efficiency by 30% through Google Maps API integration</li>
-                                </ul>
-                            </div>
-                            <div class="skills-tag">
-                                <span class="skill-tag">Machine Learning</span>
-                                <span class="skill-tag">ROS2</span>
-                                <span class="skill-tag">Python</span>
-                                <span class="skill-tag">Next.js</span>
-                                <span class="skill-tag">React Native</span>
-                                <span class="skill-tag">Expo</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="timeline-item">
-                        <div class="company-logo">
-                            <img src="homepage_logo/qilogo.jpeg" alt="Quantum Integrators Logo">
-                        </div>
-                        <div class="timeline-content">
-                            <h3 class="timeline-title">Intern</h3>
-                            <div class="timeline-company">Quantum Integrators • Internship</div>
-                            <div class="timeline-duration">Feb 2023 - Jun 2023 • 5 mos</div>
-                            <div class="timeline-description">
-                                <ul>
-                                    <li>Worked on different systems such as B4P, B4D, and B4, set up VPN, Pulse, and Eclipse, integrated working components and systems, debugged and tested the code, documented and tested new features, researched and investigated a wide range of technical issues, and analyzed datasets using SAP BW S/4HANA.</li>
-                                </ul>
-                            </div>
-                            <div class="skills-tag">
-                                <span class="skill-tag">SAP S/4HANA</span>
-                                <span class="skill-tag">System Integration</span>
-                                <span class="skill-tag">Testing</span>
-                                <span class="skill-tag">Documentation</span>
-                            </div>
-                        </div>
-                    </div>
+              </section>
+              <!-- Experience Section -->
+              <section id="experience" class="pt-4 pb-4 mb-5 p-4" style="background: linear-gradient(120deg, #1e215d 0%, #3a8fd8 40%, #7f53ac 70%, #5ffbf1 100%); border-radius: 1.5rem;">
+                <div class="card-body text-white">
+                  <h2 class="card-title text-white">Professional Experience</h2>
+                  <div class="mb-3">
+                    <h5>Software Engineer Intern</h5>
+                    <div class="date-glossy">Jun 2024 - Aug 2024</div>
+                    <div>GlobalLogic • Internship, Charlotte, NC, USA</div>
+                    <ul>
+                      <li>Designed and developed a Minimum Viable Product (MVP) for GlobalLogic's Learning Experience platform, impacting over 29,000 users. Integrated secure Google OAuth authentication, collaborating closely with design and product teams to ensure alignment with business and user requirements.</li>
+                      <li>Collaborated with a cross-functional software team in engineering the MVP using React, Node.js, TypeScript, and Next.js for streamlined request handling. Architected the solution with Firestore to meet dynamic database requirements, ensuring scalability and robust performance.</li>
+                      <li>Executed the complete Software Development Lifecycle (SDLC) over six agile sprints, from planning and development through testing and client pitch. Successfully delivered a fully functional prototype that exceeded stakeholder expectations and set the stage for further enhancements.</li>
+                    </ul>
+                  </div>
+                  <div class="mb-3">
+                    <h5>Student Volunteer</h5>
+                    <div class="date-glossy">Jan 2025 - Present</div>
+                    <div>CALSys Lab, Cal Poly Pomona</div>
+                    <ul>
+                      <li>Designing and building a cyberinfrastructure that scrapes malicious hacker data from the darkweb for the production of cyber-threat intelligence models</li>
+                      <li>Developing recommender systems to find and recommend credible websites including criminal hacking content</li>
+                      <li>Conducting research on cybersecurity threats and vulnerabilities to enhance threat intelligence capabilities</li>
+                      <li>Collaborating with faculty and other researchers on cybersecurity projects and publications</li>
+                    </ul>
+                  </div>
+                  <div class="mb-3">
+                    <h5>Graduate Research Assistant</h5>
+                    <div class="date-glossy">Aug 2024 - Present</div>
+                    <div>California State Polytechnic University-Pomona • Full-time</div>
+                    <ul>
+                      <li>Developing a campus-based autonomous ride-sharing platform with real-time vehicle tracking, AI-driven obstacle detection, and ROS2-based control systems</li>
+                      <li>Integrated YOLOv8 with ROS2 and NAV2, reducing collision rates by 15%</li>
+                      <li>Developed teleoperation interface using Next.js, TypeScript, and Python</li>
+                      <li>Improved GPS efficiency by 30% through Google Maps API integration</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h5>SAP Intern (Unpaid)</h5>
+                    <div class="date-glossy">Feb 2023 - Jun 2023</div>
+                    <div>Quantum Integrators • Internship</div>
+                    <ul>
+                      <li>Worked on different systems such as B4P, B4D, and B4, set up VPN, Pulse, and Eclipse, integrated working components and systems, debugged and tested the code, documented and tested new features, researched and investigated a wide range of technical issues, and analyzed datasets using SAP BW S/4HANA.</li>
+                    </ul>
+                  </div>
                 </div>
-            </div>
-        </section>
-
-        <section id="education" class="education">
-            <div class="container">
-                <h2 class="section-title">Education</h2>
-                <div class="education-cards">
-                    <div class="education-card">
-                        <div class="school-logo">
-                            <img src="homepage_logo/cpplogo.png" alt="Cal Poly Pomona">
-                        </div>
-                        <div class="education-content">
-                            <h3>California State Polytechnic University-Pomona</h3>
-                            <p class="degree">Master of Science - MS, Computer Science</p>
-                            <p class="duration">Aug 2023 - Jun 2025</p>
-                            <p class="gpa">GPA: 4.0</p>
-                            <div class="key-courses">
-                                <h4>Key Courses</h4>
-                                <p>Advanced Computer Architecture • Information Retrieval • Human-Computer Interaction • Big Data Analytics & Cloud Computing • Advanced Algorithm and Analysis • Advanced Software Engineering • Mobile App Development • Computational Social Systems</p>
-                            </div>
-                            <div class="activities">
-                                <h4>Activities</h4>
-                                <p>Chess Club</p>
-                                <p>CALsys lab</p>
-                            </div>
-                        </div>
+              </section>
+              <!-- Skills Section -->
+              <section id="skills" class="pt-4 pb-4 mb-5 p-4" style="background: linear-gradient(120deg, #1e215d 0%, #3a8fd8 40%, #7f53ac 70%, #5ffbf1 100%); border-radius: 1.5rem;">
+                <div class="card-body text-white">
+                  <h2 class="card-title text-white">Technical Skills</h2>
+                  <div class="row">
+                    <div class="col-md-4 mb-3">
+                      <h5>Languages</h5>
+                      <span class="badge bg-primary me-1 mb-1"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" style="width:20px;height:20px;vertical-align:middle;"> Python</span>
+                      <span class="badge bg-primary me-1 mb-1"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" style="width:20px;height:20px;vertical-align:middle;"> JavaScript</span>
+                      <span class="badge bg-primary me-1 mb-1"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript" style="width:20px;height:20px;vertical-align:middle;"> TypeScript</span>
+                      <span class="badge bg-primary me-1 mb-1"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="C++" style="width:20px;height:20px;vertical-align:middle;"> C++</span>
+                      <span class="badge bg-primary me-1 mb-1"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" style="width:20px;height:20px;vertical-align:middle;"> Java</span>
                     </div>
-
-                    <div class="education-card">
-                        <div class="school-logo">
-                            <img src="homepage_logo/nhce.png" alt="New Horizon College of Engineering">
-                        </div>
-                        <div class="education-content">
-                            <h3>New Horizon College of Engineering</h3>
-                            <p class="degree">Bachelor of Engineering - BE, Computer Science</p>
-                            <p class="duration">2019 - 2023</p>
-                            <p class="gpa">GPA: 3.75/4.0</p>
-                            <p class="gpa">CGPA: 8.63/10.0</p>
-                            <div class="activities">
-                                <h4>Activities</h4>
-                                <p>Mobile App Development Club</p>
-                                <p>Robotics Club</p>
-                            </div>
-                        </div>
+                    <div class="col-md-4 mb-3">
+                      <h5>Frameworks & Libraries</h5>
+                      <span class="badge bg-success me-1 mb-1"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" style="width:20px;height:20px;vertical-align:middle;"> React</span>
+                      <span class="badge bg-success me-1 mb-1"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" alt="Next.js" style="width:20px;height:20px;vertical-align:middle;"> Next.js</span>
+                      <span class="badge bg-success me-1 mb-1"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js" style="width:20px;height:20px;vertical-align:middle;"> Node.js</span>
+                      <span class="badge bg-success me-1 mb-1"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" alt="Express" style="width:20px;height:20px;vertical-align:middle;"> Express</span>
+                      <span class="badge bg-success me-1 mb-1"><img src="https://huggingface.co/front/assets/huggingface_logo-noborder.svg" alt="HuggingFace" style="width:20px;height:20px;vertical-align:middle;"> HuggingFace</span>
+                      <span class="badge bg-success me-1 mb-1"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg" alt="NumPy" style="width:20px;height:20px;vertical-align:middle;"> NumPy</span>
+                      <span class="badge bg-success me-1 mb-1"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/keras/keras-original.svg" alt="Keras" style="width:20px;height:20px;vertical-align:middle;"> Keras</span>
+                      <span class="badge bg-success me-1 mb-1"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" alt="Pandas" style="width:20px;height:20px;vertical-align:middle;"> Pandas</span>
+                      <span class="badge bg-success me-1 mb-1"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" alt="TensorFlow" style="width:20px;height:20px;vertical-align:middle;"> TensorFlow</span>
                     </div>
+                    <div class="col-md-4 mb-3">
+                      <h5>Tools & Technologies</h5>
+                      <span class="badge bg-info text-dark me-1 mb-1"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" style="width:20px;height:20px;vertical-align:middle;"> Git</span>
+                      <span class="badge bg-info text-dark me-1 mb-1"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker" style="width:20px;height:20px;vertical-align:middle;"> Docker</span>
+                      <span class="badge bg-info text-dark me-1 mb-1"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" alt="Firebase" style="width:20px;height:20px;vertical-align:middle;"> Firebase</span>
+                      <span class="badge bg-info text-dark me-1 mb-1"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB" style="width:20px;height:20px;vertical-align:middle;"> MongoDB</span>
+                      <span class="badge bg-info text-dark me-1 mb-1"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL" style="width:20px;height:20px;vertical-align:middle;"> PostgreSQL</span>
+                      <span class="badge bg-info text-dark me-1 mb-1"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="SQL" style="width:20px;height:20px;vertical-align:middle;"> SQL</span>
+                      <span class="badge bg-info text-dark me-1 mb-1"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg" alt="Flask" style="width:20px;height:20px;vertical-align:middle;"> Flask</span>
+                      <span class="badge bg-info text-dark me-1 mb-1"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/selenium/selenium-original.svg" alt="Selenium" style="width:20px;height:20px;vertical-align:middle;"> Selenium</span>
+                    </div>
+                  </div>
                 </div>
-            </div>
-        </section>
-
-        <section id="publications" class="publications">
-            <div class="container">
-                <h2 class="section-title">Research Publications</h2>
-                <div class="publication-grid">
-                    <div class="publication-card">
-                        <h3>Law Enforcement Companion</h3>
-                        <p class="pub-details">IEEE Conference Publication</p>
-                        <p class="description">A comprehensive study on leveraging AI technologies to enhance law enforcement capabilities.</p>
-                        <a href="https://ieeexplore.ieee.org/document/10083546" target="_blank" class="btn-link">Read Paper</a>
+              </section>
+              <!-- Projects Section -->
+              <section id="projects" class="pt-4 pb-4 mb-5 p-4" style="background: linear-gradient(120deg, #1e215d 0%, #3a8fd8 40%, #7f53ac 70%, #5ffbf1 100%); border-radius: 1.5rem;">
+                <div class="row row-cols-1 row-cols-md-2 g-4">
+                  <div class="col">
+                    <div class="card h-100">
+                      <img src="projects/stockerr/5.gif" class="card-img-top" alt="Stock Analysis platform Preview">
+                      <div class="card-body">
+                        <h5 class="card-title"><a href="https://github.com/shreyas463/Stock-Analysis-platform" target="_blank">Stock Analysis platform</a></h5>
+                        <p class="card-text">A full-stack web application replicating core features of Robinhood, built with Next.js and Flask. Real-time stock data, interactive charts, smart trading insights, portfolio management, and a trading simulation with virtual currency.</p>
+                        <a href="https://stock-analysis-platform-bay.vercel.app" target="_blank" class="btn btn-primary btn-sm">Live Demo</a>
+                      </div>
                     </div>
-                    
-                    <div class="publication-card">
-                        <h3>Utilizing Deep Learning as a Law Enforcement Ally</h3>
-                        <p class="pub-details">IEEE Conference Publication</p>
-                        <p class="description">Research on implementing deep learning algorithms for law enforcement applications.</p>
-                        <a href="https://ieeexplore.ieee.org/abstract/document/10127890" target="_blank" class="btn-link">Read Paper</a>
+                  </div>
+                  <div class="col">
+                    <div class="card h-100">
+                      <img src="projects/resume/3.1.png" class="card-img-top" alt="Resume Analyzer Preview">
+                      <div class="card-body">
+                        <h5 class="card-title"><a href="https://github.com/shreyas463/AI-Powered-Resume-Analyzer" target="_blank">AI-Powered Resume Analyzer & Builder</a></h5>
+                        <p class="card-text">A modern web application that helps users create professional resumes and analyzes them using AI to provide actionable feedback.</p>
+                        <a href="https://ai-powered-resume-analyzer-63ld-5m0dx1zd9.vercel.app/" target="_blank" class="btn btn-primary btn-sm">Live Demo</a>
+                      </div>
                     </div>
+                  </div>
+                  <div class="col">
+                    <div class="card h-100">
+                      <img src="projects/sportsinfoapp/preview.gif" class="card-img-top" alt="Sports Info App Preview">
+                      <div class="card-body">
+                        <h5 class="card-title"><a href="https://github.com/shreyas463/PreNBA" target="_blank">Sports Info App</a></h5>
+                        <p class="card-text">A modern, responsive web application that allows users to search and view detailed information about Premier League and NBA players.</p>
+                        <a href="https://pre-nba.vercel.app" target="_blank" class="btn btn-primary btn-sm">Live Demo</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="card h-100">
+                      <img src="projects/Pokemon/1.gif" class="card-img-top" alt="PokeInfo Hub Preview">
+                      <div class="card-body">
+                        <h5 class="card-title"><a href="https://github.com/shreyas463/PokeInfo-Hub" target="_blank">PokeInfo Hub</a></h5>
+                        <p class="card-text">A modern web application that serves as your comprehensive Pokémon information center.</p>
+                        <a href="https://pokeinfohub.netlify.app/" target="_blank" class="btn btn-primary btn-sm">Live Demo</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="card h-100">
+                      <img src="projects/cs5180/bio.gif" class="card-img-top" alt="BioSearch-CPP Preview">
+                      <div class="card-body">
+                        <h5 class="card-title"><a href="https://github.com/shreyas463/BioSearch-CPP" target="_blank">BioSearch-CPP</a></h5>
+                        <p class="card-text">A specialized search engine for the Cal Poly Pomona Biology Department, enabling users to find faculty members based on research interests, expertise, and other attributes.</p>
+                        <a href="https://www.youtube.com/watch?v=a22jBmXQ84U" target="_blank" class="btn btn-primary btn-sm">Demo Video</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="card h-100">
+                      <img src="projects/bartender/Thebartender.gif" class="card-img-top" alt="TheBartender Preview">
+                      <div class="card-body">
+                        <h5 class="card-title"><a href="https://github.com/shreyas463/TheBartender" target="_blank">TheBartender</a></h5>
+                        <p class="card-text">A sleek and interactive web app for discovering cocktail recipes. React and Tailwind CSS frontend, Laravel backend with GraphQL, and TheCocktailDB API.</p>
+                        <a href="https://github.com/shreyas463/TheBartender" target="_blank" class="btn btn-primary btn-sm">Source Code</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="card h-100">
+                      <img src="projects/epidmi/6.gif" class="card-img-top" alt="Disease Spread Simulation Preview">
+                      <div class="card-body">
+                        <h5 class="card-title"><a href="https://github.com/shreyas463/epidmi" target="_blank">Disease Spread Simulation</a></h5>
+                        <p class="card-text">Visualizes the spread of a disease within a population using agent-based modeling and social network-based modeling.</p>
+                        <a href="https://github.com/shreyas463/epidmi" target="_blank" class="btn btn-primary btn-sm">Source Code</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="card h-100">
+                      <img src="projects/formula1one/7.gif" class="card-img-top" alt="Formula1Won Preview">
+                      <div class="card-body">
+                        <h5 class="card-title"><a href="https://github.com/shreyas463/Formula1Won" target="_blank">Formula1Won</a></h5>
+                        <p class="card-text">Simulates a self-driving car navigating dynamic traffic using a greedy pathfinding algorithm and collision avoidance system.</p>
+                        <a href="https://formula1won.netlify.app/" target="_blank" class="btn btn-primary btn-sm">Live Demo</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="card h-100">
+                      <img src="projects/livesketch/4.1.png" class="card-img-top" alt="LiveSketch Preview">
+                      <div class="card-body">
+                        <h5 class="card-title"><a href="https://github.com/shreyas463/LiveSketch" target="_blank">LiveSketch</a></h5>
+                        <p class="card-text">A collaborative whiteboard app enabling real-time drawing with Electron, Socket.io, and Canvas API, achieving sub-50ms latency.</p>
+                        <a href="https://live-sketch.vercel.app/" target="_blank" class="btn btn-primary btn-sm">Live Demo</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="card h-100">
+                      <img src="projects/artg/art.gif" class="card-img-top" alt="Virtual Art Gallery Preview">
+                      <div class="card-body">
+                        <h5 class="card-title"><a href="https://github.com/shreyas463/Virtual-art" target="_blank">Virtual Art Gallery</a></h5>
+                        <p class="card-text">An interactive platform leveraging the MET API to showcase priceless artworks in real time. Built with React, Node.js, Express, and MongoDB.</p>
+                        <a href="https://github.com/shreyas463/Virtual-art" target="_blank" class="btn btn-primary btn-sm">Source Code</a>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-            </div>
-        </section>
-
-        <section id="skills" class="skills">
-            <div class="container">
-                <h2 class="section-title">Technical Skills</h2>
-                <div class="achievement-banner" id="achievementBanner">
-                    <span class="achievement-icon">🏆</span>
-                    <span class="achievement-text">Achievement Unlocked!</span>
+              </section>
+              <!-- Publications Section -->
+              <section id="publications" class="pt-4 pb-4 mb-5 p-4" style="background: linear-gradient(120deg, #1e215d 0%, #3a8fd8 40%, #7f53ac 70%, #5ffbf1 100%); border-radius: 1.5rem;">
+                <div class="card-body text-white">
+                  <h2 class="card-title text-white">Research Publications</h2>
+                  <ul>
+                    <li><b>Law Enforcement Companion</b> (IEEE Conference Publication) - <a href="https://ieeexplore.ieee.org/document/10083546" target="_blank">Read Paper</a></li>
+                    <li><b>Utilizing Deep Learning as a Law Enforcement Ally</b> (IEEE Conference Publication) - <a href="https://ieeexplore.ieee.org/abstract/document/10127890" target="_blank">Read Paper</a></li>
+                  </ul>
                 </div>
-                <div class="skills-grid">
-                    <div class="skill-card" data-aos="fade-up">
-                        <h3>Languages</h3>
-                        <div class="skills-tag">
-                            <span class="skill-item" data-progress="95">
-                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" class="no-decoration" />
-                                Python
-                                <div class="skill-progress">
-                                    <div class="progress-bar"></div>
-                                </div>
-                            </span>
-                            <span><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" />JavaScript</span>
-                            <span><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript" />TypeScript</span>
-                            <span><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="C++" />C++</span>
-                            <span><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" />Java</span>
-                        </div>
-                    </div>
-
-                    <div class="skill-card">
-                        <h3>Frameworks & Libraries</h3>
-                        <div class="skills-tag">
-                            <span><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" />React</span>
-                            <span><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" alt="Next.js" />Next.js</span>
-                            <span><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js" />Node.js</span>
-                            <span><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" alt="Express" />Express</span>
-                            <span><img src="https://huggingface.co/front/assets/huggingface_logo-noborder.svg" alt="HuggingFace" />HuggingFace</span>
-                            <span><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg" alt="NumPy" />NumPy</span>
-                            <span><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/keras/keras-original.svg" alt="Keras" />Keras</span>
-                            <span><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" alt="Pandas" />Pandas</span>
-                            <span><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" alt="TensorFlow" />TensorFlow</span>
-                        </div>
-                    </div>
-
-                    <div class="skill-card">
-                        <h3>Tools & Technologies</h3>
-                        <div class="skills-tag">
-                            <span><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" />Git</span>
-                            <span><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker" />Docker</span>
-                            <span><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" alt="Firebase" />Firebase</span>
-                            <span><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB" />MongoDB</span>
-                            <span><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL" />PostgreSQL</span>
-                            <span><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="SQL" />SQL</span>
-                            <span><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg" alt="Flask" />Flask</span>
-                            <span><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/selenium/selenium-original.svg" alt="Selenium" />Selenium</span>
-                        </div>
-                    </div>
+              </section>
+              <!-- Certifications Section -->
+              <section id="certifications" class="pt-4 pb-4 mb-5 p-4" style="background: linear-gradient(120deg, #1e215d 0%, #3a8fd8 40%, #7f53ac 70%, #5ffbf1 100%); border-radius: 1.5rem;">
+                <div class="card-body text-white">
+                  <h2 class="card-title text-white">Certifications</h2>
+                  <ul class="list-unstyled">
+                    <li class="mb-3"><img src="homepage_logo/Cshack.png" alt="AI Hackathon" style="width:32px;height:32px;vertical-align:middle;"> <b>AI Hackathon 2025</b>, California State Polytechnic University-Pomona (Issued Apr 2025 • Expires Apr 2029)</li>
+                    <li class="mb-3"><img src="homepage_logo/ap2.png" alt="Workato" style="width:32px;height:32px;vertical-align:middle;"> <b>Automation Pro II Certificate</b>, Workato (Issued Apr 2025 • Expires Apr 2027)</li>
+                    <li class="mb-3"><img src="homepage_logo/ap2.png" alt="Workato" style="width:32px;height:32px;vertical-align:middle;"> <b>Automation Pro I Certificate</b>, Workato (Issued Apr 2025 • Expires Apr 2027)</li>
+                    <li class="mb-3"><img src="homepage_logo/databricks.jpeg" alt="Databricks" style="width:32px;height:32px;vertical-align:middle;"> <b>Academy Accreditation - Generative AI Fundamentals</b>, Databricks (Issued Sep 2024 • Expires Sep 2026)</li>
+                    <li class="mb-3"><img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera.s3.amazonaws.com/media/coursera-logo-square.png" alt="Coursera" style="width:32px;height:32px;vertical-align:middle;"> <b>Supervised Machine Learning: Regression and Classification</b>, DeepLearning.AI, Stanford University (Issued Sep 2024)</li>
+                  </ul>
                 </div>
-            </div>
-        </section>
-
-        <section id="contact" class="contact">
-            <div class="container">
-                <h2 class="section-title">Let's Connect</h2>
-                <div class="connect-grid">
-                    <a href="https://github.com/shreyas463" target="_blank" class="connect-card">
-                        <div class="connect-icon">
-                            <i class="fab fa-github"></i>
-                        </div>
-                        <h3>GitHub</h3>
-                        <p>Check out my projects and contributions</p>
-                    </a>
-                    
-                    <a href="https://www.linkedin.com/in/shreyaschaudharysc/" target="_blank" class="connect-card">
-                        <div class="connect-icon">
-                            <i class="fab fa-linkedin"></i>
-                        </div>
-                        <h3>LinkedIn</h3>
-                        <p>Connect with me professionally</p>
-                    </a>
-
-                    <!-- <a href="https://leetcode.com/u/shreyasi/" target="_blank" class="connect-card">
-                        <div class="connect-icon">
-                            <i class="fas fa-laptop-code"></i>
-                        </div>
-                        <h3>LeetCode</h3>
-                        <p>View my coding problem solutions</p>
-                    </a> -->
-
-                    <a href="https://scholar.google.com/citations?hl=en&user=gZP2TpoAAAAJ" target="_blank" class="connect-card">
-                        <div class="connect-icon">
-                            <i class="fas fa-graduation-cap"></i>
-                        </div>
-                        <h3>Google Scholar</h3>
-                        <p>Read my research publications</p>
-                    </a>
-
-                    <a href="mailto:shreyasc@cpp.edu" class="connect-card">
-                        <div class="connect-icon">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <h3>Email</h3>
-                        <p>shreyasc@cpp.edu</p>
-                    </a>
+              </section>
+              <!-- Testimonials Section -->
+              <section id="testimonials" class="pt-4 pb-4 mb-5 p-4" style="background: linear-gradient(120deg, #1e215d 0%, #3a8fd8 40%, #7f53ac 70%, #5ffbf1 100%); border-radius: 1.5rem;">
+                <div class="card-body text-white">
+                  <h2 class="card-title text-white">Testimonials</h2>
+                  <div class="d-flex align-items-center mb-3">
+                    <img src="homepage_logo/artem.jpeg" alt="Artem Paskhin" style="width:48px;height:48px;border-radius:50%;margin-right:16px;">
+                    <div>
+                      <strong>Artem Paskhin</strong> <a href="https://www.linkedin.com/in/artempaskhin/" target="_blank"><i class="fab fa-linkedin"></i></a><br>
+                      <span class="text-muted date-glossy">Director, Engineering at GlobalLogic</span><br>
+                      <span class="text-muted date-glossy">August 4, 2024</span>
+                    </div>
+                  </div>
+                  <blockquote class="blockquote">
+                    <p>I was lucky to mentor Shreyas during 2024 summer internship program by Globallogic / Method. I was genuinely impressed by the level of commitment he has shown, curiosity and team spirit. He was able to deliver high quality solution in the multi-team environment, that not only showcased his technical abilities but strong collaborative skills!</p>
+                  </blockquote>
                 </div>
-            </div>
-        </section>
-
-        <section id="testimonials" class="testimonials">
-            <div class="container">
-                <h2 class="section-title">Testimonials</h2>
-                <div class="testimonial-card">
-                    <div class="testimonial-header">
-                        <img src="homepage_logo/artem.jpeg" alt="Artem Paskhin" class="testimonial-avatar">
-                        <div class="testimonial-info">
-                            <h3><a href="https://www.linkedin.com/in/artempaskhin/" target="_blank" class="linkedin-link">Artem Paskhin <i class="fab fa-linkedin"></i></a></h3>
-                            <p class="position">Director, Engineering at GlobalLogic</p>
-                            <p class="date">August 4, 2024</p>
-                        </div>
-                    </div>
-                    <div class="testimonial-content">
-                        <i class="fas fa-quote-left quote-icon"></i>
-                        <p>I was lucky to mentor Shreyas during 2024 summer internship program by Globallogic / Method. I was genuinely impressed by the level of commitment he has shown, curiosity and team spirit. He was able to deliver high quality solution in the multi-team environment, that not only showcased his technical abilities but strong collaborative skills!</p>
-                    </div>
-                    <div class="testimonial-footer">
-                        <img src="homepage_logo/gllogo.png" alt="GlobalLogic Logo" class="company-logo">
-                    </div>
+              </section>
+              <!-- Contact Section -->
+              <section id="contact" class="pt-4 pb-4 mb-5 p-4" style="background: linear-gradient(120deg, #1e215d 0%, #3a8fd8 40%, #7f53ac 70%, #5ffbf1 100%); border-radius: 1.5rem;">
+                <div class="card-body text-white">
+                  <h2 class="card-title text-white">Contact</h2>
+                  <ul class="list-unstyled">
+                    <li><i class="bi bi-envelope"></i> <a href="mailto:shreyasc@cpp.edu">shreyasc@cpp.edu</a></li>
+                    <li><i class="bi bi-geo-alt"></i> <a href="https://www.google.com/maps/place/California,+USA" target="_blank">California - USA</a></li>
+                    <li><i class="fab fa-github"></i> <a href="https://github.com/shreyas463" target="_blank">shreyas463</a></li>
+                    <li><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/shreyaschaudharysc/" target="_blank">shreyaschaudharysc</a></li>
+                  </ul>
                 </div>
-            </div>
-        </section>
-
-        <section id="certifications" class="certifications">
-            <div class="container">
-                <h2 class="section-title">Certifications</h2>
-                <div class="certifications-grid">
-                    <div class="certification-card">
-                        <div class="certification-icon">
-                            <img src="homepage_logo/Cshack.png" alt="AI Hackathon" class="certification-provider-icon">
-                        </div>
-                        <h3>AI Hackathon 2025</h3>
-                        <p class="issuer">California State Polytechnic University-Pomona</p>
-                        <p class="date">Issued Apr 2025 • Expires Apr 2029</p>
-                        <p class="credential-id">Credential ID 6806e558e6dca03f1f06f033</p>
-                        <div class="skills-tags">
-                            <span>Machine Learning</span>
-                            <span>React Native</span>
-                            <span>JavaScript</span>
-                        </div>
-                        <a href="https://badgr.com/public/assertions/3GHX6pldS36ZoWH2-OE-ew" target="_blank" class="verify-btn">
-                            <span>Verify Credential</span>
-                            <i class="fas fa-external-link-alt"></i>
-                        </a>
-                    </div>
-
-                    <div class="certification-card">
-                        <div class="certification-icon">
-                            <img src="homepage_logo/ap2.png" alt="Workato" class="certification-provider-icon">
-                        </div>
-                        <h3>Automation Pro II Certificate</h3>
-                        <p class="issuer">Workato</p>
-                        <p class="date">Issued Apr 2025 • Expires Apr 2027</p>
-                        <p class="credential-id">Credential ID 141227135</p>
-                        <div class="skills-tags">
-                            <span>Workato</span>
-                            <span>Enterprise Automation</span>
-                            <span>Lookup Tables</span>
-                            <span>Conditional Actions</span>
-                            <span>Error Monitoring and Handling</span>
-                            <span>Repeat Actions and Variables</span>
-                        </div>
-                        <a href="https://credentials.workato.com/b311b5e9-0c3d-4e2c-a9dc-91a6026a4a24#acc.8Ve3I5Hg" target="_blank" class="verify-btn">
-                            <span>Verify Credential</span>
-                            <i class="fas fa-external-link-alt"></i>
-                        </a>
-                    </div>
-                    
-                    <div class="certification-card">
-                        <div class="certification-icon">
-                            <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0iIzAwNzJDRSI+PHBhdGggZD0iTTEyIDJDNi40NzcgMiAyIDYuNDc3IDIgMTJzNC40NzcgMTAgMTAgMTAgMTAtNC40NzcgMTAtMTBTMTcuNTIzIDIgMTIgMnptLTEuNzg2IDEzLjc4NmMtLjk3IDAtMS43ODYtLjgxNi0xLjc4Ni0xLjc4NnMuODE2LTEuNzg2IDEuNzg2LTEuNzg2IDEuNzg2LjgxNiAxLjc4NiAxLjc4Ni0uODE2IDEuNzg2LTEuNzg2IDEuNzg2em0zLjU3MiAwYy0uOTcgMC0xLjc4Ni0uODE2LTEuNzg2LTEuNzg2cy44MTYtMS43ODYgMS43ODYtMS43ODYgMS43ODYuODE2IDEuNzg2IDEuNzg2LS44MTYgMS43ODYtMS43ODYgMS43ODZ6bS0zLjU3Mi01LjM1OGMtLjk3IDAtMS43ODYtLjgxNi0xLjc4Ni0xLjc4NnMuODE2LTEuNzg2IDEuNzg2LTEuNzg2IDEuNzg2LjgxNiAxLjc4NiAxLjc4Ni0uODE2IDEuNzg2LTEuNzg2IDEuNzg2em0zLjU3MiAwYy0uOTcgMC0xLjc4Ni0uODE2LTEuNzg2LTEuNzg2cy44MTYtMS43ODYgMS43ODYtMS43ODYgMS43ODYuODE2IDEuNzg2IDEuNzg2LS44MTYgMS43ODYtMS43ODYgMS43ODZ6Ii8+PC9zdmc+" alt="Workato" class="certification-provider-icon">
-                        </div>
-                        <h3>Automation Pro I Certificate</h3>
-                        <p class="issuer">Workato</p>
-                        <p class="date">Issued Apr 2025 • Expires Apr 2027</p>
-                        <p class="credential-id">Credential ID szyktcq3wn3q</p>
-                        <div class="skills-tags">
-                            <span>Data Mapping</span>
-                            <span>Recipe Building</span>
-                            <span>Enterprise Automation</span>
-                            <span>Trigger Building</span>
-                        </div>
-                        <a href="https://verify.skilljar.com/c/szyktcq3wn3q" target="_blank" class="verify-btn">
-                            <span>Verify Credential</span>
-                            <i class="fas fa-external-link-alt"></i>
-                        </a>
-                    </div>
-
-                    <div class="certification-card">
-                        <div class="certification-icon">
-                            <img src="homepage_logo/databricks.jpeg" alt="Databricks" class="certification-provider-icon">
-                        </div>
-                        <h3>Academy Accreditation - Generative AI Fundamentals</h3>
-                        <p class="issuer">Databricks</p>
-                        <p class="date">Issued Sep 2024 • Expires Sep 2026</p>
-                        <p class="credential-id">Credential ID 115440615</p>
-                        <a href="https://credentials.databricks.com/62de9f0b-be77-499b-b1ff-d19bc519c9b1#acc.jgybdK7e" target="_blank" class="verify-btn">
-                            <span>Verify Credential</span>
-                            <i class="fas fa-external-link-alt"></i>
-                        </a>
-                    </div>
-
-                    <div class="certification-card">
-                        <div class="certification-icon">
-                            <img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera.s3.amazonaws.com/media/coursera-logo-square.png" alt="Coursera" class="certification-provider-icon">
-                        </div>
-                        <h3>Supervised Machine Learning: Regression and Classification</h3>
-                        <p class="issuer">DeepLearning.AI, Stanford University</p>
-                        <p class="date">Issued Sep 2024</p>
-                        <p class="credential-id">Credential ID X15PXZ7Z6EJS</p>
-                        <div class="skills-tags">
-                            <span>Machine Learning</span>
-                            <span>NumPy</span>
-                            <span>Python</span>
-                            <span>Linear Regression</span>
-                            <span>Logistic Regression</span>
-                        </div>
-                        <a href="https://www.coursera.org/account/accomplishments/verify/X15PXZ7Z6EJS" target="_blank" class="verify-btn">
-                            <span>Verify Credential</span>
-                            <i class="fas fa-external-link-alt"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="projects" class="projects">
-            <div class="container">
-                <h2 class="section-title">Featured Projects</h2>
-                <p class="section-subtitle">A showcase of my technical skills and creative problem-solving</p>
-                
-                <div class="projects-column">
-                    <!-- Project 1: AI-Powered Resume Analyzer & Builder -->
-                    <div class="project-item">
-                        <div class="project-image">
-                            <div class="image-slider">
-                                <div class="slider-container">
-                                    <img src="projects/resume/3.1.png" alt="Resume Analyzer Screenshot 1" class="slider-image active">
-                                    <img src="projects/resume/3.2.png" alt="Resume Analyzer Screenshot 2" class="slider-image">
-                                    <img src="projects/resume/3.3.png" alt="Resume Analyzer Screenshot 3" class="slider-image">
-                                    <img src="projects/resume/3.4.png" alt="Resume Analyzer Screenshot 4" class="slider-image">
-                                </div>
-                                <div class="slider-controls">
-                                    <button class="slider-dot active" data-index="0"></button>
-                                    <button class="slider-dot" data-index="1"></button>
-                                    <button class="slider-dot" data-index="2"></button>
-                                    <button class="slider-dot" data-index="3"></button>
-                                </div>
-                                <button class="slider-arrow prev">&#10094;</button>
-                                <button class="slider-arrow next">&#10095;</button>
-                            </div>
-                        </div>
-                        <div class="project-content">
-                            <h3 class="project-title">AI-Powered Resume Analyzer & Builder</h3>
-                            <p class="project-description">
-                                A modern web application that helps users create professional resumes and analyzes them using AI to provide actionable feedback. 
-                                Built with Next.js 13, TypeScript, and Tailwind CSS.
-                            </p>
-                            <div class="project-tech">
-                                <span class="tech-badge">Next.js 13</span>
-                                <span class="tech-badge">TypeScript</span>
-                                <span class="tech-badge">Tailwind CSS</span>
-                                <span class="tech-badge">OpenAI</span>
-                            </div>
-                            <div class="project-links">
-                                <a href="https://github.com/shreyas463/AI-Powered-Resume-Analyzer" class="project-link" target="_blank">
-                                    <i class="fab fa-github"></i>
-                                    <span>Source Code</span>
-                                </a>
-                                <a href="https://ai-powered-resume-analyzer-63ld-5m0dx1zd9.vercel.app/" class="project-link" target="_blank">
-                                    <i class="fas fa-external-link-alt"></i>
-                                    <span>Live Demo</span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Project 2: Stock Analysis platform -->
-                    <div class="project-item">
-                        <div class="project-image">
-                            <img src="projects/stockerr/5.gif" alt="Stock Analysis platform Preview">
-                        </div>
-                        <div class="project-content">
-                            <h3 class="project-title">Stock Analysis platform</h3>
-                            <p class="project-description">
-                                A full-stack web application replicating core features of Robinhood, built with Next.js and Flask. 
-                                It offers real-time stock data via the Finnhub API, interactive charts, smart trading insights, 
-                                portfolio management, and a trading simulation with virtual currency. Users can securely log in with Firebase, 
-                                access stock-related news, and engage in community discussions. The app features a responsive design 
-                                optimized for desktop and mobile, along with a Top Gainers section to track high-performing stocks.
-                            </p>
-                            <div class="project-tech">
-                                <span class="tech-badge">Next.js</span>
-                                <span class="tech-badge">Flask</span>
-                                <span class="tech-badge">Finnhub API</span>
-                                <span class="tech-badge">Firebase</span>
-                                <span class="tech-badge">Render</span>
-                                <span class="tech-badge">Material-UI</span>
-                                <span class="tech-badge">Vercel</span>
-                                <span class="tech-badge">Chart.js</span>
-                                <span class="tech-badge">JWT</span>
-                            </div>
-                            <div class="project-links">
-                                <a href="https://github.com/shreyas463/Stock-Analysis-platform" class="project-link" target="_blank">
-                                    <i class="fab fa-github"></i>
-                                    <span>Source Code</span>
-                                </a>
-                                <a href="https://stock-analysis-platform-bay.vercel.app" class="project-link" target="_blank">
-                                    <i class="fas fa-external-link-alt"></i>
-                                    <span>Live Demo</span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Project 3: TheBartender -->
-                    <div class="project-item">
-                        <div class="project-image">
-                            <img src="projects/bartender/TheBartender.gif" alt="TheBartender Preview">
-                        </div>
-                        <div class="project-content">
-                            <h3 class="project-title">TheBartender</h3>
-                            <p class="project-description">
-                                TheBartender is a sleek and interactive web app for discovering cocktail recipes. It features a React and Tailwind CSS frontend for a smooth user experience, while the Laravel backend with GraphQL ensures efficient data fetching.
-                                Users can explore a vast collection of cocktails, filter by ingredients, and view detailed recipes powered by TheCocktailDB API. With a MySQL database for storing favorites, TheBartender makes cocktail discovery effortless and enjoyable.
-                            </p>
-                            <div class="project-tech">
-                                <span class="tech-badge">JavaScript</span>
-                                <span class="tech-badge">React</span>
-                                <span class="tech-badge">GraphQL</span>
-                                <span class="tech-badge">Laravel</span>
-                                <span class="tech-badge">Tailwind CSS</span>
-                                <span class="tech-badge">TheCocktailDB API</span>
-                                <span class="tech-badge">MySQL</span>
-                            </div>
-                            <div class="project-links">
-                                <a href="https://github.com/shreyas463/TheBartender" class="project-link" target="_blank">
-                                    <i class="fab fa-github"></i>
-                                    <span>Source Code</span>
-                                </a>
-                                <a href="https://github.com/shreyas463/TheBartender" class="project-link" target="_blank">
-                                    <i class="fas fa-external-link-alt"></i>
-                                    <span>Live Demo</span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-    
-                    <!-- Project 7: Sports Info App -->
-<div class="project-item">
-    <div class="project-image">
-        <img src="projects/sportsinfoapp/preview.gif" alt="Sports Info App Preview">
-    </div>
-    <div class="project-content">
-        <h3 class="project-title">Sports Info App</h3>
-        <p class="project-description">
-            A modern, responsive web application that allows users to search and view detailed information about Premier League and NBA players. It leverages the API-Sports API to fetch real-time player data including name, age, team, position, nationality, and player images. Axios is used to make efficient RESTful API calls, and the UI dynamically updates based on user input. Built using React and styled with Material-UI and glass-morphism effects, the app also features animated backgrounds with floating sports icons for visual appeal. It is deployed on Vercel with analytics integration for tracking user engagement and performance.
-        </p>
-        <div class="project-tech">
-            <span class="tech-badge">React</span>
-            <span class="tech-badge">Material-UI</span>
-            <span class="tech-badge">JavaScript</span>
-            <span class="tech-badge">Axios</span>
-            <span class="tech-badge">RESTful APIs</span>
-            <span class="tech-badge">API-Sports</span>
-            <span class="tech-badge">CSS Animations</span>
-            <span class="tech-badge">Vercel</span>
+              </section>
+            </main>
+          </div>
         </div>
-        <div class="project-links">
-            <a href="https://github.com/shreyas463/PreNBA" class="project-link" target="_blank">
-                <i class="fab fa-github"></i>
-                <span>Source Code</span>
-            </a>
-            <a href="https://pre-nba.vercel.app" class="project-link" target="_blank">
-                <i class="fas fa-external-link-alt"></i>
-                <span>Live Demo</span>
-            </a>
-        </div>
+        <!-- Bootstrap and vendor JS files -->
+        <script src="PersonalWebsite/assets/vendor/aos/aos.js"></script>
+        <script src="PersonalWebsite/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="PersonalWebsite/assets/vendor/glightbox/js/glightbox.min.js"></script>
+        <script src="PersonalWebsite/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+        <script src="PersonalWebsite/assets/vendor/php-email-form/validate.js"></script>
+        <script src="PersonalWebsite/assets/vendor/purecounter/purecounter.js"></script>
+        <script src="PersonalWebsite/assets/vendor/swiper/swiper-bundle.min.js"></script>
+        <script src="PersonalWebsite/assets/vendor/typed.js/typed.min.js"></script>
+        <script src="PersonalWebsite/assets/vendor/waypoints/noframework.waypoints.js"></script>
+        <script src="PersonalWebsite/assets/js/main.js"></script>
     </div>
-</div>
-
-                
-                    <!-- Project 4: PokeInfo Hub -->
-                    <div class="project-item">
-                        <div class="project-image">
-                            <img src="projects/Pokemon/1.gif" alt="PokeInfo Hub Preview">
-                        </div>
-                        <div class="project-content">
-                            <h3 class="project-title">PokeInfo Hub</h3>
-                            <p class="project-description">
-                                A modern web application that serves as your comprehensive Pokémon information center. 
-                                This interactive platform allows users to search and explore Pokémon cards, view detailed information about different Pokémon, 
-                                discover their characteristics and abilities, enjoy interactive quizzes, stay updated with Pokémon news, and experience Pokémon sounds.
-                            </p>
-                            <div class="project-tech">
-                                <span class="tech-badge">JavaScript</span>
-                                <span class="tech-badge">HTML</span>
-                                <span class="tech-badge">CSS</span>
-                            </div>
-                            <div class="project-links">
-                                <a href="https://github.com/shreyas463/PokeInfo-Hub" class="project-link" target="_blank">
-                                    <i class="fab fa-github"></i>
-                                    <span>Source Code</span>
-                                </a>
-                                <a href="https://pokeinfohub.netlify.app/" class="project-link" target="_blank">
-                                    <i class="fas fa-external-link-alt"></i>
-                                    <span>Live Demo</span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Project 5: BioSearch-CPP -->
-                    <div class="project-item">
-                        <div class="project-image">
-                            <img src="projects/cs5180/bio.gif" alt="BioSearch-CPP Preview">
-                        </div>
-                        <div class="project-content">
-                            <h3 class="project-title">BioSearch-CPP</h3>
-                            <p class="project-description">
-                                This project develops a specialized search engine for the Cal Poly Pomona Biology Department, enabling users to find faculty members based on research interests, expertise, and other attributes. 
-                                It crawls faculty web pages, extracts structured profile data, and processes text using lemmatization. 
-                                The search functionality leverages TF-IDF with cosine similarity ranking, includes spell-checking, and presents paginated results with clickable URLs. 
-                                Data is persistently stored in MongoDB for efficient retrieval.
-                            </p>
-                            <div class="project-tech">
-                                <span class="tech-badge">Python</span>
-                                <span class="tech-badge">MongoDB</span>
-                                <span class="tech-badge">TF-IDF</span>
-                                <span class="tech-badge">Web Crawling</span>
-                                <span class="tech-badge">Lemmatization</span>
-                                <span class="tech-badge">Natural Language Processing</span>
-                            </div>
-                            <div class="project-links">
-                                <a href="https://github.com/shreyas463/BioSearch-CPP" class="project-link" target="_blank">
-                                    <i class="fab fa-github"></i>
-                                    <span>Source Code</span>
-                                </a>
-                                <a href="https://www.youtube.com/watch?v=a22jBmXQ84U" class="project-link" target="_blank">
-                                    <i class="fab fa-youtube"></i>
-                                    <span>Demo Video</span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-
-                     <!-- Project 6: Disease Spread Simulation -->
-                     <div class="project-item">
-                        <div class="project-image">
-                            <img src="projects/epidmi/6.gif" alt="Disease Spread Simulation Preview">
-                        </div>
-                        <div class="project-content">
-                            <h3 class="project-title">Disease Spread Simulation</h3>
-                            <p class="project-description">
-                                This project aims to visually represent the spread of a disease within a population using ABM. Two modeling approaches are explored: traditional fully mixed modeling and social network-based modeling. The focus is on analyzing the changes in the number of susceptible, infected, and recovered individuals over time for different scenarios.
-                            </p>
-                            <div class="project-tech">
-                                <span class="tech-badge">Agent-Based Modeling</span>
-                                <span class="tech-badge">Simulation</span>
-                                <span class="tech-badge">Data Visualization</span>
-                                <span class="tech-badge">Network Analysis</span>
-                                <span class="tech-badge">Java</span>
-                                <span class="tech-badge">Html</span>
-                            </div>
-                            <div class="project-links">
-                                <a href="https://github.com/shreyas463/epidmi" class="project-link" target="_blank">
-                                    <i class="fab fa-github"></i>
-                                    <span>Source Code</span>
-                                </a>
-                                <a href="https://github.com/shreyas463/epidmi" class="project-link" target="_blank">
-                                    <i class="fas fa-external-link-alt"></i>
-                                    <span>Live Demo</span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 7: Formula1Won -->
-<div class="project-item">
-    <div class="project-image">
-        <img src="projects/formula1one/7.gif" alt="Formula1Won Preview">
-    </div>
-    <div class="project-content">
-        <h3 class="project-title">Formula1Won</h3>
-        <p class="project-description">
-            This project simulates a self-driving car navigating dynamic traffic using a greedy pathfinding algorithm. It prioritizes movement based on Manhattan distance while dynamically adjusting to obstacles. A collision avoidance system ensures realistic interactions by rerouting or pausing when necessary. Multiple traffic scenarios test adaptability, with real-time path visualization and step tracking. Built using JavaScript and HTML5 Canvas, it features smooth animations and an intuitive UI.
-        </p>
-        <div class="project-tech">
-            <span class="tech-badge">JavaScript</span>
-            <span class="tech-badge">HTML5 Canvas</span>
-            <span class="tech-badge">Pathfinding</span>
-            <span class="tech-badge">Simulation</span>
-        </div>
-        <div class="project-links">
-            <a href="https://github.com/shreyas463/Formula1Won" class="project-link" target="_blank">
-                <i class="fab fa-github"></i>
-                <span>Source Code</span>
-            </a>
-            <a href="https://formula1won.netlify.app/" class="project-link" target="_blank">
-                <i class="fas fa-external-link-alt"></i>
-                <span>Live Demo</span>
-            </a>
-        </div>
-    </div>
-</div>
-                    
-                    <!-- Project 8: LiveSketch -->
-                    <div class="project-item">
-                        <div class="project-image">
-                            <div class="image-slider">
-                                <div class="slider-container">
-                                    <img src="projects/livesketch/4.1.png" alt="LiveSketch Screenshot 1" class="slider-image active">
-                                    <img src="projects/livesketch/4.2.png" alt="LiveSketch Screenshot 2" class="slider-image">
-                                    <img src="projects/livesketch/4.3.png" alt="LiveSketch Screenshot 3" class="slider-image">
-                                </div>
-                                <div class="slider-controls">
-                                    <button class="slider-dot active" data-index="0"></button>
-                                    <button class="slider-dot" data-index="1"></button>
-                                    <button class="slider-dot" data-index="2"></button>
-                                </div>
-                                <button class="slider-arrow prev">&#10094;</button>
-                                <button class="slider-arrow next">&#10095;</button>
-                            </div>
-                        </div>
-                        <div class="project-content">
-                            <h3 class="project-title">LiveSketch</h3>
-                            <p class="project-description">
-                                Built "LiveSketch," a collaborative whiteboard app enabling real-time drawing with Electron, Socket.io, and Canvas API, achieving sub-50ms latency.
-                                Integrated MongoDB for storing user actions, enabling persistent sessions and seamless support for 100+ concurrent users.
-                            </p>
-                            <div class="project-tech">
-                                <span class="tech-badge">Electron</span>
-                                <span class="tech-badge">Socket.io</span>
-                                <span class="tech-badge">Canvas API</span>
-                                <span class="tech-badge">MongoDB</span>
-                            </div>
-                            <div class="project-links">
-                                <a href="https://github.com/shreyas463/LiveSketch" class="project-link" target="_blank">
-                                    <i class="fab fa-github"></i>
-                                    <span>Source Code</span>
-                                </a>
-                                <a href="https://live-sketch.vercel.app/" class="project-link" target="_blank">
-                                    <i class="fas fa-external-link-alt"></i>
-                                    <span>Live Demo</span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    
-                    
-                    <!-- Project 9: Virtual Art Gallery -->
-                    <div class="project-item">
-                        <div class="project-image">
-                            <img src="projects/artg/art.gif" alt="Virtual Art Gallery Preview">
-                        </div>
-                        <div class="project-content">
-                            <h3 class="project-title">Virtual Art Gallery</h3>
-                            <p class="project-description">
-                                An interactive platform leveraging the MET API to showcase priceless artworks in real time. 
-                                Built with React, Node.js, Express, and MongoDB, it offers advanced search, artist insights, AI-driven recommendations, 
-                                virtual exhibitions, and personal collections. Users can engage through comments, curate favorites, 
-                                and explore high-resolution artworks, creating a rich digital gallery experience.
-                            </p>
-                            <div class="project-tech">
-                                <span class="tech-badge">React</span>
-                                <span class="tech-badge">Node.js</span>
-                                <span class="tech-badge">Express</span>
-                                <span class="tech-badge">MongoDB</span>
-                                <span class="tech-badge">MET API</span>
-                            </div>
-                            <div class="project-links">
-                                <a href="https://github.com/shreyas463/Virtual-art" class="project-link" target="_blank">
-                                    <i class="fab fa-github"></i>
-                                    <span>Source Code</span>
-                                </a>
-                                <a href="https://github.com/shreyas463/Virtual-art" class="project-link" target="_blank">
-                                    <i class="fas fa-external-link-alt"></i>
-                                    <span>Live Demo</span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    
-                   
-                
-                <div class="more-projects">
-                    <a href="https://github.com/shreyas463" target="_blank" class="btn-more">
-                        <span>View More Projects</span>
-                        <i class="fas fa-arrow-right"></i>
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <footer class="footer">
-            <div class="container">
-                <p class="copyright"> 2025 Shreyas Chaudhary. All rights reserved.</p>
-            </div>
-        </footer>
-
-        <script src="js/main.js"></script>
-    </div>
+    <script>
+      document.getElementById('enterBtn').onclick = function() {
+        document.querySelector('.landing-page').style.display = 'none';
+        document.getElementById('bootstrap-main').style.display = 'block';
+      };
+    </script>
 </body>
 </html>
