@@ -51,6 +51,12 @@
             <!-- Sidebar -->
             <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-dark sidebar collapse">
               <div class="position-sticky pt-3">
+                <div id="theme-toggle" style="display: flex; justify-content: center; align-items: center; margin-bottom: 2rem;">
+                  <button id="toggle-theme-btn" aria-label="Toggle dark/light mode" style="background: #18181b; border: none; border-radius: 2rem; padding: 0.4rem 1.2rem; display: flex; align-items: center; gap: 1.2rem; box-shadow: 0 2px 8px #0002; cursor: pointer;">
+                    <svg id="sun-icon" width="24" height="24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><path d="M12 1v2m0 18v2m11-11h-2M3 12H1m16.95 7.07l-1.41-1.41M6.34 6.34L4.93 4.93m12.02 0l-1.41 1.41M6.34 17.66l-1.41 1.41"/></svg>
+                    <svg id="moon-icon" width="24" height="24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1111.21 3a7 7 0 109.79 9.79z"/></svg>
+                  </button>
+                </div>
                 <ul class="nav flex-column">
                   <li class="nav-item"><a class="nav-link active text-light" href="#about"><i class="bi bi-person"></i> About</a></li>
                   <li class="nav-item"><a class="nav-link text-light" href="#education"><i class="bi bi-mortarboard"></i> Education</a></li>
@@ -81,81 +87,104 @@
                 </div>
               </section>
               <!-- Education Section -->
-              <section id="education" class="pt-4 pb-4 mb-5 p-4" style="background: linear-gradient(120deg, #1e215d 0%, #3a8fd8 40%, #7f53ac 70%, #5ffbf1 100%); border-radius: 1.5rem;">
-                <div class="card-body text-white">
-                  <h2 class="card-title text-white">Education</h2>
-                  <div class="mb-3">
-                    <h5>Master of Science - MS, Computer Science</h5>
-                    <div class="date-glossy">Aug 2023 - May 2025</div>
-                    <div>California State Polytechnic University-Pomona</div>
-                    <div>GPA: 4.0</div>
-                    <div>Key Courses: Advanced Computer Architecture, Information Retrieval, Human-Computer Interaction, Big Data Analytics & Cloud Computing, Advanced Algorithm and Analysis, Advanced Software Engineering, Mobile App Development, Computational Social Systems</div>
-                    <div>Activities: Chess Club, CALsys lab</div>
+              <section id="education" style="padding: 3rem 0;">
+                <h2 class="section-title">Education</h2>
+                <div class="timeline-aurora">
+                  <div class="timeline-entry">
+                    <div class="timeline-dot-aurora"></div>
+                    <h3>Master of Science - MS, Computer Science</h3>
+                    <div class="timeline-company">California State Polytechnic University-Pomona</div>
+                    <div class="timeline-duration">Aug 2023 - May 2025</div>
+                    <div class="timeline-description">
+                      <strong>GPA:</strong> 4.0<br>
+                      <strong>Key Courses:</strong> Advanced Computer Architecture, Information Retrieval, Human-Computer Interaction, Big Data Analytics & Cloud Computing, Advanced Algorithm and Analysis, Advanced Software Engineering, Mobile App Development, Computational Social Systems<br>
+                      <strong>Activities:</strong> Chess Club, CALsys lab
+                    </div>
                   </div>
-                  <div>
-                    <h5>Bachelor of Engineering - BE, Computer Science</h5>
-                    <div class="date-glossy">Jun 2019 - May 2023</div>
-                    <div>New Horizon College of Engineering</div>
-                    <div>GPA: 3.75/4.0 &nbsp; CGPA: 8.63/10.0</div>
-                    <div>Activities: Mobile App Development Club, Robotics Club</div>
+                  <div class="timeline-entry">
+                    <div class="timeline-dot-aurora"></div>
+                    <h3>Bachelor of Engineering - BE, Computer Science</h3>
+                    <div class="timeline-company">New Horizon College of Engineering</div>
+                    <div class="timeline-duration">Jun 2019 - May 2023</div>
+                    <div class="timeline-description">
+                      <strong>GPA:</strong> 3.75/4.0 &nbsp; <strong>CGPA:</strong> 8.63/10.0<br>
+                      <strong>Activities:</strong> Mobile App Development Club, Robotics Club
+                    </div>
                   </div>
                 </div>
               </section>
               <!-- Experience Section -->
-              <section id="experience" class="pt-4 pb-4 mb-5 p-4" style="background: linear-gradient(120deg, #1e215d 0%, #3a8fd8 40%, #7f53ac 70%, #5ffbf1 100%); border-radius: 1.5rem;">
-                <div class="card-body text-white">
-                  <h2 class="card-title text-white">Professional Experience</h2>
-                  <div class="mb-3">
-                    <h5>FullStack Engineering Intern</h5>
-                    <div class="date-glossy">June 2025 – Present</div>
-                    <div>Method, Charlotte, NC</div>
-                    <ul>
-                      <li>Collaborating in an agile 8-person team to build an internal knowledge-management platform using React, Next.js, TypeScript, and Firebase, enabling efficient metadata management and intuitive search/filtering through dynamic frontend components.</li>
-                      <li>Improved backend security and maintainability by implementing role-based access control (RBAC) using Google Firebase Auth and authorization middleware, restricting CRUD access based on user roles and streamlining CI/CD with Google Cloud Functions.</li>
-                      <li>Integrating an LLM-powered query system with Ollama (Gemma model) and deploying serverless inference through Google Cloud Functions; currently working on CI/CD setup and GCP deployment pipeline to enable seamless natural language query processing.</li>
-                    </ul>
+              <section id="experience" style="padding: 3rem 0;">
+                <h2 class="section-title">Professional Experience</h2>
+                <div class="timeline-aurora">
+                  <div class="timeline-entry">
+                    <div class="timeline-dot-aurora"></div>
+                    <h3>FullStack Engineering Intern</h3>
+                    <div class="timeline-company">Method</div>
+                    <div class="timeline-duration">June 2025 – Present</div>
+                    <div class="timeline-location">Charlotte, NC</div>
+                    <div class="timeline-description">
+                      <ul>
+                        <li>Collaborating in an agile 8-person team to build an internal knowledge-management platform using React, Next.js, TypeScript, and Firebase, enabling efficient metadata management and intuitive search/filtering through dynamic frontend components.</li>
+                        <li>Improved backend security and maintainability by implementing role-based access control (RBAC) using Google Firebase Auth and authorization middleware, restricting CRUD access based on user roles and streamlining CI/CD with Google Cloud Functions.</li>
+                        <li>Integrating an LLM-powered query system with Ollama (Gemma model) and deploying serverless inference through Google Cloud Functions; currently working on CI/CD setup and GCP deployment pipeline to enable seamless natural language query processing.</li>
+                      </ul>
+                    </div>
                   </div>
-                  <div class="mb-3">
-                    <h5>Software Engineer Intern</h5>
-                    <div class="date-glossy">Jun 2024 - Aug 2024</div>
-                    <div>GlobalLogic, Austin, TX, USA</div>
-                    <ul>
-                      <li>Designed and developed a gamified quiz application to boost learner engagement and retention, implementing secure authentication and deploying for 29,000+ users via GCP, OAuth, CRUD operations, and accurate storage of data in
-                        Google Firestore.</li>
-                      <li>Collaborated with a cross-functional team to build a scalable solution using React, Node.js, TypeScript, GCP and Next.js; integrated a Firestore NoSQL database with frontend components based on Figma prototypes, achieving a 30% increase in learner retention.</li>
-                      <li>Executed the complete Software Development Lifecycle (SDLC) over six agile sprints, from planning and development through testing and client pitch. Successfully delivered a fully functional prototype that exceeded stakeholder expectations and set the stage for further enhancements.</li>
-                    </ul>
+                  <div class="timeline-entry">
+                    <div class="timeline-dot-aurora"></div>
+                    <h3>Software Engineer Intern</h3>
+                    <div class="timeline-company">GlobalLogic</div>
+                    <div class="timeline-duration">Jun 2024 - Aug 2024</div>
+                    <div class="timeline-location">Austin, TX, USA</div>
+                    <div class="timeline-description">
+                      <ul>
+                        <li>Designed and developed a gamified quiz application to boost learner engagement and retention, implementing secure authentication and deploying for 29,000+ users via GCP, OAuth, CRUD operations, and accurate storage of data in Google Firestore.</li>
+                        <li>Collaborated with a cross-functional team to build a scalable solution using React, Node.js, TypeScript, GCP and Next.js; integrated a Firestore NoSQL database with frontend components based on Figma prototypes, achieving a 30% increase in learner retention.</li>
+                        <li>Executed the complete Software Development Lifecycle (SDLC) over six agile sprints, from planning and development through testing and client pitch. Successfully delivered a fully functional prototype that exceeded stakeholder expectations and set the stage for further enhancements.</li>
+                      </ul>
+                    </div>
                   </div>
-                  <div class="mb-3">
-                    <h5>Student Volunteer</h5>
-                    <div class="date-glossy">Jan 2025 - Present</div>
-                    <div>CALSys Lab, Cal Poly Pomona</div>
-                    <ul>
-                      <li>Currently working on improving the accuracy of the existing model by adding more features and getting the abstract ready as we have a paper submission in the first week of August.</li>
-                      <li>Designing and building a cyberinfrastructure that scrapes malicious hacker data from the darkweb for the production of cyber-threat intelligence models</li>
-                      <li>Developing recommender systems to find and recommend credible websites including criminal hacking content</li>
-                      <li>Conducting research on cybersecurity threats and vulnerabilities to enhance threat intelligence capabilities</li>
-                      <li>Collaborating with faculty and other researchers on cybersecurity projects and publications</li>
-                    </ul>
+                  <div class="timeline-entry">
+                    <div class="timeline-dot-aurora"></div>
+                    <h3>Student Volunteer</h3>
+                    <div class="timeline-company">CALSys Lab, Cal Poly Pomona</div>
+                    <div class="timeline-duration">Jan 2025 - Present</div>
+                    <div class="timeline-description">
+                      <ul>
+                        <li>Currently working on improving the accuracy of the existing model by adding more features and getting the abstract ready as we have a paper submission in the first week of August.</li>
+                        <li>Designing and building a cyberinfrastructure that scrapes malicious hacker data from the darkweb for the production of cyber-threat intelligence models</li>
+                        <li>Developing recommender systems to find and recommend credible websites including criminal hacking content</li>
+                        <li>Conducting research on cybersecurity threats and vulnerabilities to enhance threat intelligence capabilities</li>
+                        <li>Collaborating with faculty and other researchers on cybersecurity projects and publications</li>
+                      </ul>
+                    </div>
                   </div>
-                  <div class="mb-3">
-                    <h5>Graduate Research Assistant</h5>
-                    <div class="date-glossy">Aug 2024 - May 2025</div>
-                    <div>California State Polytechnic University-Pomona </div>
-                    <ul>
-                      <li>• Developing a campus-based autonomous ride-sharing platform, integrating real-time vehicle tracking, AI-driven obstacle detection (YOLO, OpenCV), GPS-based navigation, and ROS2-based control systems.</li>
-                      <li>Built a mobile app for ride scheduling using React Native and Expo.</li>
-                      <li>Developed teleoperation interface using Next.js, TypeScript, Python, CSS, and JavaScript.</li>
-                      <li>Enabled remote vehicle control within the college network’s range and hosted the project on GitHub.</li>
-                    </ul>
+                  <div class="timeline-entry">
+                    <div class="timeline-dot-aurora"></div>
+                    <h3>Graduate Research Assistant</h3>
+                    <div class="timeline-company">California State Polytechnic University-Pomona</div>
+                    <div class="timeline-duration">Aug 2024 - May 2025</div>
+                    <div class="timeline-description">
+                      <ul>
+                        <li>Developing a campus-based autonomous ride-sharing platform, integrating real-time vehicle tracking, AI-driven obstacle detection (YOLO, OpenCV), GPS-based navigation, and ROS2-based control systems.</li>
+                        <li>Built a mobile app for ride scheduling using React Native and Expo.</li>
+                        <li>Developed teleoperation interface using Next.js, TypeScript, Python, CSS, and JavaScript.</li>
+                        <li>Enabled remote vehicle control within the college network’s range and hosted the project on GitHub.</li>
+                      </ul>
+                    </div>
                   </div>
-                  <div>
-                    <h5>SAP Intern (Unpaid)</h5>
-                    <div class="date-glossy">Feb 2023 - Jun 2023</div>
-                    <div>Quantum Integrators, Bangalore, India</div>
-                    <ul>
-                      <li>Worked on different systems such as B4P, B4D, and B4, set up VPN, Pulse, and Eclipse, integrated working components and systems, debugged and tested the code, documented and tested new features, researched and investigated a wide range of technical issues, and analyzed datasets using SAP BW S/4HANA.</li>
-                    </ul>
+                  <div class="timeline-entry">
+                    <div class="timeline-dot-aurora"></div>
+                    <h3>SAP Intern (Unpaid)</h3>
+                    <div class="timeline-company">Quantum Integrators</div>
+                    <div class="timeline-duration">Feb 2023 - Jun 2023</div>
+                    <div class="timeline-location">Bangalore, India</div>
+                    <div class="timeline-description">
+                      <ul>
+                        <li>Worked on different systems such as B4P, B4D, and B4, set up VPN, Pulse, and Eclipse, integrated working components and systems, debugged and tested the code, documented and tested new features, researched and investigated a wide range of technical issues, and analyzed datasets using SAP BW S/4HANA.</li>
+                      </ul>
+                    </div>
                   </div>
                 </div>
               </section>
