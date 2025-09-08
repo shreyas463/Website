@@ -15,11 +15,6 @@
     <script defer src="js/stars.js"></script>
     <script defer src="js/slider.js"></script>
     <script defer src="js/main.js"></script>
-    <!-- Vercel Analytics -->
-    <script>
-      window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
-    </script>
-    <script defer src="/_vercel/insights/script.js"></script>
 </head>
 <body>
     <canvas id="bg-canvas" style="display:none;"></canvas>
@@ -78,20 +73,18 @@
                   <div class="col-md-3 text-center mb-3 mb-md-0">
                     <img src="homepage_logo/new photo.JPG" alt="Shreyas Chaudhary" style="width: 140px; height: 140px; object-fit: cover; border-radius: 50%; border: 4px solid #5ffbf1; box-shadow: 0 4px 24px #5ffbf188;">
                   </div>
-                  <div class="col-md-9">
+                  <div class="col-md-9 text-center">
                     <h2 class="card-title text-white">About</h2>
-                    <p class="card-text text-white" style="font-size: 1.1rem;">Hi, I’m Shreyas Chaudhary—a recent Computer Science graduate from Cal Poly Pomona with a 4.0 GPA, currently based in the United States. I’ve completed two software engineering internships at GlobalLogic and Method, where I built and maintained full-stack applications, implemented secure authentication systems, and integrated LLMs for intelligent search experiences. 
-                      
-                      I’m now actively seeking full-time opportunities in software engineering.
+                    <p class="card-text text-white" style="font-size: 1.1rem;">Hi, I'm Shreyas Chaudhary—a recent Computer Science graduate from Cal Poly Pomona (4.0 GPA). I've completed software engineering internships at GlobalLogic and Method, and <span style="color: #ff6b6b;">I'm currently interning at Walgreens Boots Alliance as an SDET on the RX-i Stock Management team.</span> Across these roles, I've built and maintained full-stack applications, developed secure authentication systems, and integrated LLMs for intelligent search. <span style="color: #ff6b6b;">I'm now seeking full-time opportunities in software engineering.</span>
 
-                      Outside of work, I’m passionate about building high-impact, complex applications. In my free time, I enjoy playing soccer, hitting the gym, and watching Formula 1. I’m also a fan of TV shows and like staying up to date with world news.</p>
+                      Outside of work, I enjoy building impactful projects, playing soccer, going to the gym, and watching Formula 1.</p>
                   </div>
                 </div>
               </section>
               <!-- Education Section -->
               <section id="education" style="padding: 3rem 0;">
-                <h2 class="section-title">Education</h2>
-                <div class="timeline-aurora">
+                <h2 class="section-title text-center">Education</h2>
+                <div class="timeline-aurora text-center">
                   <div class="timeline-entry">
                     <div class="timeline-dot-aurora"></div>
                     <h3>Master of Science - MS, Computer Science</h3>
@@ -117,18 +110,19 @@
               </section>
               <!-- Experience Section -->
               <section id="experience" style="padding: 3rem 0;">
-                <h2 class="section-title">Professional Experience</h2>
-                <div class="timeline-aurora">
+                <h2 class="section-title text-center">Professional Experience</h2>
+                <div class="timeline-aurora text-center">
                   <div class="timeline-entry">
                     <div class="timeline-dot-aurora"></div>
-                    <h3>Software Development Engineer</h3>
-                    <div class="timeline-company">Global Logic</div>
+                    <h3 >Software Development Engineer</h3>
+                    <div class="timeline-company">Global Logic- Walgreens Boots Alliance</div>
                     <div class="timeline-duration">Aug 2025 - Present</div>
                     <div class="timeline-location">Deerfield, IL</div>
                     <div class="timeline-description">
                       <ul>
                         <li>I'm interning at Walgreens Boots Alliance as an SDE intern at their office in Deerfield, IL.</li>
-                        <li>Tools and technologies: Java, TDD, BDD, JUnit, Selenium, GitHub Copilot.</li>
+                        <li>I’m part of the RX-i: Stock Management team which handles and is responsible for the Drugs across the US.</li>
+                        <li>Tools and technologies: Java, Test-Driven Development , Behavior-Driven Development, JUnit, Selenium, Azure DevOps Services, Jira, Azure Cosmos DB, Kubernetes.</li>
                       </ul>
                     </div>
                   </div>
@@ -141,7 +135,8 @@
                     <div class="timeline-description">
                       <ul>
                         <li>Completed a software engineering internship at Method, a global consulting firm, where I worked closely with designers and project managers to create impactful client solutions.</li>
-                        <li>Collaborated in an agile 8-person team to build an internal knowledge-management platform using React, Next.js, LLMs, TypeScript, and Firebase, enabling efficient metadata management and intuitive search/filtering through dynamic frontend components.</li>
+                        <li>Collaborated in an 8-person Agile team to build an internal knowledge-management platform with React, Next.js,
+                          TypeScript, and Firebase, enabling efficient metadata management and intuitive search/filter features.</li>
                         <li>Improved backend security and maintainability by implementing role-based access control (RBAC) using Google Firebase Auth and authorization middleware, restricting CRUD access based on user roles and streamlining CI/CD with Google Cloud Functions.</li>
                         <li>Developed an LLM-powered file organization system using Google Gemini to match uploaded files to the correct folder structure automatically and suggest standardized filenames based on metadata and user-defined tags, with user review and approval before submission..</li>
                       </ul>
@@ -169,10 +164,9 @@
                     <div class="timeline-description">
                       <ul>
                         <li>Currently working on improving the accuracy of the existing model by adding more features and getting the abstract ready as we have a paper submission in the first week of August.</li>
-                        <li>Designing and building a cyberinfrastructure that scrapes malicious hacker data from the darkweb for the production of cyber-threat intelligence models</li>
-                        <li>Developing recommender systems to find and recommend credible websites including criminal hacking content</li>
-                        <li>Conducting research on cybersecurity threats and vulnerabilities to enhance threat intelligence capabilities</li>
-                        <li>Collaborating with faculty and other researchers on cybersecurity projects and publications</li>
+                        <li>Designing and building an automated pipeline that scrapes malicious hacker data from the dark web and processes it into structured cyber-threat intelligence models.</li>
+                        <li>Browsing the darkweb marketplaces and forums via tor browser and scraping the data using python and selenium</li>
+      
                       </ul>
                     </div>
                   </div>
@@ -183,10 +177,11 @@
                     <div class="timeline-duration">Aug 2024 - May 2025</div>
                     <div class="timeline-description">
                       <ul>
-                        <li>Developing a campus-based autonomous ride-sharing platform, integrating real-time vehicle tracking, AI-driven obstacle detection (YOLO, OpenCV), GPS-based navigation, and ROS2-based control systems.</li>
-                        <li>Built a mobile app for ride scheduling using React Native and Expo.</li>
-                        <li>Developed teleoperation interface using Next.js, TypeScript, Python, CSS, and JavaScript.</li>
-                        <li>Enabled remote vehicle control within the college network’s range and hosted the project on GitHub.</li>
+                        <li>Built a mobile app for campus-based autonomous ride-sharing using React Native and Expo, integrating real-time
+                          tracking, ML-driven obstacle detection (YOLO, OpenCV), GPS navigation, and ROS2 control.</li>
+                        <li>Published two papers at the ASEE Conference on autonomous vehicles, covering CNN-based end-to-end control systems
+                          and frameworks for equitable global AV deployment across varied socio-economic and infrastructural contexts.</li>
+                          <li>Implemented outdoor mapping with SLAM Toolbox and RViz2, improving localization and reducing testing collisions.</li>
                       </ul>
                     </div>
                   </div>
