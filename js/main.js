@@ -1,20 +1,31 @@
 // Landing page transition
 document.addEventListener('DOMContentLoaded', () => {
     const landingPage = document.querySelector('.landing-page');
-    const mainContent = document.querySelector('.main-content');
-    const enterBtn = document.querySelector('.aurora-enter-btn');
+    const bootstrapMain = document.getElementById('bootstrap-main');
+    const enterBtn = document.getElementById('enterBtn');
 
+    if (enterBtn && landingPage) {
     // Handle enter button click
     enterBtn.addEventListener('click', () => {
+            // Add fade out animation
         landingPage.style.opacity = '0';
-        landingPage.style.transform = 'scale(1.05)';
+            landingPage.style.transform = 'scale(0.95)';
+            landingPage.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            
         setTimeout(() => {
             landingPage.style.display = 'none';
-            mainContent.classList.remove('hidden');
-            mainContent.style.opacity = '1';
-            // Optionally, load additional scripts here if needed
-        }, 800);
+                if (bootstrapMain) {
+                    bootstrapMain.style.display = 'block';
+                    bootstrapMain.style.opacity = '0';
+                    bootstrapMain.style.transition = 'opacity 0.8s ease';
+                    // Trigger fade in
+                    setTimeout(() => {
+                        bootstrapMain.style.opacity = '1';
+                    }, 50);
+                }
+            }, 600);
     });
+    }
 });
 
 // Mobile menu functionality
