@@ -621,52 +621,95 @@
     }
 
     /* Resume section formatting */
+    /* Resume section formatting */
+    #portfolio-main .resume {
+      padding-bottom: 100px !important;
+      background: #f8fafc !important;
+      /* Soft background to highlight cards */
+    }
+
+    #portfolio-main .resume .container {
+      background: transparent !important;
+    }
+
     #portfolio-main .resume-title {
-      font-size: 26px !important;
-      font-weight: 700 !important;
-      margin-top: 20px !important;
-      margin-bottom: 20px !important;
-      color: #173b6c !important;
+      font-size: 28px !important;
+      font-weight: 800 !important;
+      margin-top: 30px !important;
+      margin-bottom: 25px !important;
+      color: #0f172a !important;
+      letter-spacing: 1px !important;
+      text-transform: uppercase !important;
     }
 
     #portfolio-main .resume-item {
-      padding: 0 0 30px 20px !important;
-      margin-top: -2px !important;
-      border-left: 2px solid #149ddd !important;
+      padding: 25px 30px 25px 30px !important;
+      margin-bottom: 30px !important;
+      margin-top: 0 !important;
+      border-left: 3px solid #149ddd !important;
       position: relative !important;
       overflow: visible !important;
+      background: #ffffff !important;
+      border-radius: 0 12px 12px 0 !important;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04) !important;
+      transition: all 0.3s ease !important;
+      border-right: 1px solid #f1f5f9 !important;
+      border-top: 1px solid #f1f5f9 !important;
+      border-bottom: 1px solid #f1f5f9 !important;
+    }
+
+    #portfolio-main .resume-item:hover {
+      transform: translateX(8px) !important;
+      box-shadow: 0 12px 25px rgba(20, 157, 221, 0.12) !important;
+      border-right-color: transparent !important;
+      border-top-color: transparent !important;
+      border-bottom-color: transparent !important;
     }
 
     #portfolio-main .resume-item.pb-0 {
-      padding-bottom: 20px !important;
+      padding-bottom: 25px !important;
     }
 
     #portfolio-main .resume-item ul {
-      list-style: disc !important;
-      padding-left: 20px !important;
+      list-style: none !important;
+      padding-left: 0 !important;
       margin: 15px 0 0 0 !important;
     }
 
     #portfolio-main .resume-item ul li {
-      padding: 5px 0 !important;
-      color: #272829 !important;
-      display: list-item !important;
-      margin-bottom: 8px !important;
-      line-height: 1.6 !important;
+      padding: 0 0 12px 28px !important;
+      color: #475569 !important;
+      position: relative !important;
+      margin-bottom: 0 !important;
+      line-height: 1.7 !important;
+      font-size: 15px !important;
+    }
+
+    #portfolio-main .resume-item ul li::before {
+      content: "▹" !important;
+      position: absolute !important;
+      left: 0 !important;
+      top: 0 !important;
+      color: #149ddd !important;
+      font-size: 20px !important;
+      font-weight: bold !important;
+      line-height: 1.5 !important;
     }
 
     #portfolio-main .resume-item ul li i {
-      margin-right: 10px !important;
-      color: #149ddd !important;
-      font-size: 16px !important;
+      display: none !important;
+      /* Hide old icons if any */
     }
 
     #portfolio-main .resume-item ul li a {
       color: #149ddd !important;
       text-decoration: none !important;
+      font-weight: 500 !important;
+      transition: color 0.3s ease !important;
     }
 
     #portfolio-main .resume-item ul li a:hover {
+      color: #0d7bb8 !important;
       text-decoration: underline !important;
     }
 
@@ -674,67 +717,76 @@
       font-size: 20px !important;
       font-weight: 700 !important;
       margin-bottom: 10px !important;
-      color: #173b6c !important;
+      color: #0f172a !important;
+      letter-spacing: 0.5px !important;
+      line-height: 1.3 !important;
     }
 
     #portfolio-main .resume-item h5 {
-      font-size: 16px !important;
+      font-size: 14px !important;
       font-weight: 600 !important;
-      color: #149ddd !important;
-      margin-bottom: 10px !important;
-      background: #f5f8fd !important;
-      padding: 5px 15px !important;
+      color: #0284c7 !important;
+      margin-bottom: 15px !important;
+      background: #f0f9ff !important;
+      padding: 6px 16px !important;
       display: inline-block !important;
-      border-radius: 4px !important;
-      margin-right: 10px !important;
+      border-radius: 20px !important;
+      border: 1px solid #bae6fd !important;
+      letter-spacing: 0.5px !important;
+      box-shadow: 0 2px 5px rgba(14, 165, 233, 0.05) !important;
     }
 
     #portfolio-main .resume-item p em {
-      color: #333 !important;
-      font-style: italic !important;
-      margin-left: 0 !important;
+      font-style: normal !important;
+      color: #334155 !important;
+      font-weight: 600 !important;
+      font-size: 15.5px !important;
+      display: inline-flex !important;
+      align-items: center !important;
+      background: transparent !important;
+    }
+
+    #portfolio-main .resume-item p em::before {
+      content: "\f1ad" !important;
+      font-family: "Font Awesome 6 Free" !important;
+      font-weight: 900 !important;
+      margin-right: 8px !important;
+      color: #64748b !important;
+      font-size: 14px !important;
     }
 
     #portfolio-main .resume-item p strong {
-      color: #272829 !important;
-      font-weight: 700 !important;
+      color: #0f172a !important;
+      font-weight: 600 !important;
     }
 
     #portfolio-main .resume-item p {
-      color: #272829 !important;
-      margin-bottom: 8px !important;
-      line-height: 1.6 !important;
-    }
-
-    #portfolio-main .resume-item p {
-      margin-bottom: 10px !important;
-      color: #272829 !important;
-      line-height: 1.6 !important;
+      color: #475569 !important;
+      margin-bottom: 12px !important;
+      line-height: 1.7 !important;
       display: block !important;
       width: 100% !important;
-    }
-
-    #portfolio-main .resume-item p em {
-      font-style: italic !important;
-      color: #333 !important;
-    }
-
-    #portfolio-main .resume-item ul li {
-      margin-bottom: 8px !important;
-      padding-left: 0 !important;
-      list-style-position: outside !important;
+      font-size: 15.5px !important;
     }
 
     #portfolio-main .resume-item::before {
       content: "" !important;
       position: absolute !important;
-      width: 16px !important;
-      height: 16px !important;
-      border-radius: 50px !important;
-      left: -9px !important;
-      top: 0 !important;
-      background: #fff !important;
-      border: 2px solid #149ddd !important;
+      width: 20px !important;
+      height: 20px !important;
+      border-radius: 50% !important;
+      left: -11px !important;
+      top: 25px !important;
+      background: #ffffff !important;
+      border: 4px solid #149ddd !important;
+      box-shadow: 0 0 0 4px rgba(20, 157, 221, 0.15) !important;
+      transition: all 0.3s ease !important;
+      z-index: 2 !important;
+    }
+
+    #portfolio-main .resume-item:hover::before {
+      background: #149ddd !important;
+      box-shadow: 0 0 0 6px rgba(20, 157, 221, 0.25) !important;
     }
 
     /* Portfolio items visibility */
@@ -1618,12 +1670,16 @@
                 <h5>Jun 2025 – Aug 2025</h5>
                 <p><em>Method, Charlotte, NC</em></p>
                 <ul>
-                  <li>Built an internal knowledge-management platform with React, Next.js, TypeScript, and Firebase in
-                    an 8-person Agile team</li>
-                  <li>Implemented role-based access control (RBAC) using Google Firebase Auth and authorization
-                    middleware to improve backend security</li>
-                  <li>Developed an LLM-powered file organization system using Google Gemini to automatically match
-                    uploaded files to correct folder structures</li>
+                  <li>Engineered an LLM-driven file organisation workflow using Google Gemini that intelligently
+                    classifies uploaded files into the correct folder hierarchy and generates standardised filenames
+                    from metadata and tags — eliminating document misplacement and reducing search time for employees.
+                  </li>
+                  <li>Collaborated in agile sprints using Jira and Confluence to design and implement an internal
+                    knowledge-management platform with React, Next.js, and Firebase, improving information architecture
+                    and reducing information retrieval time. </li>
+                  <li>Strengthened backend security and maintainability by integrating Google Firebase Auth with
+                    role-based authorization middleware, enforcing granular CRUD permissions and Protected Route access
+                    controls.</li>
                   <li>Streamlined CI/CD processes with Google Cloud Functions to improve deployment efficiency</li>
                 </ul>
               </div>
@@ -1660,7 +1716,7 @@
               </div>
               <div class="resume-item">
                 <h4>Research Assistant @ CALSys Lab at California State Polytechnic University, Pomona</h4>
-                <h5>Jan 2025 - Present</h5>
+                <h5>Jan 2025 - May 2025</h5>
                 <p><em>California, USA</em></p>
                 <ul>
                   <li>Improving accuracy of existing models by adding features and preparing paper abstracts for
@@ -1787,7 +1843,7 @@
               </div>
 
               <div class="progress">
-                <span class="skill">NODEJS <i class="val">75%</i></span>
+                <span class="skill">PLAYWRIGHT <i class="val">75%</i></span>
                 <div class="progress-bar-wrap">
                   <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"
                     style="width: 75%"></div>
