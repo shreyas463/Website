@@ -1,2046 +1,2208 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shreyas Chaudhary</title>
-    <link rel="icon" href="homepage_logo/scc.ico" type="image/jpeg">
-    <style>
-      /* Override landing page styles when portfolio is shown */
-      #portfolio-main {
-        display: block !important;
-        position: relative;
-        width: 100%;
-        min-height: 100vh;
-        background: #fff !important;
-        z-index: 1;
-      }
-      
-      #portfolio-main #header {
-        position: fixed !important;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        width: 300px;
-        z-index: 9997;
-        background: #040b14 !important;
-      }
-      
-      #portfolio-main #main {
-        margin-left: 300px !important;
-        background: #fff !important;
-        position: relative;
-        z-index: 1;
-        color: #272829 !important;
-        overflow-x: hidden !important;
-      }
-      
-      #portfolio-main section {
-        background: #fff !important;
-        color: #272829 !important;
-        padding: 60px 0 !important;
-        overflow: visible !important;
-        min-height: auto !important;
-      }
-      
-      #portfolio-main section#hero {
-        padding: 0 !important;
-      }
-      
-      #portfolio-main .section-bg {
-        background: #f5f8fd !important;
-      }
-      
-      #portfolio-main .section-title h2 {
-        color: #173b6c !important;
-      }
-      
-      #portfolio-main .section-title p {
-        color: #272829 !important;
-      }
-      
-      #portfolio-main .about .content h3 {
-        color: #173b6c !important;
-      }
-      
-      #portfolio-main .about .content p {
-        color: #272829 !important;
-      }
-      
-      #portfolio-main .about .content ul li {
-        color: #272829 !important;
-      }
-      
-      #portfolio-main .resume-item h4,
-      #portfolio-main .resume-item h5,
-      #portfolio-main .resume-item p {
-        color: #272829 !important;
-      }
-      
-      #portfolio-main .skill {
-        color: #272829 !important;
-      }
-      
-      #portfolio-main .portfolio-info h4,
-      #portfolio-main .portfolio-info p {
-        color: #272829 !important;
-      }
-      
-      #portfolio-main .certification-item h4,
-      #portfolio-main .certification-item h5,
-      #portfolio-main .certification-item p {
-        color: #272829 !important;
-      }
-      
-      #portfolio-main .info h4,
-      #portfolio-main .info p {
-        color: #272829 !important;
-      }
-      
-      /* Ensure all content is visible */
-      #portfolio-main .row {
-        display: flex !important;
-        flex-wrap: wrap !important;
-      }
-      
-      #portfolio-main .col-lg-4,
-      #portfolio-main .col-lg-6,
-      #portfolio-main .col-lg-8,
-      #portfolio-main .col-md-6 {
-        display: block !important;
-        visibility: visible !important;
-        opacity: 1 !important;
-      }
-      
-      #portfolio-main img {
-        display: block !important;
-        visibility: visible !important;
-        opacity: 1 !important;
-        max-width: 100% !important;
-      }
-      
-      #portfolio-main ul,
-      #portfolio-main li {
-        display: block !important;
-        visibility: visible !important;
-      }
-      
-      #portfolio-main .progress,
-      #portfolio-main .count-box,
-      #portfolio-main .resume-item,
-      #portfolio-main .portfolio-item,
-      #portfolio-main .certification-item {
-        display: block !important;
-        visibility: visible !important;
-        opacity: 1 !important;
-      }
-      
-      /* Override any conflicting styles from old CSS */
-      #portfolio-main * {
-        box-sizing: border-box;
-      }
-      
-      #portfolio-main .container {
-        width: 100% !important;
-        max-width: 1200px !important;
-        margin: 0 auto !important;
-        padding-left: 40px !important;
-        padding-right: 40px !important;
-        box-sizing: border-box !important;
-        padding: 0 15px !important;
-      }
-      
-      #portfolio-main h1, #portfolio-main h2, #portfolio-main h3, #portfolio-main h4, #portfolio-main h5 {
-        display: block !important;
-        visibility: visible !important;
-      }
-      
-      #portfolio-main p, #portfolio-main span, #portfolio-main strong {
-        display: inline !important;
-        visibility: visible !important;
-      }
-      
-      #portfolio-main .section-title {
-        display: block !important;
-        visibility: visible !important;
-        margin-bottom: 20px !important;
-        text-align: center !important;
-      }
-      
-      /* Profile image circular styling */
-      #portfolio-main .profile img {
-        border-radius: 50% !important;
-        width: 150px !important;
-        height: 150px !important;
-        object-fit: cover !important;
-        margin: 0 auto 20px !important;
-        display: block !important;
-        border: none !important;
-      }
-      
-      /* About section image styling */
-      #portfolio-main .about img.img-fluid {
-        border-radius: 8px !important;
-        width: 100% !important;
-        height: auto !important;
-        max-width: 100% !important;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1) !important;
-        margin-top: 95px !important;
-      }
-      
-      /* Proper spacing and alignment */
-      #portfolio-main .container {
-        padding-left: 15px !important;
-        padding-right: 15px !important;
-      }
-      
-      #portfolio-main .row {
-        margin-left: -15px !important;
-        margin-right: -15px !important;
-      }
-      
-      #portfolio-main [class*="col-"] {
-        padding-left: 15px !important;
-        padding-right: 15px !important;
-      }
-      
-      /* Section title formatting */
-      #portfolio-main .section-title h2 {
-        font-size: 32px !important;
-        font-weight: 700 !important;
-        text-transform: uppercase !important;
-        margin-bottom: 20px !important;
-        padding-bottom: 20px !important;
-        position: relative !important;
-      }
-      
-      #portfolio-main .section-title h2::after {
-        content: "" !important;
-        position: absolute !important;
-        display: block !important;
-        width: 50px !important;
-        height: 3px !important;
-        background: #149ddd !important;
-        bottom: 0 !important;
-        left: 50% !important;
-        transform: translateX(-50%) !important;
-      }
-      
-      #portfolio-main .section-title p {
-        margin-bottom: 0 !important;
-        font-style: italic !important;
-        color: #7e8890 !important;
-      }
-      
-      /* Content alignment */
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shreyas Chaudhary</title>
+  <link rel="icon" href="homepage_logo/scc.ico" type="image/jpeg">
+  <style>
+    /* Override landing page styles when portfolio is shown */
+    #portfolio-main {
+      display: block !important;
+      position: relative;
+      width: 100%;
+      min-height: 100vh;
+      background: #fff !important;
+      z-index: 1;
+    }
+
+    #portfolio-main #header {
+      position: fixed !important;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      width: 300px;
+      z-index: 9997;
+      background: #040b14 !important;
+    }
+
+    #portfolio-main #main {
+      margin-left: 300px !important;
+      background: #fff !important;
+      position: relative;
+      z-index: 1;
+      color: #272829 !important;
+      overflow-x: hidden !important;
+    }
+
+    #portfolio-main section {
+      background: #fff !important;
+      color: #272829 !important;
+      padding: 60px 0 !important;
+      overflow: visible !important;
+      min-height: auto !important;
+    }
+
+    #portfolio-main section#hero {
+      padding: 0 !important;
+    }
+
+    #portfolio-main .section-bg {
+      background: #f5f8fd !important;
+    }
+
+    #portfolio-main .section-title h2 {
+      color: #173b6c !important;
+    }
+
+    #portfolio-main .section-title p {
+      color: #272829 !important;
+    }
+
+    #portfolio-main .about .content h3 {
+      color: #173b6c !important;
+    }
+
+    #portfolio-main .about .content p {
+      color: #272829 !important;
+    }
+
+    #portfolio-main .about .content ul li {
+      color: #272829 !important;
+    }
+
+    #portfolio-main .resume-item h4,
+    #portfolio-main .resume-item h5,
+    #portfolio-main .resume-item p {
+      color: #272829 !important;
+    }
+
+    #portfolio-main .skill {
+      color: #272829 !important;
+    }
+
+    #portfolio-main .portfolio-info h4,
+    #portfolio-main .portfolio-info p {
+      color: #272829 !important;
+    }
+
+    #portfolio-main .certification-item h4,
+    #portfolio-main .certification-item h5,
+    #portfolio-main .certification-item p {
+      color: #272829 !important;
+    }
+
+    #portfolio-main .info h4,
+    #portfolio-main .info p {
+      color: #272829 !important;
+    }
+
+    /* Ensure all content is visible */
+    #portfolio-main .row {
+      display: flex !important;
+      flex-wrap: wrap !important;
+    }
+
+    #portfolio-main .col-lg-4,
+    #portfolio-main .col-lg-6,
+    #portfolio-main .col-lg-8,
+    #portfolio-main .col-md-6 {
+      display: block !important;
+      visibility: visible !important;
+      opacity: 1 !important;
+    }
+
+    #portfolio-main img {
+      display: block !important;
+      visibility: visible !important;
+      opacity: 1 !important;
+      max-width: 100% !important;
+    }
+
+    #portfolio-main ul,
+    #portfolio-main li {
+      display: block !important;
+      visibility: visible !important;
+    }
+
+    #portfolio-main .progress,
+    #portfolio-main .count-box,
+    #portfolio-main .resume-item,
+    #portfolio-main .portfolio-item,
+    #portfolio-main .certification-item {
+      display: block !important;
+      visibility: visible !important;
+      opacity: 1 !important;
+    }
+
+    /* Override any conflicting styles from old CSS */
+    #portfolio-main * {
+      box-sizing: border-box;
+    }
+
+    #portfolio-main .container {
+      width: 100% !important;
+      max-width: 1200px !important;
+      margin: 0 auto !important;
+      padding-left: 40px !important;
+      padding-right: 40px !important;
+      box-sizing: border-box !important;
+      padding: 0 15px !important;
+    }
+
+    #portfolio-main h1,
+    #portfolio-main h2,
+    #portfolio-main h3,
+    #portfolio-main h4,
+    #portfolio-main h5 {
+      display: block !important;
+      visibility: visible !important;
+    }
+
+    #portfolio-main p,
+    #portfolio-main span,
+    #portfolio-main strong {
+      display: inline !important;
+      visibility: visible !important;
+    }
+
+    #portfolio-main .section-title {
+      display: block !important;
+      visibility: visible !important;
+      margin-bottom: 20px !important;
+      text-align: center !important;
+    }
+
+    /* Profile image circular styling */
+    #portfolio-main .profile img {
+      border-radius: 50% !important;
+      width: 150px !important;
+      height: 150px !important;
+      object-fit: cover !important;
+      margin: 0 auto 20px !important;
+      display: block !important;
+      border: none !important;
+    }
+
+    /* About section image styling */
+    #portfolio-main .about img.img-fluid {
+      border-radius: 8px !important;
+      width: 100% !important;
+      height: auto !important;
+      max-width: 100% !important;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1) !important;
+      margin-top: 95px !important;
+    }
+
+    /* Proper spacing and alignment */
+    #portfolio-main .container {
+      padding-left: 15px !important;
+      padding-right: 15px !important;
+    }
+
+    #portfolio-main .row {
+      margin-left: -15px !important;
+      margin-right: -15px !important;
+    }
+
+    #portfolio-main [class*="col-"] {
+      padding-left: 15px !important;
+      padding-right: 15px !important;
+    }
+
+    /* Section title formatting */
+    #portfolio-main .section-title h2 {
+      font-size: 32px !important;
+      font-weight: 700 !important;
+      text-transform: uppercase !important;
+      margin-bottom: 20px !important;
+      padding-bottom: 20px !important;
+      position: relative !important;
+    }
+
+    #portfolio-main .section-title h2::after {
+      content: "" !important;
+      position: absolute !important;
+      display: block !important;
+      width: 50px !important;
+      height: 3px !important;
+      background: #149ddd !important;
+      bottom: 0 !important;
+      left: 50% !important;
+      transform: translateX(-50%) !important;
+    }
+
+    #portfolio-main .section-title p {
+      margin-bottom: 0 !important;
+      font-style: italic !important;
+      color: #7e8890 !important;
+    }
+
+    /* Content alignment */
+    #portfolio-main .about .content {
+      padding-left: 20px !important;
+    }
+
+    #portfolio-main .about .content .fst-italic {
+      margin-bottom: 10px !important;
+      font-size: 15px !important;
+    }
+
+    @media (max-width: 992px) {
       #portfolio-main .about .content {
-        padding-left: 20px !important;
-      }
-      
-      #portfolio-main .about .content .fst-italic {
-        margin-bottom: 10px !important;
-        font-size: 15px !important;
-      }
-      
-      @media (max-width: 992px) {
-        #portfolio-main .about .content {
-          padding-left: 0 !important;
-          padding-top: 20px !important;
-        }
-      }
-      
-      /* Profile section in sidebar */
-      #portfolio-main .profile {
-        text-align: center !important;
-        padding: 20px !important;
-      }
-      
-      #portfolio-main .profile h1 {
-        font-size: 24px !important;
-        margin: 0 0 10px 0 !important;
-        padding: 0 !important;
-      }
-      
-      #portfolio-main .profile h1 a {
-        color: #fff !important;
-        text-decoration: none !important;
-      }
-      
-      #portfolio-main .social-links {
-        margin-top: 20px !important;
-        display: flex !important;
-        justify-content: center !important;
-        gap: 10px !important;
-      }
-      
-      #portfolio-main .social-links a {
-        width: 36px !important;
-        height: 36px !important;
-        border-radius: 50% !important;
-        background: rgba(255, 255, 255, 0.1) !important;
-        color: #fff !important;
-        display: flex !important;
-        align-items: center !important;
-        justify-content: center !important;
-        transition: all 0.3s !important;
-      }
-      
-      #portfolio-main .social-links a:hover {
-        background: #149ddd !important;
-        transform: translateY(-3px) !important;
-      }
-      
-      /* Navigation menu formatting */
-      #portfolio-main .nav-menu {
-        padding: 0 !important;
-        margin: 0 !important;
-      }
-      
-      #portfolio-main .nav-menu ul {
-        list-style: none !important;
-        padding: 0 !important;
-        margin: 0 !important;
-      }
-      
-      #portfolio-main .nav-menu li {
-        padding: 0 !important;
-        margin: 0 !important;
-      }
-      
-      #portfolio-main .nav-menu a {
-        display: flex !important;
-        align-items: center !important;
-        padding: 12px 20px !important;
-        color: #a8a9b4 !important;
-        text-decoration: none !important;
-        transition: all 0.3s !important;
-      }
-      
-      #portfolio-main .nav-menu a:hover,
-      #portfolio-main .nav-menu a.active {
-        color: #fff !important;
-        background: rgba(255, 255, 255, 0.1) !important;
-      }
-      
-      #portfolio-main .nav-menu a i {
-        margin-right: 10px !important;
-        font-size: 18px !important;
-      }
-      
-      /* Better spacing for sections */
-      #portfolio-main section {
-        padding: 80px 0 !important;
-        overflow: visible !important;
-        min-height: auto !important;
-      }
-      
-      #portfolio-main .resume {
-        padding-bottom: 100px !important;
-      }
-      
-      #portfolio-main .container {
-        overflow: visible !important;
-      }
-      
-      #portfolio-main .row {
-        overflow: visible !important;
-      }
-      
-      #portfolio-main .section-bg {
-        background: #f5f8fd !important;
-      }
-      
-      #portfolio-main .about .content h3 {
-        font-size: 26px !important;
-        font-weight: 700 !important;
-        margin-bottom: 10px !important;
-      }
-      
-      #portfolio-main .about .content ul {
-        list-style: none !important;
-        padding: 0 !important;
-        margin: 0 0 15px 0 !important;
-      }
-      
-      #portfolio-main .about .content ul li {
-        padding-bottom: 5px !important;
-        margin-bottom: 5px !important;
-        display: block !important;
-        white-space: nowrap !important;
-        overflow: visible !important;
-        line-height: 1.6 !important;
-      }
-      
-      #portfolio-main .about .content ul li i {
-        color: #149ddd !important;
-        margin-right: 8px !important;
-      }
-      
-      #portfolio-main .about .content ul li strong {
-        margin-right: 5px !important;
-      }
-      
-      #portfolio-main .about .content ul li span {
-        display: inline !important;
-      }
-      
-      #portfolio-main .about .content ul li span a {
-        color: #149ddd !important;
-        text-decoration: none !important;
-      }
-      
-      #portfolio-main .about .content ul li span a:hover {
-        text-decoration: underline !important;
-      }
-      
-      /* Testimonials section styling */
-      #portfolio-main .testimonials {
-        padding: 50px 0 !important;
-        background: #fff !important;
-      }
-      
-      #portfolio-main .testimonial-item {
-        padding: 30px !important;
-        background: #fff !important;
-        border-radius: 8px !important;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1) !important;
-        margin-bottom: 20px !important;
-        max-width: 100% !important;
-        overflow: visible !important;
-      }
-      
-      #portfolio-main .testimonial-content-wrapper {
-        display: flex !important;
-        align-items: flex-start !important;
-        gap: 30px !important;
-        margin-bottom: 15px !important;
-      }
-      
-      #portfolio-main .testimonial-left {
-        flex-shrink: 0 !important;
-        text-align: left !important;
-      }
-      
-      #portfolio-main .testimonial-img-wrapper {
-        position: relative !important;
-        display: inline-block !important;
-        margin-bottom: 15px !important;
-      }
-      
-      #portfolio-main .testimonial-item .testimonial-img {
-        width: 120px !important;
-        height: 120px !important;
-        border-radius: 50% !important;
-        overflow: hidden !important;
-        border: none !important;
-        display: flex !important;
-        align-items: center !important;
-        justify-content: center !important;
-        flex-shrink: 0 !important;
-      }
-      
-      #portfolio-main .testimonial-item .testimonial-img img {
-        width: 100% !important;
-        height: 100% !important;
-        object-fit: cover !important;
-        display: block !important;
-      }
-      
-      #portfolio-main .testimonial-linkedin-overlay {
-        position: absolute !important;
-        bottom: 0 !important;
-        right: 0 !important;
-        width: 36px !important;
-        height: 36px !important;
-        background: #149ddd !important;
-        border-radius: 50% !important;
-        display: flex !important;
-        align-items: center !important;
-        justify-content: center !important;
-        color: #fff !important;
-        font-size: 18px !important;
-        border: 3px solid #fff !important;
-        text-decoration: none !important;
-        transition: transform 0.3s ease !important;
-        z-index: 10 !important;
-      }
-      
-      #portfolio-main .testimonial-linkedin-overlay:hover {
-        transform: scale(1.1) !important;
-      }
-      
-      #portfolio-main .testimonial-left h3 {
-        font-size: 22px !important;
-        font-weight: 700 !important;
-        margin: 15px 0 5px 0 !important;
-        color: #173b6c !important;
-        text-align: left !important;
-      }
-      
-      #portfolio-main .testimonial-left h4 {
-        font-size: 15px !important;
-        color: #7e8890 !important;
-        margin-bottom: 0 !important;
-        text-align: left !important;
-      }
-      
-      #portfolio-main .testimonial-right {
-        flex: 1 !important;
-        padding-left: 20px !important;
-      }
-      
-      #portfolio-main .testimonial-quote {
-        font-style: italic !important;
-        margin: 0 !important;
-        padding: 0 !important;
-        background: transparent !important;
-        position: relative !important;
-        border-radius: 0 !important;
-        color: #173b6c !important;
-        line-height: 1.8 !important;
-        font-size: 16px !important;
-        text-align: left !important;
-      }
-      
-      #portfolio-main .testimonial-quote strong {
-        color: #173b6c !important;
-        font-weight: 700 !important;
-      }
-      
-      #portfolio-main .testimonial-item .quote-icon-left,
-      #portfolio-main .testimonial-item .quote-icon-right {
-        color: #c3e8fa !important;
-        font-size: 32px !important;
-      }
-      
-      #portfolio-main .testimonial-item .quote-icon-left {
-        display: inline-block !important;
-        left: -8px !important;
-        position: relative !important;
-        vertical-align: top !important;
-      }
-      
-      #portfolio-main .testimonial-item .quote-icon-right {
-        display: inline-block !important;
-        right: -8px !important;
-        position: relative !important;
-        top: 5px !important;
-        vertical-align: bottom !important;
-      }
-      
-      #portfolio-main .testimonial-context {
-        margin-top: 20px !important;
-        padding-top: 15px !important;
-        border-top: 1px solid #e0e0e0 !important;
-        color: #7e8890 !important;
-        font-size: 14px !important;
-        text-align: left !important;
-      }
-      
-      @media (max-width: 768px) {
-        #portfolio-main .testimonial-content-wrapper {
-          flex-direction: column !important;
-          gap: 20px !important;
-        }
-        
-        #portfolio-main .testimonial-left {
-          text-align: center !important;
-        }
-        
-        #portfolio-main .testimonial-left h3,
-        #portfolio-main .testimonial-left h4 {
-          text-align: center !important;
-        }
-        
-        #portfolio-main .testimonial-right {
-          padding-left: 0 !important;
-        }
-        
-        #portfolio-main .testimonial-quote {
-          text-align: center !important;
-        }
-        
-        #portfolio-main .testimonial-context {
-          text-align: center !important;
-        }
-      }
-      
-      /* Skills section formatting */
-      #portfolio-main .skills.section-bg {
-        background: #f5f8fd !important;
-      }
-      
-      #portfolio-main .progress {
-        height: auto !important;
-        display: block !important;
-        background: #fff !important;
-        overflow: visible !important;
-        margin-bottom: 15px !important;
-        padding: 15px 20px !important;
-        border-radius: 4px !important;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05) !important;
-      }
-      
-      #portfolio-main .skill {
-        font-weight: 600 !important;
-        padding: 0 !important;
-        margin: 0 0 8px 0 !important;
-        text-transform: uppercase !important;
-        display: block !important;
-        color: #272829 !important;
-        font-size: 14px !important;
-      }
-      
-      #portfolio-main .skill .val {
-        float: right !important;
-        font-style: normal !important;
-        color: #149ddd !important;
-        font-weight: 600 !important;
-      }
-      
-      #portfolio-main .progress-bar-wrap {
-        background: #dce8f8 !important;
-        height: 10px !important;
-        border-radius: 4px !important;
-        overflow: hidden !important;
-        margin-top: 5px !important;
-      }
-      
-      #portfolio-main .progress-bar {
-        height: 10px !important;
-        background-color: #149ddd !important;
-        transition: width 0.9s ease !important;
-        border-radius: 4px !important;
-      }
-      
-      /* Resume section formatting */
-      #portfolio-main .resume-title {
-        font-size: 26px !important;
-        font-weight: 700 !important;
-        margin-top: 20px !important;
-        margin-bottom: 20px !important;
-        color: #173b6c !important;
-      }
-      
-      #portfolio-main .resume-item {
-        padding: 0 0 30px 20px !important;
-        margin-top: -2px !important;
-        border-left: 2px solid #149ddd !important;
-        position: relative !important;
-        overflow: visible !important;
-      }
-      
-      #portfolio-main .resume-item.pb-0 {
-        padding-bottom: 20px !important;
-      }
-      
-      #portfolio-main .resume-item ul {
-        list-style: disc !important;
-        padding-left: 20px !important;
-        margin: 15px 0 0 0 !important;
-      }
-      
-      #portfolio-main .resume-item ul li {
-        padding: 5px 0 !important;
-        color: #272829 !important;
-        display: list-item !important;
-        margin-bottom: 8px !important;
-        line-height: 1.6 !important;
-      }
-      
-      #portfolio-main .resume-item ul li i {
-        margin-right: 10px !important;
-        color: #149ddd !important;
-        font-size: 16px !important;
-      }
-      
-      #portfolio-main .resume-item ul li a {
-        color: #149ddd !important;
-        text-decoration: none !important;
-      }
-      
-      #portfolio-main .resume-item ul li a:hover {
-        text-decoration: underline !important;
-      }
-      
-      #portfolio-main .resume-item h4 {
-        font-size: 20px !important;
-        font-weight: 700 !important;
-        margin-bottom: 10px !important;
-        color: #173b6c !important;
-      }
-      
-      #portfolio-main .resume-item h5 {
-        font-size: 16px !important;
-        font-weight: 600 !important;
-        color: #149ddd !important;
-        margin-bottom: 10px !important;
-        background: #f5f8fd !important;
-        padding: 5px 15px !important;
-        display: inline-block !important;
-        border-radius: 4px !important;
-        margin-right: 10px !important;
-      }
-      
-      #portfolio-main .resume-item p em {
-        color: #333 !important;
-        font-style: italic !important;
-        margin-left: 0 !important;
-      }
-      
-      #portfolio-main .resume-item p strong {
-        color: #272829 !important;
-        font-weight: 700 !important;
-      }
-      
-      #portfolio-main .resume-item p {
-        color: #272829 !important;
-        margin-bottom: 8px !important;
-        line-height: 1.6 !important;
-      }
-      
-      #portfolio-main .resume-item p {
-        margin-bottom: 10px !important;
-        color: #272829 !important;
-        line-height: 1.6 !important;
-        display: block !important;
-        width: 100% !important;
-      }
-      
-      #portfolio-main .resume-item p em {
-        font-style: italic !important;
-        color: #333 !important;
-      }
-      
-      #portfolio-main .resume-item ul li {
-        margin-bottom: 8px !important;
         padding-left: 0 !important;
-        list-style-position: outside !important;
-      }
-      
-      #portfolio-main .resume-item::before {
-        content: "" !important;
-        position: absolute !important;
-        width: 16px !important;
-        height: 16px !important;
-        border-radius: 50px !important;
-        left: -9px !important;
-        top: 0 !important;
-        background: #fff !important;
-        border: 2px solid #149ddd !important;
-      }
-      
-      /* Portfolio items visibility */
-      #portfolio-main .portfolio.section-bg {
-        padding: 60px 0 !important;
-        background: #f5f8fd !important;
-      }
-      
-      #portfolio-main .portfolio-item {
-        margin-bottom: 30px !important;
-        display: block !important;
-        visibility: visible !important;
-        opacity: 1 !important;
-        width: 30% !important;
-        padding: 0 15px !important;
-        margin: 0 0 30px 0 !important;
-        box-sizing: border-box !important;
-        flex: 0 0 30% !important;
-        max-width: 30% !important;
-      }
-      
-      @media (max-width: 991px) {
-        #portfolio-main .portfolio-item {
-          width: 50% !important;
-        }
-      }
-      
-      @media (max-width: 767px) {
-        #portfolio-main .portfolio-item {
-          width: 100% !important;
-        }
-      }
-      
-      #portfolio-main .portfolio-container,
-      .portfolio-container {
-        display: flex !important;
-        flex-wrap: wrap !important;
-        width: 100% !important;
-        overflow: visible !important;
-        visibility: visible !important;
-        opacity: 1 !important;
-        transform: none !important;
-        transition: none !important;
-        justify-content: space-between !important;
-        padding: 0 !important;
-      }
-      
-      #portfolio-main .portfolio-container::after {
-        content: "" !important;
-        display: table !important;
-        clear: both !important;
-      }
-      
-      /* Force AOS elements to be visible */
-      #portfolio-main [data-aos],
-      [data-aos] {
-        opacity: 1 !important;
-        transform: none !important;
-        visibility: visible !important;
-        pointer-events: auto !important;
-      }
-      
-      /* Override AOS default styles */
-      [data-aos][data-aos][data-aos-duration="400"], 
-      body[data-aos-duration="400"] [data-aos] {
-        transition-duration: 0ms !important;
-      }
-      
-      [data-aos^=fade][data-aos^=fade] {
-        opacity: 1 !important;
-      }
-      
-      #portfolio-main .portfolio-wrap {
-        position: relative !important;
-        overflow: hidden !important;
-        display: block !important;
-        margin-bottom: 20px !important;
-        background: #fff !important;
-        box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1) !important;
-        border-radius: 8px !important;
-      }
-      
-      #portfolio-main .portfolio-wrap img {
-        width: 100% !important;
-        height: 200px !important;
-        object-fit: cover !important;
-        display: block !important;
-        transition: transform 0.3s !important;
-      }
-      
-      #portfolio-main .portfolio-wrap:hover img {
-        transform: scale(1.1) !important;
-      }
-      
-      #portfolio-main .portfolio-item {
-        display: flex !important;
-        flex-direction: column !important;
-        height: 100% !important;
-      }
-      
-      #portfolio-main .portfolio-item > div {
-        display: flex !important;
-        flex-direction: column !important;
-        height: 100% !important;
-        background: #fff !important;
-        border-radius: 8px !important;
-        overflow: hidden !important;
-        box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1) !important;
-      }
-      
-      #portfolio-main .portfolio-info {
-        padding: 15px !important;
-        background: #fff !important;
-        display: flex !important;
-        flex-direction: column !important;
-        flex-grow: 1 !important;
-        min-height: 120px !important;
-      }
-      
-      #portfolio-main .portfolio-info h4 {
-        font-size: 16px !important;
-        font-weight: 600 !important;
-        color: #173b6c !important;
-        margin-bottom: 5px !important;
-      }
-      
-      #portfolio-main .portfolio-info p {
-        font-size: 14px !important;
-        color: #6c757d !important;
-        margin: 0 !important;
-        line-height: 1.5 !important;
-        flex-grow: 1 !important;
-      }
-      
-      #portfolio-main .row.portfolio-container {
-        display: flex !important;
-        flex-wrap: wrap !important;
-        align-items: stretch !important;
-      }
-      
-      #portfolio-main .row.portfolio-container > .portfolio-item {
-        display: flex !important;
-        margin-bottom: 30px !important;
-      }
-      
-      #portfolio-main .portfolio-links {
-        position: absolute !important;
-        left: 0 !important;
-        right: 0 !important;
-        top: 0 !important;
-        bottom: calc(100% - 200px) !important;
-        background: rgba(20, 157, 221, 0.8) !important;
-        display: flex !important;
-        justify-content: center !important;
-        align-items: center !important;
-        opacity: 0 !important;
-        transition: opacity 0.3s !important;
-        z-index: 3 !important;
-        padding: 10px !important;
-      }
-      
-      #portfolio-main .portfolio-wrap:hover .portfolio-links {
-        opacity: 1 !important;
-      }
-      
-      #portfolio-main .portfolio-links a {
-        color: #fff !important;
-        font-size: 24px !important;
-        margin: 0 10px !important;
-        width: 40px !important;
-        height: 40px !important;
-        display: flex !important;
-        align-items: center !important;
-        justify-content: center !important;
-        background: rgba(255, 255, 255, 0.2) !important;
-        border-radius: 50% !important;
-        transition: all 0.3s !important;
-      }
-      
-      #portfolio-main .portfolio-links a:hover {
-        background: rgba(255, 255, 255, 0.4) !important;
-        transform: scale(1.1) !important;
-      }
-      
-      /* Publications styling */
-      #portfolio-main .publication-item {
-        padding: 30px !important;
-        margin-bottom: 30px !important;
-        background: #fff !important;
-        border-left: 3px solid #149ddd !important;
-        display: block !important;
-        height: 100% !important;
-        min-height: 200px !important;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
-        transition: transform 0.3s, box-shadow 0.3s !important;
-      }
-      
-      #portfolio-main .publication-item:hover {
-        transform: translateY(-5px) !important;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
-      }
-      
-      #portfolio-main .publication-item h4 {
-        font-size: 18px !important;
-        font-weight: 600 !important;
-        margin-bottom: 10px !important;
-        color: #173b6c !important;
-      }
-      
-      #portfolio-main .publication-item h5 {
-        font-size: 16px !important;
-        color: #149ddd !important;
-        margin-bottom: 10px !important;
-      }
-      
-      #portfolio-main .publication-item p {
-        font-size: 14px !important;
-        color: #7e8890 !important;
-        margin-bottom: 15px !important;
-      }
-      
-      #portfolio-main .read-paper-link {
-        color: #149ddd !important;
-        text-decoration: none !important;
-        font-weight: 600 !important;
-        display: inline-flex !important;
-        align-items: center !important;
-        gap: 5px !important;
-        transition: color 0.3s !important;
-      }
-      
-      #portfolio-main .read-paper-link:hover {
-        color: #0d7bb8 !important;
-        text-decoration: underline !important;
-      }
-      
-      #portfolio-main .coming-soon-badge {
-        color: #6c757d !important;
-        font-size: 14px !important;
-        font-weight: 500 !important;
-        display: inline-flex !important;
-        align-items: center !important;
-        gap: 5px !important;
-        margin-top: auto !important;
-        background: #f8f9fa !important;
-        padding: 5px 12px !important;
-        border-radius: 15px !important;
-        border: 1px solid #dee2e6 !important;
-      }
-      
-      #portfolio-main .coming-soon-badge i {
-        font-size: 14px !important;
-      }
-      
-      /* Certifications visibility */
-      #portfolio-main .certification-item {
-        padding: 30px !important;
-        margin-bottom: 30px !important;
-        background: #fff !important;
-        border-left: 3px solid #149ddd !important;
-        display: block !important;
-        height: 100% !important;
-        min-height: 200px !important;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
-        transition: transform 0.3s, box-shadow 0.3s !important;
-        position: relative !important;
-      }
-      
-      #portfolio-main .certification-item:hover {
-        transform: translateY(-5px) !important;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
-      }
-      
-      #portfolio-main .certification-icon {
-        font-size: 40px !important;
-        margin-bottom: 15px !important;
-        display: block !important;
-      }
-      
-      #portfolio-main .certification-item h4 {
-        font-size: 18px !important;
-        font-weight: 600 !important;
-        margin-bottom: 10px !important;
-        color: #173b6c !important;
-      }
-      
-      #portfolio-main .certification-item h5 {
-        font-size: 16px !important;
-        color: #149ddd !important;
-        margin-bottom: 10px !important;
-      }
-      
-      #portfolio-main .certification-item p {
-        font-size: 14px !important;
-        color: #7e8890 !important;
-        margin-bottom: 15px !important;
-      }
-      
-      #portfolio-main .cert-link {
-        color: #149ddd !important;
-        text-decoration: none !important;
-        font-weight: 600 !important;
-        display: inline-flex !important;
-        align-items: center !important;
-        gap: 5px !important;
-        transition: color 0.3s !important;
-        margin-top: auto !important;
-      }
-      
-      #portfolio-main .cert-link:hover {
-        color: #0d7bb8 !important;
-        text-decoration: underline !important;
-      }
-      
-      /* Ensure equal height for all items */
-      #portfolio-main .publications,
-      #portfolio-main .certifications {
-        background: #f5f8fd !important;
-      }
-      
-      #portfolio-main .publications .row,
-      #portfolio-main .certifications .row {
-        display: flex !important;
-        flex-wrap: wrap !important;
-      }
-      
-      #portfolio-main .publications .col-lg-6,
-      #portfolio-main .certifications .col-lg-6 {
-        display: flex !important;
-      }
-      
-      #portfolio-main .publication-item,
-      #portfolio-main .certification-item {
-        display: flex !important;
-        flex-direction: column !important;
-        width: 100% !important;
-      }
-      
-      #portfolio-main .publication-item .read-paper-link {
-        margin-top: auto !important;
-      }
-      
-      /* Contact section styling */
-      #portfolio-main .contact {
-        padding: 60px 0 !important;
-        background: #f5f8fd !important;
-      }
-      
-      #portfolio-main .contact .info {
-        padding: 30px !important;
-        background: #fff !important;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08) !important;
-        display: block !important;
-        border-radius: 12px !important;
-        height: 100% !important;
-      }
-      
-      #portfolio-main .contact-card {
-        display: flex !important;
-        align-items: flex-start !important;
-        padding: 20px !important;
-        margin-bottom: 15px !important;
-        background: #f8fafc !important;
-        border-radius: 10px !important;
-        transition: all 0.3s ease !important;
-        border: 1px solid #e9ecef !important;
-      }
-      
-      #portfolio-main .contact-card:hover {
-        transform: translateY(-3px) !important;
-        box-shadow: 0 8px 20px rgba(20, 157, 221, 0.15) !important;
-        border-color: #149ddd !important;
-      }
-      
-      #portfolio-main .contact-icon {
-        width: 50px !important;
-        height: 50px !important;
-        border-radius: 12px !important;
-        display: flex !important;
-        justify-content: center !important;
-        align-items: center !important;
-        margin-right: 15px !important;
-        flex-shrink: 0 !important;
-      }
-      
-      #portfolio-main .contact-icon i {
-        font-size: 22px !important;
-        color: #fff !important;
-      }
-      
-      #portfolio-main .email-icon {
-        background: linear-gradient(135deg, #149ddd 0%, #0d7bb8 100%) !important;
-      }
-      
-      #portfolio-main .phone-icon {
-        background: linear-gradient(135deg, #28a745 0%, #1e7e34 100%) !important;
-      }
-      
-      #portfolio-main .location-icon {
-        background: linear-gradient(135deg, #ff6b35 0%, #e55a2b 100%) !important;
-      }
-      
-      #portfolio-main .contact-details h4 {
-        font-size: 16px !important;
-        font-weight: 600 !important;
-        margin-bottom: 5px !important;
-        color: #173b6c !important;
-      }
-      
-      #portfolio-main .contact-details p {
-        font-size: 15px !important;
-        color: #6c757d !important;
-        margin: 0 !important;
-      }
-      
-      #portfolio-main .contact-details p a {
-        color: #149ddd !important;
-        text-decoration: none !important;
-        font-weight: 500 !important;
-      }
-      
-      #portfolio-main .contact-details p a:hover {
-        text-decoration: underline !important;
-      }
-      
-      #portfolio-main .social-links-contact {
-        margin-top: 25px !important;
         padding-top: 20px !important;
-        border-top: 1px solid #e9ecef !important;
       }
-      
-      #portfolio-main .social-links-contact h4 {
-        font-size: 16px !important;
-        font-weight: 600 !important;
-        color: #173b6c !important;
-        margin-bottom: 15px !important;
+    }
+
+    /* Profile section in sidebar */
+    #portfolio-main .profile {
+      text-align: center !important;
+      padding: 20px !important;
+    }
+
+    #portfolio-main .profile h1 {
+      font-size: 24px !important;
+      margin: 0 0 10px 0 !important;
+      padding: 0 !important;
+    }
+
+    #portfolio-main .profile h1 a {
+      color: #fff !important;
+      text-decoration: none !important;
+    }
+
+    #portfolio-main .social-links {
+      margin-top: 20px !important;
+      display: flex !important;
+      justify-content: center !important;
+      gap: 10px !important;
+    }
+
+    #portfolio-main .social-links a {
+      width: 36px !important;
+      height: 36px !important;
+      border-radius: 50% !important;
+      background: rgba(255, 255, 255, 0.1) !important;
+      color: #fff !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      transition: all 0.3s !important;
+    }
+
+    #portfolio-main .social-links a:hover {
+      background: #149ddd !important;
+      transform: translateY(-3px) !important;
+    }
+
+    /* Navigation menu formatting */
+    #portfolio-main .nav-menu {
+      padding: 0 !important;
+      margin: 0 !important;
+    }
+
+    #portfolio-main .nav-menu ul {
+      list-style: none !important;
+      padding: 0 !important;
+      margin: 0 !important;
+    }
+
+    #portfolio-main .nav-menu li {
+      padding: 0 !important;
+      margin: 0 !important;
+    }
+
+    #portfolio-main .nav-menu a {
+      display: flex !important;
+      align-items: center !important;
+      padding: 12px 20px !important;
+      color: #a8a9b4 !important;
+      text-decoration: none !important;
+      transition: all 0.3s !important;
+    }
+
+    #portfolio-main .nav-menu a:hover,
+    #portfolio-main .nav-menu a.active {
+      color: #fff !important;
+      background: rgba(255, 255, 255, 0.1) !important;
+    }
+
+    #portfolio-main .nav-menu a i {
+      margin-right: 10px !important;
+      font-size: 18px !important;
+    }
+
+    /* Better spacing for sections */
+    #portfolio-main section {
+      padding: 80px 0 !important;
+      overflow: visible !important;
+      min-height: auto !important;
+    }
+
+    #portfolio-main .resume {
+      padding-bottom: 100px !important;
+    }
+
+    #portfolio-main .container {
+      overflow: visible !important;
+    }
+
+    #portfolio-main .row {
+      overflow: visible !important;
+    }
+
+    #portfolio-main .section-bg {
+      background: #f5f8fd !important;
+    }
+
+    #portfolio-main .about .content h3 {
+      font-size: 26px !important;
+      font-weight: 700 !important;
+      margin-bottom: 10px !important;
+    }
+
+    #portfolio-main .about .content ul {
+      list-style: none !important;
+      padding: 0 !important;
+      margin: 0 0 15px 0 !important;
+    }
+
+    #portfolio-main .about .content ul li {
+      padding-bottom: 5px !important;
+      margin-bottom: 5px !important;
+      display: block !important;
+      white-space: nowrap !important;
+      overflow: visible !important;
+      line-height: 1.6 !important;
+    }
+
+    #portfolio-main .about .content ul li i {
+      color: #149ddd !important;
+      margin-right: 8px !important;
+    }
+
+    #portfolio-main .about .content ul li strong {
+      margin-right: 5px !important;
+    }
+
+    #portfolio-main .about .content ul li span {
+      display: inline !important;
+    }
+
+    #portfolio-main .about .content ul li span a {
+      color: #149ddd !important;
+      text-decoration: none !important;
+    }
+
+    #portfolio-main .about .content ul li span a:hover {
+      text-decoration: underline !important;
+    }
+
+    /* Testimonials section styling */
+    #portfolio-main .testimonials {
+      padding: 50px 0 !important;
+      background: #fff !important;
+    }
+
+    #portfolio-main .testimonial-item {
+      padding: 30px !important;
+      background: #fff !important;
+      border-radius: 8px !important;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1) !important;
+      margin-bottom: 20px !important;
+      max-width: 100% !important;
+      overflow: visible !important;
+    }
+
+    #portfolio-main .testimonial-content-wrapper {
+      display: flex !important;
+      align-items: flex-start !important;
+      gap: 30px !important;
+      margin-bottom: 15px !important;
+    }
+
+    #portfolio-main .testimonial-left {
+      flex-shrink: 0 !important;
+      text-align: left !important;
+    }
+
+    #portfolio-main .testimonial-img-wrapper {
+      position: relative !important;
+      display: inline-block !important;
+      margin-bottom: 15px !important;
+    }
+
+    #portfolio-main .testimonial-item .testimonial-img {
+      width: 120px !important;
+      height: 120px !important;
+      border-radius: 50% !important;
+      overflow: hidden !important;
+      border: none !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      flex-shrink: 0 !important;
+    }
+
+    #portfolio-main .testimonial-item .testimonial-img img {
+      width: 100% !important;
+      height: 100% !important;
+      object-fit: cover !important;
+      display: block !important;
+    }
+
+    #portfolio-main .testimonial-linkedin-overlay {
+      position: absolute !important;
+      bottom: 0 !important;
+      right: 0 !important;
+      width: 36px !important;
+      height: 36px !important;
+      background: #149ddd !important;
+      border-radius: 50% !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      color: #fff !important;
+      font-size: 18px !important;
+      border: 3px solid #fff !important;
+      text-decoration: none !important;
+      transition: transform 0.3s ease !important;
+      z-index: 10 !important;
+    }
+
+    #portfolio-main .testimonial-linkedin-overlay:hover {
+      transform: scale(1.1) !important;
+    }
+
+    #portfolio-main .testimonial-left h3 {
+      font-size: 22px !important;
+      font-weight: 700 !important;
+      margin: 15px 0 5px 0 !important;
+      color: #173b6c !important;
+      text-align: left !important;
+    }
+
+    #portfolio-main .testimonial-left h4 {
+      font-size: 15px !important;
+      color: #7e8890 !important;
+      margin-bottom: 0 !important;
+      text-align: left !important;
+    }
+
+    #portfolio-main .testimonial-right {
+      flex: 1 !important;
+      padding-left: 20px !important;
+    }
+
+    #portfolio-main .testimonial-quote {
+      font-style: italic !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      background: transparent !important;
+      position: relative !important;
+      border-radius: 0 !important;
+      color: #173b6c !important;
+      line-height: 1.8 !important;
+      font-size: 16px !important;
+      text-align: left !important;
+    }
+
+    #portfolio-main .testimonial-quote strong {
+      color: #173b6c !important;
+      font-weight: 700 !important;
+    }
+
+    #portfolio-main .testimonial-item .quote-icon-left,
+    #portfolio-main .testimonial-item .quote-icon-right {
+      color: #c3e8fa !important;
+      font-size: 32px !important;
+    }
+
+    #portfolio-main .testimonial-item .quote-icon-left {
+      display: inline-block !important;
+      left: -8px !important;
+      position: relative !important;
+      vertical-align: top !important;
+    }
+
+    #portfolio-main .testimonial-item .quote-icon-right {
+      display: inline-block !important;
+      right: -8px !important;
+      position: relative !important;
+      top: 5px !important;
+      vertical-align: bottom !important;
+    }
+
+    #portfolio-main .testimonial-context {
+      margin-top: 20px !important;
+      padding-top: 15px !important;
+      border-top: 1px solid #e0e0e0 !important;
+      color: #7e8890 !important;
+      font-size: 14px !important;
+      text-align: left !important;
+    }
+
+    @media (max-width: 768px) {
+      #portfolio-main .testimonial-content-wrapper {
+        flex-direction: column !important;
+        gap: 20px !important;
       }
-      
-      #portfolio-main .social-icons {
-        display: flex !important;
-        gap: 12px !important;
+
+      #portfolio-main .testimonial-left {
+        text-align: center !important;
       }
-      
-      #portfolio-main .social-icons a {
-        width: 45px !important;
-        height: 45px !important;
-        border-radius: 10px !important;
-        display: flex !important;
-        justify-content: center !important;
-        align-items: center !important;
-        color: #fff !important;
-        font-size: 20px !important;
-        transition: all 0.3s ease !important;
+
+      #portfolio-main .testimonial-left h3,
+      #portfolio-main .testimonial-left h4 {
+        text-align: center !important;
       }
-      
-      #portfolio-main .social-icons a.github {
-        background: #333 !important;
-      }
-      
-      #portfolio-main .social-icons a.linkedin {
-        background: #0077b5 !important;
-      }
-      
-      #portfolio-main .social-icons a.google-scholar {
-        background: #4285f4 !important;
-      }
-      
-      #portfolio-main .social-icons a.email {
-        background: #149ddd !important;
-      }
-      
-      #portfolio-main .social-icons a:hover {
-        transform: translateY(-3px) !important;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2) !important;
-      }
-      
-      #portfolio-main .map-container {
-        width: 100% !important;
-        height: 100% !important;
-        min-height: 450px !important;
-        border-radius: 12px !important;
-        overflow: hidden !important;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08) !important;
-      }
-      
-      #portfolio-main .map-container iframe {
-        width: 100% !important;
-        height: 100% !important;
-        min-height: 450px !important;
-        border: none !important;
-      }
-      
-      #portfolio-main #hero {
-        width: 100%;
-        min-height: 100vh !important;
-        height: 100vh !important;
-        background: url('assets/img/shreyaS.png') no-repeat center center !important;
-        background-size: cover !important;
-        position: relative;
-        display: flex;
-        align-items: center;
-        margin: 0 !important;
-        padding: 0 !important;
-      }
-      
-      #portfolio-main #hero .hero-overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: linear-gradient(135deg, rgba(5, 13, 24, 0.7) 0%, rgba(5, 13, 24, 0.4) 100%);
-        z-index: 1;
-      }
-      
-      #portfolio-main #hero .container {
-        position: relative;
-        z-index: 2;
-      }
-      
-      #portfolio-main #hero .hero-container {
-        position: relative;
-        z-index: 2;
-        min-width: 300px;
-      }
-      
-      #portfolio-main #hero h1 {
-        margin: 0 0 10px 0;
-        font-size: 64px;
-        font-weight: 700;
-        line-height: 70px;
-        color: #fff !important;
-        text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
-      }
-      
-      #portfolio-main #hero p {
-        color: #fff !important;
-        margin-bottom: 50px;
-        font-size: 26px;
-        text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
-      }
-      
-      #portfolio-main #hero p span {
-        color: #fff !important;
-        padding-bottom: 4px;
-        letter-spacing: 1px;
-        border-bottom: 3px solid #149ddd;
-      }
-      
-      /* Education details list */
-      #portfolio-main .education-details {
-        list-style: none !important;
+
+      #portfolio-main .testimonial-right {
         padding-left: 0 !important;
-        margin: 10px 0 !important;
       }
-      
-      #portfolio-main .education-details li {
-        padding: 3px 0 !important;
-        color: #6c757d !important;
-        font-size: 14px !important;
+
+      #portfolio-main .testimonial-quote {
+        text-align: center !important;
       }
-      
-      #portfolio-main .education-details li:first-child {
-        color: #050d18 !important;
-        font-weight: 600 !important;
-        margin-bottom: 5px !important;
+
+      #portfolio-main .testimonial-context {
+        text-align: center !important;
       }
-      
-      #portfolio-main .education-details li:not(:first-child)::before {
-        content: "•" !important;
-        color: #149ddd !important;
-        margin-right: 8px !important;
+    }
+
+    /* Skills section formatting */
+    #portfolio-main .skills.section-bg {
+      background: #f5f8fd !important;
+    }
+
+    #portfolio-main .progress {
+      height: auto !important;
+      display: block !important;
+      background: #fff !important;
+      overflow: visible !important;
+      margin-bottom: 15px !important;
+      padding: 15px 20px !important;
+      border-radius: 4px !important;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05) !important;
+    }
+
+    #portfolio-main .skill {
+      font-weight: 600 !important;
+      padding: 0 !important;
+      margin: 0 0 8px 0 !important;
+      text-transform: uppercase !important;
+      display: block !important;
+      color: #272829 !important;
+      font-size: 14px !important;
+    }
+
+    #portfolio-main .skill .val {
+      float: right !important;
+      font-style: normal !important;
+      color: #149ddd !important;
+      font-weight: 600 !important;
+    }
+
+    #portfolio-main .progress-bar-wrap {
+      background: #dce8f8 !important;
+      height: 10px !important;
+      border-radius: 4px !important;
+      overflow: hidden !important;
+      margin-top: 5px !important;
+    }
+
+    #portfolio-main .progress-bar {
+      height: 10px !important;
+      background-color: #149ddd !important;
+      transition: width 0.9s ease !important;
+      border-radius: 4px !important;
+    }
+
+    /* Resume section formatting */
+    #portfolio-main .resume-title {
+      font-size: 26px !important;
+      font-weight: 700 !important;
+      margin-top: 20px !important;
+      margin-bottom: 20px !important;
+      color: #173b6c !important;
+    }
+
+    #portfolio-main .resume-item {
+      padding: 0 0 30px 20px !important;
+      margin-top: -2px !important;
+      border-left: 2px solid #149ddd !important;
+      position: relative !important;
+      overflow: visible !important;
+    }
+
+    #portfolio-main .resume-item.pb-0 {
+      padding-bottom: 20px !important;
+    }
+
+    #portfolio-main .resume-item ul {
+      list-style: disc !important;
+      padding-left: 20px !important;
+      margin: 15px 0 0 0 !important;
+    }
+
+    #portfolio-main .resume-item ul li {
+      padding: 5px 0 !important;
+      color: #272829 !important;
+      display: list-item !important;
+      margin-bottom: 8px !important;
+      line-height: 1.6 !important;
+    }
+
+    #portfolio-main .resume-item ul li i {
+      margin-right: 10px !important;
+      color: #149ddd !important;
+      font-size: 16px !important;
+    }
+
+    #portfolio-main .resume-item ul li a {
+      color: #149ddd !important;
+      text-decoration: none !important;
+    }
+
+    #portfolio-main .resume-item ul li a:hover {
+      text-decoration: underline !important;
+    }
+
+    #portfolio-main .resume-item h4 {
+      font-size: 20px !important;
+      font-weight: 700 !important;
+      margin-bottom: 10px !important;
+      color: #173b6c !important;
+    }
+
+    #portfolio-main .resume-item h5 {
+      font-size: 16px !important;
+      font-weight: 600 !important;
+      color: #149ddd !important;
+      margin-bottom: 10px !important;
+      background: #f5f8fd !important;
+      padding: 5px 15px !important;
+      display: inline-block !important;
+      border-radius: 4px !important;
+      margin-right: 10px !important;
+    }
+
+    #portfolio-main .resume-item p em {
+      color: #333 !important;
+      font-style: italic !important;
+      margin-left: 0 !important;
+    }
+
+    #portfolio-main .resume-item p strong {
+      color: #272829 !important;
+      font-weight: 700 !important;
+    }
+
+    #portfolio-main .resume-item p {
+      color: #272829 !important;
+      margin-bottom: 8px !important;
+      line-height: 1.6 !important;
+    }
+
+    #portfolio-main .resume-item p {
+      margin-bottom: 10px !important;
+      color: #272829 !important;
+      line-height: 1.6 !important;
+      display: block !important;
+      width: 100% !important;
+    }
+
+    #portfolio-main .resume-item p em {
+      font-style: italic !important;
+      color: #333 !important;
+    }
+
+    #portfolio-main .resume-item ul li {
+      margin-bottom: 8px !important;
+      padding-left: 0 !important;
+      list-style-position: outside !important;
+    }
+
+    #portfolio-main .resume-item::before {
+      content: "" !important;
+      position: absolute !important;
+      width: 16px !important;
+      height: 16px !important;
+      border-radius: 50px !important;
+      left: -9px !important;
+      top: 0 !important;
+      background: #fff !important;
+      border: 2px solid #149ddd !important;
+    }
+
+    /* Portfolio items visibility */
+    #portfolio-main .portfolio.section-bg {
+      padding: 60px 0 !important;
+      background: #f5f8fd !important;
+    }
+
+    #portfolio-main .portfolio-item {
+      margin-bottom: 30px !important;
+      display: block !important;
+      visibility: visible !important;
+      opacity: 1 !important;
+      width: 30% !important;
+      padding: 0 15px !important;
+      margin: 0 0 30px 0 !important;
+      box-sizing: border-box !important;
+      flex: 0 0 30% !important;
+      max-width: 30% !important;
+    }
+
+    @media (max-width: 991px) {
+      #portfolio-main .portfolio-item {
+        width: 50% !important;
       }
-    </style>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,400;1,600&family=Raleway:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css" rel="stylesheet">
-    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-    <link href="assets/css/style.css" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-    <script defer src="js/interactions.js"></script>
-    <script defer src="js/background.js"></script>
-    <script defer src="js/stars.js"></script>
-    <script defer src="js/slider.js"></script>
-    <script defer src="js/main.js"></script>
+    }
+
+    @media (max-width: 767px) {
+      #portfolio-main .portfolio-item {
+        width: 100% !important;
+      }
+    }
+
+    #portfolio-main .portfolio-container,
+    .portfolio-container {
+      display: flex !important;
+      flex-wrap: wrap !important;
+      width: 100% !important;
+      overflow: visible !important;
+      visibility: visible !important;
+      opacity: 1 !important;
+      transform: none !important;
+      transition: none !important;
+      justify-content: space-between !important;
+      padding: 0 !important;
+    }
+
+    #portfolio-main .portfolio-container::after {
+      content: "" !important;
+      display: table !important;
+      clear: both !important;
+    }
+
+    /* Force AOS elements to be visible */
+    #portfolio-main [data-aos],
+    [data-aos] {
+      opacity: 1 !important;
+      transform: none !important;
+      visibility: visible !important;
+      pointer-events: auto !important;
+    }
+
+    /* Override AOS default styles */
+    [data-aos][data-aos][data-aos-duration="400"],
+    body[data-aos-duration="400"] [data-aos] {
+      transition-duration: 0ms !important;
+    }
+
+    [data-aos^=fade][data-aos^=fade] {
+      opacity: 1 !important;
+    }
+
+    #portfolio-main .portfolio-wrap {
+      position: relative !important;
+      overflow: hidden !important;
+      display: block !important;
+      margin-bottom: 20px !important;
+      background: #fff !important;
+      box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1) !important;
+      border-radius: 8px !important;
+    }
+
+    #portfolio-main .portfolio-wrap img {
+      width: 100% !important;
+      height: 200px !important;
+      object-fit: cover !important;
+      display: block !important;
+      transition: transform 0.3s !important;
+    }
+
+    #portfolio-main .portfolio-wrap:hover img {
+      transform: scale(1.1) !important;
+    }
+
+    #portfolio-main .portfolio-item {
+      display: flex !important;
+      flex-direction: column !important;
+      height: 100% !important;
+    }
+
+    #portfolio-main .portfolio-item>div {
+      display: flex !important;
+      flex-direction: column !important;
+      height: 100% !important;
+      background: #fff !important;
+      border-radius: 8px !important;
+      overflow: hidden !important;
+      box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1) !important;
+    }
+
+    #portfolio-main .portfolio-info {
+      padding: 15px !important;
+      background: #fff !important;
+      display: flex !important;
+      flex-direction: column !important;
+      flex-grow: 1 !important;
+      min-height: 120px !important;
+    }
+
+    #portfolio-main .portfolio-info h4 {
+      font-size: 16px !important;
+      font-weight: 600 !important;
+      color: #173b6c !important;
+      margin-bottom: 5px !important;
+    }
+
+    #portfolio-main .portfolio-info p {
+      font-size: 14px !important;
+      color: #6c757d !important;
+      margin: 0 !important;
+      line-height: 1.5 !important;
+      flex-grow: 1 !important;
+    }
+
+    #portfolio-main .row.portfolio-container {
+      display: flex !important;
+      flex-wrap: wrap !important;
+      align-items: stretch !important;
+    }
+
+    #portfolio-main .row.portfolio-container>.portfolio-item {
+      display: flex !important;
+      margin-bottom: 30px !important;
+    }
+
+    #portfolio-main .portfolio-links {
+      position: absolute !important;
+      left: 0 !important;
+      right: 0 !important;
+      top: 0 !important;
+      bottom: calc(100% - 200px) !important;
+      background: rgba(20, 157, 221, 0.8) !important;
+      display: flex !important;
+      justify-content: center !important;
+      align-items: center !important;
+      opacity: 0 !important;
+      transition: opacity 0.3s !important;
+      z-index: 3 !important;
+      padding: 10px !important;
+    }
+
+    #portfolio-main .portfolio-wrap:hover .portfolio-links {
+      opacity: 1 !important;
+    }
+
+    #portfolio-main .portfolio-links a {
+      color: #fff !important;
+      font-size: 24px !important;
+      margin: 0 10px !important;
+      width: 40px !important;
+      height: 40px !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      background: rgba(255, 255, 255, 0.2) !important;
+      border-radius: 50% !important;
+      transition: all 0.3s !important;
+    }
+
+    #portfolio-main .portfolio-links a:hover {
+      background: rgba(255, 255, 255, 0.4) !important;
+      transform: scale(1.1) !important;
+    }
+
+    /* Publications styling */
+    #portfolio-main .publication-item {
+      padding: 30px !important;
+      margin-bottom: 30px !important;
+      background: #fff !important;
+      border-left: 3px solid #149ddd !important;
+      display: block !important;
+      height: 100% !important;
+      min-height: 200px !important;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
+      transition: transform 0.3s, box-shadow 0.3s !important;
+    }
+
+    #portfolio-main .publication-item:hover {
+      transform: translateY(-5px) !important;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+    }
+
+    #portfolio-main .publication-item h4 {
+      font-size: 18px !important;
+      font-weight: 600 !important;
+      margin-bottom: 10px !important;
+      color: #173b6c !important;
+    }
+
+    #portfolio-main .publication-item h5 {
+      font-size: 16px !important;
+      color: #149ddd !important;
+      margin-bottom: 10px !important;
+    }
+
+    #portfolio-main .publication-item p {
+      font-size: 14px !important;
+      color: #7e8890 !important;
+      margin-bottom: 15px !important;
+    }
+
+    #portfolio-main .read-paper-link {
+      color: #149ddd !important;
+      text-decoration: none !important;
+      font-weight: 600 !important;
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 5px !important;
+      transition: color 0.3s !important;
+    }
+
+    #portfolio-main .read-paper-link:hover {
+      color: #0d7bb8 !important;
+      text-decoration: underline !important;
+    }
+
+    #portfolio-main .coming-soon-badge {
+      color: #6c757d !important;
+      font-size: 14px !important;
+      font-weight: 500 !important;
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 5px !important;
+      margin-top: auto !important;
+      background: #f8f9fa !important;
+      padding: 5px 12px !important;
+      border-radius: 15px !important;
+      border: 1px solid #dee2e6 !important;
+    }
+
+    #portfolio-main .coming-soon-badge i {
+      font-size: 14px !important;
+    }
+
+    /* Certifications visibility */
+    #portfolio-main .certification-item {
+      padding: 30px !important;
+      margin-bottom: 30px !important;
+      background: #fff !important;
+      border-left: 3px solid #149ddd !important;
+      display: block !important;
+      height: 100% !important;
+      min-height: 200px !important;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
+      transition: transform 0.3s, box-shadow 0.3s !important;
+      position: relative !important;
+    }
+
+    #portfolio-main .certification-item:hover {
+      transform: translateY(-5px) !important;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+    }
+
+    #portfolio-main .certification-icon {
+      font-size: 40px !important;
+      margin-bottom: 15px !important;
+      display: block !important;
+    }
+
+    #portfolio-main .certification-item h4 {
+      font-size: 18px !important;
+      font-weight: 600 !important;
+      margin-bottom: 10px !important;
+      color: #173b6c !important;
+    }
+
+    #portfolio-main .certification-item h5 {
+      font-size: 16px !important;
+      color: #149ddd !important;
+      margin-bottom: 10px !important;
+    }
+
+    #portfolio-main .certification-item p {
+      font-size: 14px !important;
+      color: #7e8890 !important;
+      margin-bottom: 15px !important;
+    }
+
+    #portfolio-main .cert-link {
+      color: #149ddd !important;
+      text-decoration: none !important;
+      font-weight: 600 !important;
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 5px !important;
+      transition: color 0.3s !important;
+      margin-top: auto !important;
+    }
+
+    #portfolio-main .cert-link:hover {
+      color: #0d7bb8 !important;
+      text-decoration: underline !important;
+    }
+
+    /* Ensure equal height for all items */
+    #portfolio-main .publications,
+    #portfolio-main .certifications {
+      background: #f5f8fd !important;
+    }
+
+    #portfolio-main .publications .row,
+    #portfolio-main .certifications .row {
+      display: flex !important;
+      flex-wrap: wrap !important;
+    }
+
+    #portfolio-main .publications .col-lg-6,
+    #portfolio-main .certifications .col-lg-6 {
+      display: flex !important;
+    }
+
+    #portfolio-main .publication-item,
+    #portfolio-main .certification-item {
+      display: flex !important;
+      flex-direction: column !important;
+      width: 100% !important;
+    }
+
+    #portfolio-main .publication-item .read-paper-link {
+      margin-top: auto !important;
+    }
+
+    /* Contact section styling */
+    #portfolio-main .contact {
+      padding: 60px 0 !important;
+      background: #f5f8fd !important;
+    }
+
+    #portfolio-main .contact .info {
+      padding: 30px !important;
+      background: #fff !important;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08) !important;
+      display: block !important;
+      border-radius: 12px !important;
+      height: 100% !important;
+    }
+
+    #portfolio-main .contact-card {
+      display: flex !important;
+      align-items: flex-start !important;
+      padding: 20px !important;
+      margin-bottom: 15px !important;
+      background: #f8fafc !important;
+      border-radius: 10px !important;
+      transition: all 0.3s ease !important;
+      border: 1px solid #e9ecef !important;
+    }
+
+    #portfolio-main .contact-card:hover {
+      transform: translateY(-3px) !important;
+      box-shadow: 0 8px 20px rgba(20, 157, 221, 0.15) !important;
+      border-color: #149ddd !important;
+    }
+
+    #portfolio-main .contact-icon {
+      width: 50px !important;
+      height: 50px !important;
+      border-radius: 12px !important;
+      display: flex !important;
+      justify-content: center !important;
+      align-items: center !important;
+      margin-right: 15px !important;
+      flex-shrink: 0 !important;
+    }
+
+    #portfolio-main .contact-icon i {
+      font-size: 22px !important;
+      color: #fff !important;
+    }
+
+    #portfolio-main .email-icon {
+      background: linear-gradient(135deg, #149ddd 0%, #0d7bb8 100%) !important;
+    }
+
+    #portfolio-main .phone-icon {
+      background: linear-gradient(135deg, #28a745 0%, #1e7e34 100%) !important;
+    }
+
+    #portfolio-main .location-icon {
+      background: linear-gradient(135deg, #ff6b35 0%, #e55a2b 100%) !important;
+    }
+
+    #portfolio-main .contact-details h4 {
+      font-size: 16px !important;
+      font-weight: 600 !important;
+      margin-bottom: 5px !important;
+      color: #173b6c !important;
+    }
+
+    #portfolio-main .contact-details p {
+      font-size: 15px !important;
+      color: #6c757d !important;
+      margin: 0 !important;
+    }
+
+    #portfolio-main .contact-details p a {
+      color: #149ddd !important;
+      text-decoration: none !important;
+      font-weight: 500 !important;
+    }
+
+    #portfolio-main .contact-details p a:hover {
+      text-decoration: underline !important;
+    }
+
+    #portfolio-main .social-links-contact {
+      margin-top: 25px !important;
+      padding-top: 20px !important;
+      border-top: 1px solid #e9ecef !important;
+    }
+
+    #portfolio-main .social-links-contact h4 {
+      font-size: 16px !important;
+      font-weight: 600 !important;
+      color: #173b6c !important;
+      margin-bottom: 15px !important;
+    }
+
+    #portfolio-main .social-icons {
+      display: flex !important;
+      gap: 12px !important;
+    }
+
+    #portfolio-main .social-icons a {
+      width: 45px !important;
+      height: 45px !important;
+      border-radius: 10px !important;
+      display: flex !important;
+      justify-content: center !important;
+      align-items: center !important;
+      color: #fff !important;
+      font-size: 20px !important;
+      transition: all 0.3s ease !important;
+    }
+
+    #portfolio-main .social-icons a.github {
+      background: #333 !important;
+    }
+
+    #portfolio-main .social-icons a.linkedin {
+      background: #0077b5 !important;
+    }
+
+    #portfolio-main .social-icons a.google-scholar {
+      background: #4285f4 !important;
+    }
+
+    #portfolio-main .social-icons a.email {
+      background: #149ddd !important;
+    }
+
+    #portfolio-main .social-icons a:hover {
+      transform: translateY(-3px) !important;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2) !important;
+    }
+
+    #portfolio-main .map-container {
+      width: 100% !important;
+      height: 100% !important;
+      min-height: 450px !important;
+      border-radius: 12px !important;
+      overflow: hidden !important;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08) !important;
+    }
+
+    #portfolio-main .map-container iframe {
+      width: 100% !important;
+      height: 100% !important;
+      min-height: 450px !important;
+      border: none !important;
+    }
+
+    #portfolio-main #hero {
+      width: 100%;
+      min-height: 100vh !important;
+      height: 100vh !important;
+      background: url('assets/img/shreyaS.png') no-repeat center center !important;
+      background-size: cover !important;
+      position: relative;
+      display: flex;
+      align-items: center;
+      margin: 0 !important;
+      padding: 0 !important;
+    }
+
+    #portfolio-main #hero .hero-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(135deg, rgba(5, 13, 24, 0.7) 0%, rgba(5, 13, 24, 0.4) 100%);
+      z-index: 1;
+    }
+
+    #portfolio-main #hero .container {
+      position: relative;
+      z-index: 2;
+    }
+
+    #portfolio-main #hero .hero-container {
+      position: relative;
+      z-index: 2;
+      min-width: 300px;
+    }
+
+    #portfolio-main #hero h1 {
+      margin: 0 0 10px 0;
+      font-size: 64px;
+      font-weight: 700;
+      line-height: 70px;
+      color: #fff !important;
+      text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    }
+
+    #portfolio-main #hero p {
+      color: #fff !important;
+      margin-bottom: 50px;
+      font-size: 26px;
+      text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+    }
+
+    #portfolio-main #hero p span {
+      color: #fff !important;
+      padding-bottom: 4px;
+      letter-spacing: 1px;
+      border-bottom: 3px solid #149ddd;
+    }
+
+    /* Education details list */
+    #portfolio-main .education-details {
+      list-style: none !important;
+      padding-left: 0 !important;
+      margin: 10px 0 !important;
+    }
+
+    #portfolio-main .education-details li {
+      padding: 3px 0 !important;
+      color: #6c757d !important;
+      font-size: 14px !important;
+    }
+
+    #portfolio-main .education-details li:first-child {
+      color: #050d18 !important;
+      font-weight: 600 !important;
+      margin-bottom: 5px !important;
+    }
+
+    #portfolio-main .education-details li:not(:first-child)::before {
+      content: "•" !important;
+      color: #149ddd !important;
+      margin-right: 8px !important;
+    }
+  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,400;1,600&family=Raleway:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/css/style.css" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script defer src="js/interactions.js"></script>
+  <script defer src="js/background.js"></script>
+  <script defer src="js/stars.js"></script>
+  <script defer src="js/slider.js"></script>
+  <script defer src="js/main.js"></script>
 </head>
+
 <body>
-    <!-- Main Portfolio Content -->
-    <div id="portfolio-main" style="position: relative;">
-        <!-- Header/Sidebar -->
-        <header id="header">
-            <div class="profile">
-                <img src="homepage_logo/betterpic.png" alt="Shreyas Chaudhary" class="img-fluid">
-                <h1><a href="#about">Shreyas Chaudhary</a></h1>
-                <div class="social-links mt-3">
-                    <a href="https://github.com/shreyas463" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-                    <a href="https://www.linkedin.com/in/shreyaschaudharysc/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                    <a href="https://scholar.google.com/citations?hl=en&user=gZP2TpoAAAAJ" target="_blank" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
-                    <a href="mailto:shreyasc@cpp.edu" title="Email"><i class="fas fa-envelope"></i></a>
-                </div>
-    </div>
+  <!-- Main Portfolio Content -->
+  <div id="portfolio-main" style="position: relative;">
+    <!-- Header/Sidebar -->
+    <header id="header">
+      <div class="profile">
+        <img src="homepage_logo/betterpic.png" alt="Shreyas Chaudhary" class="img-fluid">
+        <h1><a href="#about">Shreyas Chaudhary</a></h1>
+        <div class="social-links mt-3">
+          <a href="https://github.com/shreyas463" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/shreyaschaudharysc/" target="_blank" title="LinkedIn"><i
+              class="fab fa-linkedin"></i></a>
+          <a href="https://scholar.google.com/citations?hl=en&user=gZP2TpoAAAAJ" target="_blank"
+            title="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
+          <a href="mailto:shreyasc@cpp.edu" title="Email"><i class="fas fa-envelope"></i></a>
+        </div>
+      </div>
 
-            <nav id="navbar" class="nav-menu navbar">
-                <ul>
-                    <li><a class="nav-link scrollto active" href="#hero"><i class="bi bi-house"></i> <span>Home</span></a></li>
-                    <li><a class="nav-link scrollto" href="#about"><i class="bi bi-person"></i> <span>About</span></a></li>
-                    <li><a class="nav-link scrollto" href="#resume"><i class="bi bi-file-earmark-text"></i> <span>Resume</span></a></li>
-                    <li><a class="nav-link scrollto" href="#skills"><i class="bi bi-bar-chart"></i> <span>Skills</span></a></li>
-                    <li><a class="nav-link scrollto" href="#projects"><i class="bi bi-folder"></i> <span>Projects</span></a></li>
-                    <li><a class="nav-link scrollto" href="#publications"><i class="bi bi-journal-text"></i> <span>Publications</span></a></li>
-                    <li><a class="nav-link scrollto" href="#certifications"><i class="bi bi-award"></i> <span>Certifications</span></a></li>
-                    <li><a class="nav-link scrollto" href="#contact"><i class="bi bi-envelope"></i> <span>Contact</span></a></li>
-                </ul>
-            </nav>
-        </header>
+      <nav id="navbar" class="nav-menu navbar">
+        <ul>
+          <li><a class="nav-link scrollto active" href="#hero"><i class="bi bi-house"></i> <span>Home</span></a></li>
+          <li><a class="nav-link scrollto" href="#about"><i class="bi bi-person"></i> <span>About</span></a></li>
+          <li><a class="nav-link scrollto" href="#resume"><i class="bi bi-file-earmark-text"></i>
+              <span>Resume</span></a></li>
+          <li><a class="nav-link scrollto" href="#skills"><i class="bi bi-bar-chart"></i> <span>Skills</span></a></li>
+          <li><a class="nav-link scrollto" href="#projects"><i class="bi bi-folder"></i> <span>Projects</span></a></li>
+          <li><a class="nav-link scrollto" href="#publications"><i class="bi bi-journal-text"></i>
+              <span>Publications</span></a></li>
+          <li><a class="nav-link scrollto" href="#certifications"><i class="bi bi-award"></i>
+              <span>Certifications</span></a></li>
+          <li><a class="nav-link scrollto" href="#contact"><i class="bi bi-envelope"></i> <span>Contact</span></a></li>
+        </ul>
+      </nav>
+    </header>
 
-        <!-- Main Content -->
-        <main id="main">
-            <!-- Hero Section -->
-            <section id="hero" class="d-flex align-items-center" style="background-image: url('assets/img/shreyaS.png');">
-                <div class="hero-overlay"></div>
-                <div class="container">
+    <!-- Main Content -->
+    <main id="main">
+      <!-- Hero Section -->
+      <section id="hero" class="d-flex align-items-center" style="background-image: url('assets/img/shreyaS.png');">
+        <div class="hero-overlay"></div>
+        <div class="container">
           <div class="row">
-                        <div class="col-lg-8 d-flex flex-column justify-content-center" data-aos="fade-up">
-                            <div class="hero-container">
-                                <h1>Shreyas Chaudhary</h1>
-                                <div class="hero-text-carousel">
-                                    <p class="hero-line line-1">I'm a <span>Software Engineer</span></p>
-                                    <p class="hero-line line-2"><span>Test Engineer 1, Quality Assurance</span></p>
-                                </div>
+            <div class="col-lg-8 d-flex flex-column justify-content-center" data-aos="fade-up">
+              <div class="hero-container">
+                <h1>Shreyas Chaudhary</h1>
+                <div class="hero-text-carousel">
+                  <p class="hero-line line-1">I'm a <span>Software Engineer</span></p>
+                  <p class="hero-line line-2"><span>Test Engineer 1, Quality Assurance</span></p>
                 </div>
               </div>
-                    </div>
-                </div>
-            </section>
-        <style>
-                .hero-text-carousel {
-                    position: relative;
-                    height: 50px;
-                }
-                .hero-line {
-                    position: absolute;
-                    opacity: 0;
-                    animation-duration: 8s;
-                    animation-iteration-count: infinite;
-                    font-size: 24px;
-                    color: #fff;
-                    margin: 0;
-                }
-                .hero-line span {
-                    color: #149ddd;
-                    border-bottom: 3px solid #149ddd;
-                    padding-bottom: 2px;
-                }
-                .line-1 {
-                    animation-name: fadeText1;
-                }
-                .line-2 {
-                    animation-name: fadeText2;
-                }
-                @keyframes fadeText1 {
-                    0%, 5% { opacity: 0; }
-                    10%, 45% { opacity: 1; }
-                    50%, 100% { opacity: 0; }
-                }
-                @keyframes fadeText2 {
-                    0%, 50%, 55% { opacity: 0; }
-                    60%, 95% { opacity: 1; }
-                    100% { opacity: 0; }
-          }
-        </style>
-
-              <!-- About Section -->
-            <section id="about" class="about">
-                <div class="container">
-                    <div class="section-title">
-                        <h2>About</h2>
-                  </div>
-
-          <div class="row">
-                        <div class="col-lg-4" data-aos="fade-right">
-                            <img src="homepage_logo/betterpic.png" class="img-fluid" alt="Shreyas Chaudhary">
-                </div>
-                        <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
-                            <h3>Software Engineer &amp; AI/ML Specialist</h3>
-                            <p class="fst-italic">
-                                Here are the little details that you would like to know about me:
-                            </p>
-                            <div class="row">
-                                <div class="col-lg-6">
-                                    <ul>
-                                        <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span>Chicago, IL, USA</span></li>
-                                        <li><i class="bi bi-chevron-right"></i> <strong>Personal Email:</strong> <span>shreyaschaudhary3@gmail.com</span></li>
-                </ul>
-              </div>
-                                <div class="col-lg-6">
-                                    <ul>
-                                        <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>Master of Science, Computer Science</span></li>
-                                        <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span>shreyasc@cpp.edu</span></li>
-                                        <li><i class="bi bi-chevron-right"></i> <strong>Hobbies:</strong> <span>Soccer, Gym, Formula 1</span></li>
-                                    </ul>
-                  </div>
-                  </div>
-                            <p>
-                                Software engineer with 1+ year of internship experience across SDET, backend, and full-stack roles at GlobalLogic, Walgreens, and Method, building reliable and scalable systems. Strong in Java and Python for backend and test automation, with hands-on experience in Selenium, REST APIs, and CI/CD pipelines, plus full-stack development using TypeScript, React, Next.js, Firebase, and AWS. Shipped scalable web apps to real-world users and validated complex enterprise workflows through robust automation frameworks and high-quality testing. Published research in autonomous systems and built real-time tracking and ML-based detection pipelines. Seeking SDET, backend, or full-stack roles where I can take ownership, write clean and scalable code, and deliver high-impact software at scale.
-                            </p>
-                    </div>
-                  </div>
-                </div>
-              </section>
-
-            <!-- Testimonials Section -->
-            <section id="testimonials" class="testimonials">
-                <div class="container">
-                    <div class="section-title">
-                        <h2>Testimonials</h2>
-                        <p>Recommendations from managers & teammates across internships and projects.</p>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-lg-10 offset-lg-1">
-                            <div class="testimonial-item" data-aos="fade-up">
-                                <div class="testimonial-content-wrapper">
-                                    <div class="testimonial-left">
-                                        <div class="testimonial-img-wrapper">
-                                            <div class="testimonial-img">
-                                                <img src="homepage_logo/artem.jpeg" alt="Artem Paskhin" class="img-fluid" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                                                <div style="display: none; width: 120px; height: 120px; border-radius: 50%; background: #149ddd; color: white; align-items: center; justify-content: center; font-size: 48px; font-weight: bold; margin: 0 auto;">AP</div>
-                  </div>
-                                            <a href="https://www.linkedin.com/in/artempaskhin/" target="_blank" rel="noopener noreferrer" class="testimonial-linkedin-overlay">
-                                                <i class="bi bi-linkedin"></i>
-                                            </a>
-                    </div>
-                                        <h3>Artem Paskhin</h3>
-                                        <h4>Director, Engineering at GlobalLogic</h4>
-                                    </div>
-                                    <div class="testimonial-right">
-                                        <p class="testimonial-quote">
-                                            <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                                            I was lucky to mentor Shreyas during 2024 summer internship program by Globallogic / Method. I was genuinely impressed by the level of commitment he has shown, curiosity and team spirit. He was able to deliver <strong>high quality solutions</strong> in the multi-team environment, that not only showcased his technical abilities but strong collaborative skills!
-                                            <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="testimonial-context">
-                                    GlobalLogic • 2024 Summer Internship • Full-stack delivery in multi-team environment
-                                </div>
-                            </div>
-                        </div>
-                  </div>
-                </div>
-              </section>
-            <!-- Resume Section -->
-            <section id="resume" class="resume">
-                <div class="container">
-                    <div class="section-title">
-                        <h2>Resume</h2>
-                        <p>This is the summary of my professional journey...</p>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-lg-6" data-aos="fade-up">
-                            <h3 class="resume-title">Summary</h3>
-                            <div class="resume-item pb-0">
-                                <h4>SHREYAS CHAUDHARY</h4>
-                                <p><em>Software engineer with 1+ year of internship experience across SDET, backend, and full-stack roles at GlobalLogic, Walgreens, and Method, building reliable and scalable systems. Strong in Java and Python for backend and test automation, with hands-on experience in Selenium, REST APIs, and CI/CD pipelines, plus full-stack development using TypeScript, React, Next.js, Firebase, and AWS. Shipped scalable web apps to real-world users and validated complex enterprise workflows through robust automation frameworks and high-quality testing. Published research in autonomous systems and built real-time tracking and ML-based detection pipelines. Seeking SDET, backend, or full-stack roles where I can take ownership, write clean and scalable code, and deliver high-impact software at scale.</em></p>
-                            </div>
-
-                            <h3 class="resume-title">Education</h3>
-                            <div class="resume-item">
-                                <h4>Master of Science, Computer Science</h4>
-                                <h5>Aug 2023 - May 2025</h5>
-                                <p><em>California State Polytechnic University-Pomona</em></p>
-                                <p><strong>GPA:</strong> 4.0</p>
-                                <p><strong>Key Courses:</strong> Advanced Computer Architecture, Information Retrieval, Human-Computer Interaction, Big Data Analytics & Cloud Computing, Advanced Algorithm and Analysis, Advanced Software Engineering, Mobile App Development, Computational Social Systems</p>
-                                <p><strong>Activities:</strong> Chess Club, CALsys Lab</p>
-                    </div>
-                            <div class="resume-item">
-                                <h4>Bachelor of Engineering, Computer Science</h4>
-                                <h5>Jun 2019 - May 2023</h5>
-                                <p><em>New Horizon College of Engineering, Bangalore</em></p>
-                                <p><strong>GPA:</strong> 3.75/4.0</p>
-                                <p><strong>CGPA:</strong> 8.63/10.0</p>
-                                <p><strong>Activities:</strong> Mobile App Development Club, Robotics Club</p>
-                  </div>
-                        </div>
-                        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-                            <h3 class="resume-title">Professional Experience</h3>
-                            <div class="resume-item">
-                                <h4>Software Development Engineer in Test Intern</h4>
-                                <h5>August 2025 – March 2026</h5>
-                                <p><em>GlobalLogic - Walgreens Boots Alliance, Chicago</em></p>
-                                <ul>
-                                    <li>Driving Walgreens DSCSA Compliance rollout by validating end-to-end traceability through 600+ manually executed tests and 700+ automated test executions across receiving, returns, audits, and quarantine workflows — ensuring stable functionality across the emulator, corporate and store platforms.</li>
-                                    <li>Created scalable automation scripts to support both legacy and newly released features; enhancing framework reliability using Selenium WebDriver, TestNG, Page Factory, Postman API validations, and Cosmos DB data checks, while stabilizing Azure DevOps pipeline regressions and increasing emulator/CI pass rates across modules.</li>
-                                    <li>Collaborating closely with developers, product owners, and release managers to identify, reproduce, and resolve defects; triaging critical issues using HAR/log evidence and Databricks-driven IDI validations to accelerate root-cause analysis and prevent release-blocking failures.</li>
-                      </ul>
-                    </div>
-                            <div class="resume-item">
-                                <h4>FullStack Engineering Intern</h4>
-                                <h5>Jun 2025 – Aug 2025</h5>
-                                <p><em>Method, Charlotte, NC</em></p>
-                                <ul>
-                                    <li>Built an internal knowledge-management platform with React, Next.js, TypeScript, and Firebase in an 8-person Agile team</li>
-                                    <li>Implemented role-based access control (RBAC) using Google Firebase Auth and authorization middleware to improve backend security</li>
-                                    <li>Developed an LLM-powered file organization system using Google Gemini to automatically match uploaded files to correct folder structures</li>
-                                    <li>Streamlined CI/CD processes with Google Cloud Functions to improve deployment efficiency</li>
-                      </ul>
-                    </div>
-                            <div class="resume-item">
-                                <h4>RESEARCH ASSISTANT @ AUTONOMOUS VEHICLE LABORATORY AT CALIFORNIA STATE POLYTECHNIC UNIVERSITY, POMONA</h4>
-                                <h5>Aug 2024 - May 2025</h5>
-                                <p><em>California, USA</em></p>
-                                <ul>
-                                    <li>Built a mobile app for campus-based autonomous ride-sharing using React Native and Expo with real-time tracking and ML-driven obstacle detection</li>
-                                    <li>Published two papers at the ASEE Conference on autonomous vehicles covering CNN-based end-to-end control systems and equitable AV deployment frameworks</li>
-                                    <li>Implemented outdoor mapping with SLAM Toolbox and RViz2, improving localization accuracy and reducing testing collisions</li>
-                      </ul>
-                    </div>
-                            <div class="resume-item">
-                                <h4>Software Engineer Intern</h4>
-                                <h5>Jun 2024 - Aug 2024</h5>
-                                <p><em>GlobalLogic, Austin, TX</em></p>
-                                <ul>
-                                    <li>Designed and developed a scalable gamified quiz application boosting engagement for 29,000+ users and achieving 30% increase in learner retention</li>
-                                    <li>Implemented secure authentication with OAuth 2.0 (Google SSO) and role-based access control using JWT tokens</li>
-                                    <li>Engineered a question-answering chatbot leveraging GPT-4, optimizing for accuracy, contextual understanding, and response speed</li>
-                                    <li>Implemented a LangChain-based RAG system integrated with Pinecone for scalable, semantic vector search</li>
-                                    <li>Executed complete SDLC over 8 agile sprints, delivering a fully functional prototype that exceeded stakeholder expectations</li>
-                      </ul>
-                    </div>
-                            <div class="resume-item">
-                                <h4>Research Assistant @ CALSys Lab at California State Polytechnic University, Pomona</h4>
-                                <h5>Jan 2025 - Present</h5>
-                                <p><em>California, USA</em></p>
-                                <ul>
-                                    <li>Improving accuracy of existing models by adding features and preparing paper abstracts for submission</li>
-                                    <li>Building an automated pipeline that scrapes malicious hacker data from the dark web and processes it into structured cyber-threat intelligence models</li>
-                                    <li>Scraping darkweb marketplaces and forums via Tor browser using Python and Selenium for threat intelligence</li>
-                      </ul>
-                    </div>
-                            <div class="resume-item">
-                                <h4>SAP Intern</h4>
-                                <h5>Feb 2023 - Jun 2023</h5>
-                                <p><em>Quantum Integrators, Bangalore, India</em></p>
-                                <ul>
-                                    <li>Worked on different systems such as B4P, B4D, and B4, set up VPN, Pulse, and Eclipse</li>
-                                    <li>Integrated working components and systems, debugged and tested the code</li>
-                                    <li>Documented and tested new features, researched and investigated technical issues</li>
-                                    <li>Analyzed datasets using SAP BW S/4HANA</li>
-                      </ul>
-                            </div>
-                    </div>
-                  </div>
-                </div>
-              </section>
-              <!-- Skills Section -->
-            <section id="skills" class="skills section-bg">
-                <div class="container">
-                    <div class="section-title">
-                        <h2>Skills</h2>
-                        <p>Following is the list of skills I possess:</p>
-                    </div>
-
-                    <div class="row skills-content">
-                        <div class="col-lg-6" data-aos="fade-up">
-                            <div class="progress">
-                                <span class="skill">PYTHON <i class="val">90%</i></span>
-                                <div class="progress-bar-wrap">
-                                    <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 90%"></div>
-                    </div>
-                            </div>
-
-                            <div class="progress">
-                                <span class="skill">JAVA <i class="val">90%</i></span>
-                                <div class="progress-bar-wrap">
-                                    <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 90%"></div>
-                                </div>
-                            </div>
-
-                            <div class="progress">
-                                <span class="skill">JAVASCRIPT <i class="val">80%</i></span>
-                                <div class="progress-bar-wrap">
-                                    <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%"></div>
-                                </div>
-                            </div>
-
-                            <div class="progress">
-                                <span class="skill">TYPESCRIPT <i class="val">80%</i></span>
-                                <div class="progress-bar-wrap">
-                                    <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%"></div>
-                                </div>
-                            </div>
-
-                            <div class="progress">
-                                <span class="skill">WEB DEVELOPMENT (REACT, HTML, CSS) <i class="val">80%</i></span>
-                                <div class="progress-bar-wrap">
-                                    <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%"></div>
-                                </div>
-                            </div>
-
-                            <div class="progress">
-                                <span class="skill">AWS S3 <i class="val">75%</i></span>
-                                <div class="progress-bar-wrap">
-                                    <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%"></div>
-                                </div>
-                            </div>
-
-                            <div class="progress">
-                                <span class="skill">Claude Code <i class="val">70%</i></span>
-                                <div class="progress-bar-wrap">
-                                    <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 70%"></div>
-                                </div>
-                            </div>
-
-                            <div class="progress">
-                                <span class="skill">AWS LAMBDA <i class="val">50%</i></span>
-                                <div class="progress-bar-wrap">
-                                    <div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 50%"></div>
-                                </div>
-                            </div>
-
-                            <div class="progress">
-                                <span class="skill">SPRING BOOT <i class="val">70%</i></span>
-                                <div class="progress-bar-wrap">
-                                    <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 70%"></div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-                            <div class="progress">
-                                <span class="skill">GIT <i class="val">80%</i></span>
-                                <div class="progress-bar-wrap">
-                                    <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%"></div>
-                                </div>
-                            </div>
-
-                            <div class="progress">
-                                <span class="skill">SYSTEM DESIGNING <i class="val">70%</i></span>
-                                <div class="progress-bar-wrap">
-                                    <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 70%"></div>
-                                </div>
-                            </div>
-
-                            <div class="progress">
-                                <span class="skill">NODEJS <i class="val">75%</i></span>
-                                <div class="progress-bar-wrap">
-                                    <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%"></div>
-                                </div>
-                            </div>
-
-                            <div class="progress">
-                                <span class="skill">SELENIUM <i class="val">80%</i></span>
-                                <div class="progress-bar-wrap">
-                                    <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%"></div>
-                                </div>
-                            </div>
-
-                            <div class="progress">
-                                <span class="skill">DJANGO <i class="val">70%</i></span>
-                                <div class="progress-bar-wrap">
-                                    <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 70%"></div>
-                                </div>
-                            </div>
-
-                            <div class="progress">
-                                <span class="skill">NO SQL <i class="val">80%</i></span>
-                                <div class="progress-bar-wrap">
-                                    <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%"></div>
-                                </div>
-                            </div>
-
-                            <div class="progress">
-                                <span class="skill">REACT <i class="val">90%</i></span>
-                                <div class="progress-bar-wrap">
-                                    <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 90%"></div>
-                                </div>
-                            </div>
-
-                            <div class="progress">
-                                <span class="skill">NEXT.JS <i class="val">90%</i></span>
-                                <div class="progress-bar-wrap">
-                                    <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 90%"></div>
-                                </div>
-                            </div>
-
-                            <div class="progress">
-                                <span class="skill">TAILWIND CSS <i class="val">95%</i></span>
-                                <div class="progress-bar-wrap">
-                                    <div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100" style="width: 95%"></div>
-                                </div>
-                            </div>
-                    </div>
-                  </div>
-                </div>
-              </section>
-              <!-- Projects Section -->
-            <section id="projects" class="portfolio section-bg">
-                <div class="container">
-                    <div class="section-title">
-                        <h2>Projects</h2>
-                        <p>Here are some of the top projects that I have worked on:</p>
-                      </div>
-
-                    <div class="row portfolio-container" style="opacity: 1 !important; visibility: visible !important; display: flex !important; flex-wrap: wrap !important;">
-                        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-                            <div class="portfolio-wrap">
-                                <img src="projects/stockerr/5.gif" class="img-fluid" alt="Stock Analysis Platform">
-                                <div class="portfolio-links">
-                                    <a href="projects/stockerr/5.gif" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Stock Analysis Platform"><i class="bx bx-plus"></i></a>
-                                    <a href="https://github.com/shreyas463/Stock-Analysis-platform" target="_blank" title="Source Code"><i class="bx bx-code-alt"></i></a>
-                                    <a href="https://stock-analysis-platform-bay.vercel.app" target="_blank" title="Live Demo"><i class="bx bx-link"></i></a>
-                    </div>
-                  </div>
-                            <div class="portfolio-info">
-                                <h4>Stock Analysis Platform</h4>
-                                <p>A full-stack web application replicating core features of Robinhood, built with Next.js and Flask.</p>
-                      </div>
-                    </div>
-
-                        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-                            <div class="portfolio-wrap">
-                                <img src="projects/resume/3.1.png" class="img-fluid" alt="AI-Powered Resume Analyzer">
-                                <div class="portfolio-links">
-                                    <a href="projects/resume/3.1.png" data-gallery="portfolioGallery" class="portfolio-lightbox" title="AI-Powered Resume Analyzer"><i class="bx bx-plus"></i></a>
-                                    <a href="https://github.com/shreyas463/AI-Powered-Resume-Analyzer" target="_blank" title="Source Code"><i class="bx bx-code-alt"></i></a>
-                                    <a href="https://ai-powered-resume-analyzer-63ld-5m0dx1zd9.vercel.app/" target="_blank" title="Live Demo"><i class="bx bx-link"></i></a>
-                  </div>
-                      </div>
-                            <div class="portfolio-info">
-                                <h4>AI-Powered Resume Analyzer</h4>
-                                <p>A modern web application that helps users create professional resumes and analyzes them using AI.</p>
-                    </div>
-                  </div>
-
-                        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-                            <div class="portfolio-wrap">
-                                <img src="projects/sportsinfoapp/preview.gif" class="img-fluid" alt="PreNBA - Sports Info App">
-                                <div class="portfolio-links">
-                                    <a href="projects/sportsinfoapp/preview.gif" data-gallery="portfolioGallery" class="portfolio-lightbox" title="PreNBA - Sports Info App"><i class="bx bx-plus"></i></a>
-                                    <a href="https://github.com/shreyas463/PreNBA" target="_blank" title="Source Code"><i class="bx bx-code-alt"></i></a>
-                                    <a href="https://pre-nba.vercel.app" target="_blank" title="Live Demo"><i class="bx bx-link"></i></a>
-                      </div>
-                    </div>
-                            <div class="portfolio-info">
-                                <h4>PreNBA - Sports Info App</h4>
-                                <p>A modern, responsive web application for Premier League and NBA players information.</p>
-                  </div>
-                      </div>
-
-                        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-                            <div class="portfolio-wrap">
-                                <img src="projects/Pokemon/1.gif" class="img-fluid" alt="PokeInfo Hub">
-                                <div class="portfolio-links">
-                                    <a href="projects/Pokemon/1.gif" data-gallery="portfolioGallery" class="portfolio-lightbox" title="PokeInfo Hub"><i class="bx bx-plus"></i></a>
-                                    <a href="https://github.com/shreyas463/PokeInfo-Hub" target="_blank" title="Source Code"><i class="bx bx-link"></i></a>
-                    </div>
-                  </div>
-                            <div class="portfolio-info">
-                                <h4>PokeInfo Hub</h4>
-                                <p>A modern web application that serves as your comprehensive Pokémon information center.</p>
-                      </div>
-                    </div>
-
-                        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-                            <div class="portfolio-wrap">
-                                <img src="projects/formula1one/7.gif" class="img-fluid" alt="Formula1Won">
-                                <div class="portfolio-links">
-                                    <a href="projects/formula1one/7.gif" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Formula1Won"><i class="bx bx-plus"></i></a>
-                                    <a href="https://github.com/shreyas463/Formula1Won" target="_blank" title="Source Code"><i class="bx bx-link"></i></a>
-                  </div>
-                      </div>
-                            <div class="portfolio-info">
-                                <h4>Formula1Won</h4>
-                                <p>Simulates a self-driving car navigating dynamic traffic using a greedy pathfinding algorithm and collision avoidance system.</p>
-                    </div>
-                  </div>
-
-                        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-                            <div class="portfolio-wrap">
-                                <img src="projects/bartender/Thebartender.gif" class="img-fluid" alt="The Bartender">
-                                <div class="portfolio-links">
-                                    <a href="projects/bartender/Thebartender.gif" data-gallery="portfolioGallery" class="portfolio-lightbox" title="The Bartender"><i class="bx bx-plus"></i></a>
-                                    <a href="https://github.com/shreyas463/TheBartender" target="_blank" title="Source Code"><i class="bx bx-link"></i></a>
-                      </div>
-                    </div>
-                            <div class="portfolio-info">
-                                <h4>The Bartender</h4>
-                                <p>A sleek and interactive web app for discovering cocktail recipes. React and Tailwind CSS frontend, Laravel backend with GraphQL, and TheCocktailDB API.</p>
-                  </div>
-                      </div>
-
-                        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-                            <div class="portfolio-wrap">
-                                <img src="projects/epidmi/6.gif" class="img-fluid" alt="Disease Spread Simulation">
-                                <div class="portfolio-links">
-                                    <a href="projects/epidmi/6.gif" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Disease Spread Simulation"><i class="bx bx-plus"></i></a>
-                                    <a href="https://github.com/shreyas463/epidmi" target="_blank" title="Source Code"><i class="bx bx-link"></i></a>
-                    </div>
-                  </div>
-                            <div class="portfolio-info">
-                                <h4>Disease Spread Simulation</h4>
-                                <p>Visualizes the spread of a disease within a population using agent-based modeling and social network-based modeling.</p>
-                      </div>
-                    </div>
-
-                        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-                            <div class="portfolio-wrap">
-                                <img src="projects/livesketch/4.1.png" class="img-fluid" alt="LiveSketch">
-                                <div class="portfolio-links">
-                                    <a href="projects/livesketch/4.1.png" data-gallery="portfolioGallery" class="portfolio-lightbox" title="LiveSketch"><i class="bx bx-plus"></i></a>
-                                    <a href="https://github.com/shreyas463/LiveSketch" target="_blank" title="Source Code"><i class="bx bx-link"></i></a>
-                  </div>
-                </div>
-                            <div class="portfolio-info">
-                                <h4>LiveSketch</h4>
-                                <p>A collaborative whiteboard app enabling real-time drawing with Electron, Socket.io, and Canvas API.</p>
-                    </div>
-                  </div>
-
-                        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-                            <div class="portfolio-wrap">
-                                <img src="projects/cs5180/bio.gif" class="img-fluid" alt="BioSearch-CPP">
-                                <div class="portfolio-links">
-                                    <a href="projects/cs5180/bio.gif" data-gallery="portfolioGallery" class="portfolio-lightbox" title="BioSearch-CPP"><i class="bx bx-plus"></i></a>
-                                    <a href="https://github.com/shreyas463/BioSearch-CPP" target="_blank" title="Source Code"><i class="bx bx-link"></i></a>
-                      </div>
-                    </div>
-                            <div class="portfolio-info">
-                                <h4>BioSearch-CPP</h4>
-                                <p>A specialized search engine for the CPP Biology Department to find faculty by research interests and expertise.</p>
-                      </div>
-                    </div>
-
-                        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-                            <div class="portfolio-wrap">
-                                <img src="projects/artg/art.gif" class="img-fluid" alt="Virtual Art Gallery">
-                                <div class="portfolio-links">
-                                    <a href="projects/artg/art.gif" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Virtual Art Gallery"><i class="bx bx-plus"></i></a>
-                                    <a href="https://github.com/shreyas463/Virtual-art" target="_blank" title="Source Code"><i class="bx bx-link"></i></a>
-                                </div>
-                            </div>
-                            <div class="portfolio-info">
-                                <h4>Virtual Art Gallery</h4>
-                                <p>An interactive platform leveraging the MET API to showcase priceless artworks in real time. Built with React, Node.js, Express, and MongoDB.</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </section>
-              
-              <!-- Publications Section -->
-            <section id="publications" class="publications section-bg">
-                <div class="container">
-                    <div class="section-title">
-                        <h2>Publications</h2>
-                        <p>Research publications and academic papers</p>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-lg-6" data-aos="fade-up">
-                            <div class="publication-item">
-                                <h4>End to End Networks for Vehicle Control</h4>
-                                <h5>2025 ASEE PSW Conference</h5>
-                                <p><em>Published 2025</em></p>
-                                <a href="https://peer.asee.org/end-to-end-networks-for-vehicle-control" target="_blank" class="read-paper-link">Read Paper <i class="bi bi-arrow-right"></i></a>
-                            </div>
-                        </div>
-                        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-                            <div class="publication-item">
-                                <h4>Toward Equitable Autonomous Vehicle Deployment</h4>
-                                <h5>2025 ASEE PSW Conference</h5>
-                                <p><em>Published 2025</em></p>
-                                <a href="https://peer.asee.org/toward-equitable-autonomous-vehicle-deployment" target="_blank" class="read-paper-link">Read Paper <i class="bi bi-arrow-right"></i></a>
-                            </div>
-                        </div>
-                        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-                            <div class="publication-item">
-                                <h4>Law Enforcement Companion</h4>
-                                <h5>2025 ASEE PSW Conference</h5>
-                                <p><em>Published 2025</em></p>
-                                <a href="https://ieeexplore.ieee.org/document/10083546" target="_blank" class="read-paper-link">Read Paper <i class="bi bi-arrow-right"></i></a>
-                            </div>
-                        </div>
-                        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
-                            <div class="publication-item">
-                                <h4>Utilizing Deep Learning as a Law Enforcement Ally</h4>
-                                <h5>2025 ASEE PSW Conference</h5>
-                                <p><em>Published 2025</em></p>
-                                <a href="https://ieeexplore.ieee.org/abstract/document/10127890" target="_blank" class="read-paper-link">Read Paper <i class="bi bi-arrow-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-              </section>
-              
-              <!-- Certifications Section -->
-            <section id="certifications" class="certifications section-bg">
-                <div class="container">
-                    <div class="section-title">
-                        <h2>Certifications</h2>
-                        <p>Here are some of the major certifications that reflect my skills and continuous learning journey:</p>
-                </div>
-
-                    <div class="row">
-                        <div class="col-lg-6" data-aos="fade-up">
-                            <div class="certification-item">
-                                <div class="certification-icon">
-                                    <img src="homepage_logo/cpplogo.png" alt="Cal Poly Pomona" style="width: 50px; height: 50px; object-fit: contain;">
-                    </div>
-                                <h4>AI Hackathon 2025</h4>
-                                <h5>California State Polytechnic University-Pomona</h5>
-                                <p><em>Issued Apr 2025 • Expires Apr 2029</em></p>
-                                <a href="https://badgr.com/public/assertions/3GHX6pldS36ZoWH2-OE-ew" target="_blank" class="cert-link">View Certificate <i class="bi bi-box-arrow-up-right"></i></a>
-                  </div>
-                        </div>
-                        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-                            <div class="certification-item">
-                                <div class="certification-icon">
-                                    <img src="homepage_logo/workato.png" alt="Workato" style="width: 50px; height: 50px; object-fit: contain;">
-                                </div>
-                                <h4>Automation Pro I Certificate</h4>
-                                <h5>Workato</h5>
-                                <p><em>Issued Apr 2025 • Expires Apr 2027</em></p>
-                                <a href="https://verify.skilljar.com/c/szyktcq3wn3q" target="_blank" class="cert-link">View Certificate <i class="bi bi-box-arrow-up-right"></i></a>
-                            </div>
-                        </div>
-                        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-                            <div class="certification-item">
-                                <div class="certification-icon">
-                                    <img src="homepage_logo/workato.png" alt="Workato" style="width: 50px; height: 50px; object-fit: contain;">
-                                </div>
-                                <h4>Automation Pro II Certificate</h4>
-                                <h5>Workato</h5>
-                                <p><em>Issued Apr 2025 • Expires Apr 2027</em></p>
-                                <a href="https://credentials.workato.com/b311b5e9-0c3d-4e2c-a9dc-91a6026a4a24#acc.QJTP1Xmx" target="_blank" class="cert-link">View Certificate <i class="bi bi-box-arrow-up-right"></i></a>
-                            </div>
-                        </div>
-                        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
-                            <div class="certification-item">
-                                <div class="certification-icon">
-                                    <img src="homepage_logo/workato.png" alt="Workato" style="width: 50px; height: 50px; object-fit: contain;">
-                                </div>
-                                <h4>Automation Pro III Certificate</h4>
-                                <h5>Workato</h5>
-                                <p><em>Issued May 2025 • Expires May 2027</em></p>
-                                <a href="https://verify.skilljar.com/c/pgzf4vp5g67n" target="_blank" class="cert-link">View Certificate <i class="bi bi-box-arrow-up-right"></i></a>
-                            </div>
-                        </div>
-                        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
-                            <div class="certification-item">
-                                <div class="certification-icon">
-                                    <img src="homepage_logo/databricks.jpeg" alt="Databricks" style="width: 50px; height: 50px; object-fit: contain;">
-                                </div>
-                                <h4>Academy Accreditation - Generative AI Fundamentals</h4>
-                                <h5>Databricks</h5>
-                                <p><em>Issued Sep 2024 • Expires Sep 2026</em></p>
-                                <a href="https://credentials.databricks.com/62de9f0b-be77-499b-b1ff-d19bc519c9b1#acc.C90FAWo2" target="_blank" class="cert-link">View Certificate <i class="bi bi-box-arrow-up-right"></i></a>
-                            </div>
-                        </div>
-                        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="500">
-                            <div class="certification-item">
-                                <div class="certification-icon">
-                                    <img src="homepage_logo/cpplogo.png" alt="Stanford" style="width: 50px; height: 50px; object-fit: contain;">
-                                </div>
-                                <h4>Supervised Machine Learning: Regression and Classification</h4>
-                                <h5>DeepLearning.AI, Stanford University</h5>
-                                <p><em>Issued Sep 2024</em></p>
-                                <a href="https://www.coursera.org/account/accomplishments/verify/X15PXZ7Z6EJS" target="_blank" class="cert-link">View Certificate <i class="bi bi-box-arrow-up-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-              </section>
-
-              <!-- Contact Section -->
-            <section id="contact" class="contact">
-                <div class="container">
-                    <div class="section-title">
-                        <h2>Contact</h2>
-                        <p>Feel free to reach out! I'm always open to discussing new opportunities.</p>
-                </div>
-
-                    <div class="row" data-aos="fade-in">
-                        <div class="col-lg-12">
-                            <div class="contact-minimal" style="display: flex; justify-content: center; gap: 60px; flex-wrap: wrap; padding: 30px 0;">
-                                <div class="contact-item" style="text-align: center;">
-                                    <h5 style="color: #173b6c; font-weight: 600; margin-bottom: 8px;">Email</h5>
-                                    <p style="margin: 0;"><a href="mailto:shreyasc@cpp.edu" style="color: #149ddd;">shreyasc@cpp.edu</a></p>
+            </div>
           </div>
-                                <div class="contact-item" style="text-align: center;">
-                                    <h5 style="color: #173b6c; font-weight: 600; margin-bottom: 8px;">Location</h5>
-                                    <p style="color: #272829; margin: 0;">Chicago, IL - USA</p>
-    </div>
-                            </div>
-                        </div>
-                    </div>
+        </div>
+      </section>
+      <style>
+        .hero-text-carousel {
+          position: relative;
+          height: 50px;
+        }
+
+        .hero-line {
+          position: absolute;
+          opacity: 0;
+          animation-duration: 8s;
+          animation-iteration-count: infinite;
+          font-size: 24px;
+          color: #fff;
+          margin: 0;
+        }
+
+        .hero-line span {
+          color: #149ddd;
+          border-bottom: 3px solid #149ddd;
+          padding-bottom: 2px;
+        }
+
+        .line-1 {
+          animation-name: fadeText1;
+        }
+
+        .line-2 {
+          animation-name: fadeText2;
+        }
+
+        @keyframes fadeText1 {
+
+          0%,
+          5% {
+            opacity: 0;
+          }
+
+          10%,
+          45% {
+            opacity: 1;
+          }
+
+          50%,
+          100% {
+            opacity: 0;
+          }
+        }
+
+        @keyframes fadeText2 {
+
+          0%,
+          50%,
+          55% {
+            opacity: 0;
+          }
+
+          60%,
+          95% {
+            opacity: 1;
+          }
+
+          100% {
+            opacity: 0;
+          }
+        }
+      </style>
+
+      <!-- About Section -->
+      <section id="about" class="about">
+        <div class="container">
+          <div class="section-title">
+            <h2>About</h2>
+          </div>
+
+          <div class="row">
+            <div class="col-lg-4" data-aos="fade-right">
+              <img src="homepage_logo/betterpic.png" class="img-fluid" alt="Shreyas Chaudhary">
+            </div>
+            <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
+              <h3>Software Engineer &amp; AI/ML Specialist</h3>
+              <p class="fst-italic">
+                Here are the little details that you would like to know about me:
+              </p>
+              <div class="row">
+                <div class="col-lg-6">
+                  <ul>
+                    <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span>Chicago, IL, USA</span></li>
+                    <li><i class="bi bi-chevron-right"></i> <strong>Personal Email:</strong>
+                      <span>shreyaschaudhary3@gmail.com</span>
+                    </li>
+                  </ul>
                 </div>
-            </section>
-            </main>
-    </div>
-    <script src="assets/vendor/purecounter/purecounter.js"></script>
-    <script src="assets/vendor/aos/aos.js"></script>
-    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-    <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-    <script src="assets/js/main.js"></script>
+                <div class="col-lg-6">
+                  <ul>
+                    <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>Master of Science, Computer
+                        Science</span></li>
+                    <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span>shreyasc@cpp.edu</span></li>
+                    <li><i class="bi bi-chevron-right"></i> <strong>Hobbies:</strong> <span>Soccer, Gym, Formula
+                        1</span></li>
+                  </ul>
+                </div>
+              </div>
+              <p>
+                Software engineer with 1+ year of internship experience across SDET, backend, and full-stack roles at
+                GlobalLogic, Walgreens, and Method. Strong in Java and Python for backend and test automation, with
+                hands-on experience in Selenium, REST APIs, CI/CD pipelines, and full-stack development using
+                TypeScript, React, Next.js, Firebase, and AWS. Built scalable web apps for real users, validated complex
+                enterprise workflows through robust automation frameworks, and published research in autonomous systems
+                with real-time tracking and ML-based detection pipelines. Seeking SDET, backend, or full-stack roles
+                where I can own projects, write clean scalable code, and deliver high-impact software.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Testimonials Section -->
+      <section id="testimonials" class="testimonials">
+        <div class="container">
+          <div class="section-title">
+            <h2>Testimonials</h2>
+            <p>Recommendations from managers & teammates across internships and projects.</p>
+          </div>
+
+          <div class="row">
+            <div class="col-lg-10 offset-lg-1">
+              <div class="testimonial-item" data-aos="fade-up">
+                <div class="testimonial-content-wrapper">
+                  <div class="testimonial-left">
+                    <div class="testimonial-img-wrapper">
+                      <div class="testimonial-img">
+                        <img src="homepage_logo/artem.jpeg" alt="Artem Paskhin" class="img-fluid"
+                          onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div
+                          style="display: none; width: 120px; height: 120px; border-radius: 50%; background: #149ddd; color: white; align-items: center; justify-content: center; font-size: 48px; font-weight: bold; margin: 0 auto;">
+                          AP</div>
+                      </div>
+                      <a href="https://www.linkedin.com/in/artempaskhin/" target="_blank" rel="noopener noreferrer"
+                        class="testimonial-linkedin-overlay">
+                        <i class="bi bi-linkedin"></i>
+                      </a>
+                    </div>
+                    <h3>Artem Paskhin</h3>
+                    <h4>Director, Engineering at GlobalLogic</h4>
+                  </div>
+                  <div class="testimonial-right">
+                    <p class="testimonial-quote">
+                      <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                      I was lucky to mentor Shreyas during 2024 summer internship program by Globallogic / Method. I was
+                      genuinely impressed by the level of commitment he has shown, curiosity and team spirit. He was
+                      able to deliver <strong>high quality solutions</strong> in the multi-team environment, that not
+                      only showcased his technical abilities but strong collaborative skills!
+                      <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                    </p>
+                  </div>
+                </div>
+                <div class="testimonial-context">
+                  GlobalLogic • 2024 Summer Internship • Full-stack delivery in multi-team environment
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Resume Section -->
+      <section id="resume" class="resume">
+        <div class="container">
+          <div class="section-title">
+            <h2>Resume</h2>
+            <p>This is the summary of my professional journey...</p>
+          </div>
+
+          <div class="row">
+            <div class="col-lg-6" data-aos="fade-up">
+              <h3 class="resume-title">Summary</h3>
+              <div class="resume-item pb-0">
+                <h4>SHREYAS CHAUDHARY</h4>
+                <p><em>Software engineer with experience across SDET, backend, and full-stack engineering, focused on
+                    building reliable systems, scalable automation, and AI-assisted developer workflows. I’ve worked on
+                    enterprise healthcare platforms, user-facing web apps, and intelligent document-processing tools,
+                    using Java, Python, Selenium, REST APIs, CI/CD, React, Next.js, Firebase, AWS, and modern AI coding
+                    tools. Strong at turning ambiguous problems into clean, testable solutions, improving release
+                    quality, and shipping software that is dependable, maintainable, and built for real users. Seeking
+                    SDET, backend, or full-stack roles where I can bring ownership, speed, and strong engineering
+                    judgment to high-impact products.</em></p>
+              </div>
+
+              <h3 class="resume-title">Education</h3>
+              <div class="resume-item">
+                <h4>Master of Science, Computer Science</h4>
+                <h5>Aug 2023 - May 2025</h5>
+                <p><em>California State Polytechnic University-Pomona</em></p>
+                <p><strong>GPA:</strong> 4.0</p>
+                <p><strong>Key Courses:</strong> Advanced Computer Architecture, Information Retrieval, Human-Computer
+                  Interaction, Big Data Analytics & Cloud Computing, Advanced Algorithm and Analysis, Advanced Software
+                  Engineering, Mobile App Development, Computational Social Systems</p>
+                <p><strong>Activities:</strong> Chess Club, CALsys Lab</p>
+              </div>
+              <div class="resume-item">
+                <h4>Bachelor of Engineering, Computer Science</h4>
+                <h5>Jun 2019 - May 2023</h5>
+                <p><em>New Horizon College of Engineering, Bangalore</em></p>
+                <p><strong>GPA:</strong> 3.75/4.0</p>
+                <p><strong>CGPA:</strong> 8.63/10.0</p>
+                <p><strong>Activities:</strong> Mobile App Development Club, Robotics Club</p>
+              </div>
+            </div>
+            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+              <h3 class="resume-title">Professional Experience</h3>
+              <div class="resume-item">
+                <h4>Software Development Engineer in Test Intern</h4>
+                <h5>August 2025 – March 2026</h5>
+                <p><em>GlobalLogic - Walgreens Boots Alliance, Chicago</em></p>
+                <ul>
+                  <li>Driving Walgreens DSCSA Compliance rollout by validating end-to-end traceability through 600+
+                    manually executed tests and 700+ automated test executions across receiving, returns, audits, and
+                    quarantine workflows — ensuring stable functionality across the emulator, corporate and store
+                    platforms.</li>
+                  <li>Created scalable automation scripts to support both legacy and newly released features; enhancing
+                    framework reliability using Selenium WebDriver, TestNG, Page Factory, Postman API validations, and
+                    Cosmos DB data checks, while stabilizing Azure DevOps pipeline regressions and increasing
+                    emulator/CI pass rates across modules.</li>
+                  <li>Collaborating closely with developers, product owners, and release managers to identify,
+                    reproduce, and resolve defects; triaging critical issues using HAR/log evidence and
+                    Databricks-driven IDI validations to accelerate root-cause analysis and prevent release-blocking
+                    failures.</li>
+                </ul>
+              </div>
+              <div class="resume-item">
+                <h4>FullStack Engineering Intern</h4>
+                <h5>Jun 2025 – Aug 2025</h5>
+                <p><em>Method, Charlotte, NC</em></p>
+                <ul>
+                  <li>Built an internal knowledge-management platform with React, Next.js, TypeScript, and Firebase in
+                    an 8-person Agile team</li>
+                  <li>Implemented role-based access control (RBAC) using Google Firebase Auth and authorization
+                    middleware to improve backend security</li>
+                  <li>Developed an LLM-powered file organization system using Google Gemini to automatically match
+                    uploaded files to correct folder structures</li>
+                  <li>Streamlined CI/CD processes with Google Cloud Functions to improve deployment efficiency</li>
+                </ul>
+              </div>
+              <div class="resume-item">
+                <h4>RESEARCH ASSISTANT @ AUTONOMOUS VEHICLE LABORATORY AT CALIFORNIA STATE POLYTECHNIC UNIVERSITY,
+                  POMONA</h4>
+                <h5>Aug 2024 - May 2025</h5>
+                <p><em>California, USA</em></p>
+                <ul>
+                  <li>Built a mobile app for campus-based autonomous ride-sharing using React Native and Expo with
+                    real-time tracking and ML-driven obstacle detection</li>
+                  <li>Published two papers at the ASEE Conference on autonomous vehicles covering CNN-based end-to-end
+                    control systems and equitable AV deployment frameworks</li>
+                  <li>Implemented outdoor mapping with SLAM Toolbox and RViz2, improving localization accuracy and
+                    reducing testing collisions</li>
+                </ul>
+              </div>
+              <div class="resume-item">
+                <h4>Software Engineer Intern</h4>
+                <h5>Jun 2024 - Aug 2024</h5>
+                <p><em>GlobalLogic, Austin, TX</em></p>
+                <ul>
+                  <li>Designed and developed a scalable gamified quiz application boosting engagement for 29,000+ users
+                    and achieving 30% increase in learner retention</li>
+                  <li>Implemented secure authentication with OAuth 2.0 (Google SSO) and role-based access control using
+                    JWT tokens</li>
+                  <li>Engineered a question-answering chatbot leveraging GPT-4, optimizing for accuracy, contextual
+                    understanding, and response speed</li>
+                  <li>Implemented a LangChain-based RAG system integrated with Pinecone for scalable, semantic vector
+                    search</li>
+                  <li>Executed complete SDLC over 8 agile sprints, delivering a fully functional prototype that exceeded
+                    stakeholder expectations</li>
+                </ul>
+              </div>
+              <div class="resume-item">
+                <h4>Research Assistant @ CALSys Lab at California State Polytechnic University, Pomona</h4>
+                <h5>Jan 2025 - Present</h5>
+                <p><em>California, USA</em></p>
+                <ul>
+                  <li>Improving accuracy of existing models by adding features and preparing paper abstracts for
+                    submission</li>
+                  <li>Building an automated pipeline that scrapes malicious hacker data from the dark web and processes
+                    it into structured cyber-threat intelligence models</li>
+                  <li>Scraping darkweb marketplaces and forums via Tor browser using Python and Selenium for threat
+                    intelligence</li>
+                </ul>
+              </div>
+              <div class="resume-item">
+                <h4>SAP Intern</h4>
+                <h5>Feb 2023 - Jun 2023</h5>
+                <p><em>Quantum Integrators, Bangalore, India</em></p>
+                <ul>
+                  <li>Worked on different systems such as B4P, B4D, and B4, set up VPN, Pulse, and Eclipse</li>
+                  <li>Integrated working components and systems, debugged and tested the code</li>
+                  <li>Documented and tested new features, researched and investigated technical issues</li>
+                  <li>Analyzed datasets using SAP BW S/4HANA</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Skills Section -->
+      <section id="skills" class="skills section-bg">
+        <div class="container">
+          <div class="section-title">
+            <h2>Skills</h2>
+            <p>Following is the list of skills I possess:</p>
+          </div>
+
+          <div class="row skills-content">
+            <div class="col-lg-6" data-aos="fade-up">
+              <div class="progress">
+                <span class="skill">PYTHON <i class="val">90%</i></span>
+                <div class="progress-bar-wrap">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"
+                    style="width: 90%"></div>
+                </div>
+              </div>
+
+              <div class="progress">
+                <span class="skill">JAVA <i class="val">90%</i></span>
+                <div class="progress-bar-wrap">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"
+                    style="width: 90%"></div>
+                </div>
+              </div>
+
+              <div class="progress">
+                <span class="skill">JAVASCRIPT <i class="val">80%</i></span>
+                <div class="progress-bar-wrap">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"
+                    style="width: 80%"></div>
+                </div>
+              </div>
+
+              <div class="progress">
+                <span class="skill">TYPESCRIPT <i class="val">80%</i></span>
+                <div class="progress-bar-wrap">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"
+                    style="width: 80%"></div>
+                </div>
+              </div>
+
+              <div class="progress">
+                <span class="skill">WEB DEVELOPMENT (REACT, HTML, CSS) <i class="val">80%</i></span>
+                <div class="progress-bar-wrap">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"
+                    style="width: 80%"></div>
+                </div>
+              </div>
+
+              <div class="progress">
+                <span class="skill">AWS S3 <i class="val">75%</i></span>
+                <div class="progress-bar-wrap">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"
+                    style="width: 75%"></div>
+                </div>
+              </div>
+
+              <div class="progress">
+                <span class="skill">Claude Code <i class="val">70%</i></span>
+                <div class="progress-bar-wrap">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"
+                    style="width: 70%"></div>
+                </div>
+              </div>
+
+              <div class="progress">
+                <span class="skill">AWS LAMBDA <i class="val">50%</i></span>
+                <div class="progress-bar-wrap">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"
+                    style="width: 50%"></div>
+                </div>
+              </div>
+
+              <div class="progress">
+                <span class="skill">SPRING BOOT <i class="val">70%</i></span>
+                <div class="progress-bar-wrap">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"
+                    style="width: 70%"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+              <div class="progress">
+                <span class="skill">GIT <i class="val">80%</i></span>
+                <div class="progress-bar-wrap">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"
+                    style="width: 80%"></div>
+                </div>
+              </div>
+
+              <div class="progress">
+                <span class="skill">SYSTEM DESIGNING <i class="val">70%</i></span>
+                <div class="progress-bar-wrap">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"
+                    style="width: 70%"></div>
+                </div>
+              </div>
+
+              <div class="progress">
+                <span class="skill">NODEJS <i class="val">75%</i></span>
+                <div class="progress-bar-wrap">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"
+                    style="width: 75%"></div>
+                </div>
+              </div>
+
+              <div class="progress">
+                <span class="skill">SELENIUM <i class="val">80%</i></span>
+                <div class="progress-bar-wrap">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"
+                    style="width: 80%"></div>
+                </div>
+              </div>
+
+              <div class="progress">
+                <span class="skill">DJANGO <i class="val">70%</i></span>
+                <div class="progress-bar-wrap">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"
+                    style="width: 70%"></div>
+                </div>
+              </div>
+
+              <div class="progress">
+                <span class="skill">NO SQL <i class="val">80%</i></span>
+                <div class="progress-bar-wrap">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"
+                    style="width: 80%"></div>
+                </div>
+              </div>
+
+              <div class="progress">
+                <span class="skill">REACT <i class="val">90%</i></span>
+                <div class="progress-bar-wrap">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"
+                    style="width: 90%"></div>
+                </div>
+              </div>
+
+              <div class="progress">
+                <span class="skill">NEXT.JS <i class="val">90%</i></span>
+                <div class="progress-bar-wrap">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"
+                    style="width: 90%"></div>
+                </div>
+              </div>
+
+              <div class="progress">
+                <span class="skill">TAILWIND CSS <i class="val">95%</i></span>
+                <div class="progress-bar-wrap">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"
+                    style="width: 95%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Projects Section -->
+      <section id="projects" class="portfolio section-bg">
+        <div class="container">
+          <div class="section-title">
+            <h2>Projects</h2>
+            <p>Here are some of the top projects that I have worked on:</p>
+          </div>
+
+          <div class="row portfolio-container"
+            style="opacity: 1 !important; visibility: visible !important; display: flex !important; flex-wrap: wrap !important;">
+            <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+              <div class="portfolio-wrap">
+                <img src="projects/stockerr/5.gif" class="img-fluid" alt="Stock Analysis Platform">
+                <div class="portfolio-links">
+                  <a href="projects/stockerr/5.gif" data-gallery="portfolioGallery" class="portfolio-lightbox"
+                    title="Stock Analysis Platform"><i class="bx bx-plus"></i></a>
+                  <a href="https://github.com/shreyas463/Stock-Analysis-platform" target="_blank" title="Source Code"><i
+                      class="bx bx-code-alt"></i></a>
+                  <a href="https://stock-analysis-platform-bay.vercel.app" target="_blank" title="Live Demo"><i
+                      class="bx bx-link"></i></a>
+                </div>
+              </div>
+              <div class="portfolio-info">
+                <h4>Stock Analysis Platform</h4>
+                <p>A full-stack web application replicating core features of Robinhood, built with Next.js and Flask.
+                </p>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+              <div class="portfolio-wrap">
+                <img src="projects/resume/3.1.png" class="img-fluid" alt="AI-Powered Resume Analyzer">
+                <div class="portfolio-links">
+                  <a href="projects/resume/3.1.png" data-gallery="portfolioGallery" class="portfolio-lightbox"
+                    title="AI-Powered Resume Analyzer"><i class="bx bx-plus"></i></a>
+                  <a href="https://github.com/shreyas463/AI-Powered-Resume-Analyzer" target="_blank"
+                    title="Source Code"><i class="bx bx-code-alt"></i></a>
+                  <a href="https://ai-powered-resume-analyzer-63ld-5m0dx1zd9.vercel.app/" target="_blank"
+                    title="Live Demo"><i class="bx bx-link"></i></a>
+                </div>
+              </div>
+              <div class="portfolio-info">
+                <h4>AI-Powered Resume Analyzer</h4>
+                <p>A modern web application that helps users create professional resumes and analyzes them using AI.</p>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+              <div class="portfolio-wrap">
+                <img src="projects/sportsinfoapp/preview.gif" class="img-fluid" alt="PreNBA - Sports Info App">
+                <div class="portfolio-links">
+                  <a href="projects/sportsinfoapp/preview.gif" data-gallery="portfolioGallery"
+                    class="portfolio-lightbox" title="PreNBA - Sports Info App"><i class="bx bx-plus"></i></a>
+                  <a href="https://github.com/shreyas463/PreNBA" target="_blank" title="Source Code"><i
+                      class="bx bx-code-alt"></i></a>
+                  <a href="https://pre-nba.vercel.app" target="_blank" title="Live Demo"><i class="bx bx-link"></i></a>
+                </div>
+              </div>
+              <div class="portfolio-info">
+                <h4>PreNBA - Sports Info App</h4>
+                <p>A modern, responsive web application for Premier League and NBA players information.</p>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+              <div class="portfolio-wrap">
+                <img src="projects/Pokemon/1.gif" class="img-fluid" alt="PokeInfo Hub">
+                <div class="portfolio-links">
+                  <a href="projects/Pokemon/1.gif" data-gallery="portfolioGallery" class="portfolio-lightbox"
+                    title="PokeInfo Hub"><i class="bx bx-plus"></i></a>
+                  <a href="https://github.com/shreyas463/PokeInfo-Hub" target="_blank" title="Source Code"><i
+                      class="bx bx-link"></i></a>
+                </div>
+              </div>
+              <div class="portfolio-info">
+                <h4>PokeInfo Hub</h4>
+                <p>A modern web application that serves as your comprehensive Pokémon information center.</p>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+              <div class="portfolio-wrap">
+                <img src="projects/formula1one/7.gif" class="img-fluid" alt="Formula1Won">
+                <div class="portfolio-links">
+                  <a href="projects/formula1one/7.gif" data-gallery="portfolioGallery" class="portfolio-lightbox"
+                    title="Formula1Won"><i class="bx bx-plus"></i></a>
+                  <a href="https://github.com/shreyas463/Formula1Won" target="_blank" title="Source Code"><i
+                      class="bx bx-link"></i></a>
+                </div>
+              </div>
+              <div class="portfolio-info">
+                <h4>Formula1Won</h4>
+                <p>Simulates a self-driving car navigating dynamic traffic using a greedy pathfinding algorithm and
+                  collision avoidance system.</p>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+              <div class="portfolio-wrap">
+                <img src="projects/bartender/Thebartender.gif" class="img-fluid" alt="The Bartender">
+                <div class="portfolio-links">
+                  <a href="projects/bartender/Thebartender.gif" data-gallery="portfolioGallery"
+                    class="portfolio-lightbox" title="The Bartender"><i class="bx bx-plus"></i></a>
+                  <a href="https://github.com/shreyas463/TheBartender" target="_blank" title="Source Code"><i
+                      class="bx bx-link"></i></a>
+                </div>
+              </div>
+              <div class="portfolio-info">
+                <h4>The Bartender</h4>
+                <p>A sleek and interactive web app for discovering cocktail recipes. React and Tailwind CSS frontend,
+                  Laravel backend with GraphQL, and TheCocktailDB API.</p>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+              <div class="portfolio-wrap">
+                <img src="projects/epidmi/6.gif" class="img-fluid" alt="Disease Spread Simulation">
+                <div class="portfolio-links">
+                  <a href="projects/epidmi/6.gif" data-gallery="portfolioGallery" class="portfolio-lightbox"
+                    title="Disease Spread Simulation"><i class="bx bx-plus"></i></a>
+                  <a href="https://github.com/shreyas463/epidmi" target="_blank" title="Source Code"><i
+                      class="bx bx-link"></i></a>
+                </div>
+              </div>
+              <div class="portfolio-info">
+                <h4>Disease Spread Simulation</h4>
+                <p>Visualizes the spread of a disease within a population using agent-based modeling and social
+                  network-based modeling.</p>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+              <div class="portfolio-wrap">
+                <img src="projects/livesketch/4.1.png" class="img-fluid" alt="LiveSketch">
+                <div class="portfolio-links">
+                  <a href="projects/livesketch/4.1.png" data-gallery="portfolioGallery" class="portfolio-lightbox"
+                    title="LiveSketch"><i class="bx bx-plus"></i></a>
+                  <a href="https://github.com/shreyas463/LiveSketch" target="_blank" title="Source Code"><i
+                      class="bx bx-link"></i></a>
+                </div>
+              </div>
+              <div class="portfolio-info">
+                <h4>LiveSketch</h4>
+                <p>A collaborative whiteboard app enabling real-time drawing with Electron, Socket.io, and Canvas API.
+                </p>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+              <div class="portfolio-wrap">
+                <img src="projects/cs5180/bio.gif" class="img-fluid" alt="BioSearch-CPP">
+                <div class="portfolio-links">
+                  <a href="projects/cs5180/bio.gif" data-gallery="portfolioGallery" class="portfolio-lightbox"
+                    title="BioSearch-CPP"><i class="bx bx-plus"></i></a>
+                  <a href="https://github.com/shreyas463/BioSearch-CPP" target="_blank" title="Source Code"><i
+                      class="bx bx-link"></i></a>
+                </div>
+              </div>
+              <div class="portfolio-info">
+                <h4>BioSearch-CPP</h4>
+                <p>A specialized search engine for the CPP Biology Department to find faculty by research interests and
+                  expertise.</p>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+              <div class="portfolio-wrap">
+                <img src="projects/artg/art.gif" class="img-fluid" alt="Virtual Art Gallery">
+                <div class="portfolio-links">
+                  <a href="projects/artg/art.gif" data-gallery="portfolioGallery" class="portfolio-lightbox"
+                    title="Virtual Art Gallery"><i class="bx bx-plus"></i></a>
+                  <a href="https://github.com/shreyas463/Virtual-art" target="_blank" title="Source Code"><i
+                      class="bx bx-link"></i></a>
+                </div>
+              </div>
+              <div class="portfolio-info">
+                <h4>Virtual Art Gallery</h4>
+                <p>An interactive platform leveraging the MET API to showcase priceless artworks in real time. Built
+                  with React, Node.js, Express, and MongoDB.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Publications Section -->
+      <section id="publications" class="publications section-bg">
+        <div class="container">
+          <div class="section-title">
+            <h2>Publications</h2>
+            <p>Research publications and academic papers</p>
+          </div>
+
+          <div class="row">
+            <div class="col-lg-6" data-aos="fade-up">
+              <div class="publication-item">
+                <h4>End to End Networks for Vehicle Control</h4>
+                <h5>2025 ASEE PSW Conference</h5>
+                <p><em>Published 2025</em></p>
+                <a href="https://peer.asee.org/end-to-end-networks-for-vehicle-control" target="_blank"
+                  class="read-paper-link">Read Paper <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
+            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+              <div class="publication-item">
+                <h4>Toward Equitable Autonomous Vehicle Deployment</h4>
+                <h5>2025 ASEE PSW Conference</h5>
+                <p><em>Published 2025</em></p>
+                <a href="https://peer.asee.org/toward-equitable-autonomous-vehicle-deployment" target="_blank"
+                  class="read-paper-link">Read Paper <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
+            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+              <div class="publication-item">
+                <h4>Law Enforcement Companion</h4>
+                <h5>2025 ASEE PSW Conference</h5>
+                <p><em>Published 2025</em></p>
+                <a href="https://ieeexplore.ieee.org/document/10083546" target="_blank" class="read-paper-link">Read
+                  Paper <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
+            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
+              <div class="publication-item">
+                <h4>Utilizing Deep Learning as a Law Enforcement Ally</h4>
+                <h5>2025 ASEE PSW Conference</h5>
+                <p><em>Published 2025</em></p>
+                <a href="https://ieeexplore.ieee.org/abstract/document/10127890" target="_blank"
+                  class="read-paper-link">Read Paper <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Certifications Section -->
+      <section id="certifications" class="certifications section-bg">
+        <div class="container">
+          <div class="section-title">
+            <h2>Certifications</h2>
+            <p>Here are some of the major certifications that reflect my skills and continuous learning journey:</p>
+          </div>
+
+          <div class="row">
+            <div class="col-lg-6" data-aos="fade-up">
+              <div class="certification-item">
+                <div class="certification-icon">
+                  <img src="homepage_logo/cpplogo.png" alt="Cal Poly Pomona"
+                    style="width: 50px; height: 50px; object-fit: contain;">
+                </div>
+                <h4>AI Hackathon 2025</h4>
+                <h5>California State Polytechnic University-Pomona</h5>
+                <p><em>Issued Apr 2025 • Expires Apr 2029</em></p>
+                <a href="https://badgr.com/public/assertions/3GHX6pldS36ZoWH2-OE-ew" target="_blank"
+                  class="cert-link">View Certificate <i class="bi bi-box-arrow-up-right"></i></a>
+              </div>
+            </div>
+            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+              <div class="certification-item">
+                <div class="certification-icon">
+                  <img src="homepage_logo/workato.png" alt="Workato"
+                    style="width: 50px; height: 50px; object-fit: contain;">
+                </div>
+                <h4>Automation Pro I Certificate</h4>
+                <h5>Workato</h5>
+                <p><em>Issued Apr 2025 • Expires Apr 2027</em></p>
+                <a href="https://verify.skilljar.com/c/szyktcq3wn3q" target="_blank" class="cert-link">View Certificate
+                  <i class="bi bi-box-arrow-up-right"></i></a>
+              </div>
+            </div>
+            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+              <div class="certification-item">
+                <div class="certification-icon">
+                  <img src="homepage_logo/workato.png" alt="Workato"
+                    style="width: 50px; height: 50px; object-fit: contain;">
+                </div>
+                <h4>Automation Pro II Certificate</h4>
+                <h5>Workato</h5>
+                <p><em>Issued Apr 2025 • Expires Apr 2027</em></p>
+                <a href="https://credentials.workato.com/b311b5e9-0c3d-4e2c-a9dc-91a6026a4a24#acc.QJTP1Xmx"
+                  target="_blank" class="cert-link">View Certificate <i class="bi bi-box-arrow-up-right"></i></a>
+              </div>
+            </div>
+            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
+              <div class="certification-item">
+                <div class="certification-icon">
+                  <img src="homepage_logo/workato.png" alt="Workato"
+                    style="width: 50px; height: 50px; object-fit: contain;">
+                </div>
+                <h4>Automation Pro III Certificate</h4>
+                <h5>Workato</h5>
+                <p><em>Issued May 2025 • Expires May 2027</em></p>
+                <a href="https://verify.skilljar.com/c/pgzf4vp5g67n" target="_blank" class="cert-link">View Certificate
+                  <i class="bi bi-box-arrow-up-right"></i></a>
+              </div>
+            </div>
+            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
+              <div class="certification-item">
+                <div class="certification-icon">
+                  <img src="homepage_logo/databricks.jpeg" alt="Databricks"
+                    style="width: 50px; height: 50px; object-fit: contain;">
+                </div>
+                <h4>Academy Accreditation - Generative AI Fundamentals</h4>
+                <h5>Databricks</h5>
+                <p><em>Issued Sep 2024 • Expires Sep 2026</em></p>
+                <a href="https://credentials.databricks.com/62de9f0b-be77-499b-b1ff-d19bc519c9b1#acc.C90FAWo2"
+                  target="_blank" class="cert-link">View Certificate <i class="bi bi-box-arrow-up-right"></i></a>
+              </div>
+            </div>
+            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="500">
+              <div class="certification-item">
+                <div class="certification-icon">
+                  <img src="homepage_logo/cpplogo.png" alt="Stanford"
+                    style="width: 50px; height: 50px; object-fit: contain;">
+                </div>
+                <h4>Supervised Machine Learning: Regression and Classification</h4>
+                <h5>DeepLearning.AI, Stanford University</h5>
+                <p><em>Issued Sep 2024</em></p>
+                <a href="https://www.coursera.org/account/accomplishments/verify/X15PXZ7Z6EJS" target="_blank"
+                  class="cert-link">View Certificate <i class="bi bi-box-arrow-up-right"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section id="contact" class="contact">
+        <div class="container">
+          <div class="section-title">
+            <h2>Contact</h2>
+            <p>Feel free to reach out! I'm always open to discussing new opportunities.</p>
+          </div>
+
+          <div class="row" data-aos="fade-in">
+            <div class="col-lg-12">
+              <div class="contact-minimal"
+                style="display: flex; justify-content: center; gap: 60px; flex-wrap: wrap; padding: 30px 0;">
+                <div class="contact-item" style="text-align: center;">
+                  <h5 style="color: #173b6c; font-weight: 600; margin-bottom: 8px;">Email</h5>
+                  <p style="margin: 0;"><a href="mailto:shreyasc@cpp.edu" style="color: #149ddd;">shreyasc@cpp.edu</a>
+                  </p>
+                </div>
+                <div class="contact-item" style="text-align: center;">
+                  <h5 style="color: #173b6c; font-weight: 600; margin-bottom: 8px;">Location</h5>
+                  <p style="color: #272829; margin: 0;">Chicago, IL - USA</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+  <script src="assets/vendor/purecounter/purecounter.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/js/main.js"></script>
 </body>
+
 </html>
