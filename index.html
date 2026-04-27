@@ -1275,8 +1275,7 @@
       width: 100%;
       min-height: 100vh !important;
       height: 100vh !important;
-      background: url('assets/img/shreyaS.png') no-repeat center center !important;
-      background-size: cover !important;
+      background: transparent !important;
       position: relative;
       display: flex;
       align-items: center;
@@ -1352,6 +1351,103 @@
       color: #149ddd !important;
       margin-right: 8px !important;
     }
+
+    /* Theme Toggle Switch */
+    .theme-switch-wrapper {
+      margin-bottom: 20px;
+    }
+
+    .theme-switch {
+      display: inline-block;
+      height: 28px;
+      position: relative;
+      width: 56px;
+      margin-bottom: 0;
+    }
+
+    .theme-switch input {
+      display: none;
+    }
+
+    .slider {
+      background-color: #1a2332;
+      bottom: 0;
+      cursor: pointer;
+      left: 0;
+      position: absolute;
+      right: 0;
+      top: 0;
+      transition: .4s;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 5px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .slider.round {
+      border-radius: 34px;
+    }
+
+    .slider:before {
+      background-color: #fff;
+      bottom: 3px;
+      content: "";
+      height: 20px;
+      left: 4px;
+      position: absolute;
+      transition: .4s;
+      width: 20px;
+      border-radius: 50%;
+      z-index: 2;
+    }
+
+    input:checked+.slider {
+      background-color: #149ddd;
+    }
+
+    input:checked+.slider:before {
+      transform: translateX(26px);
+    }
+
+    .sun-icon {
+      color: #f39c12;
+      font-size: 12px;
+      z-index: 1;
+    }
+
+    .moon-icon {
+      color: #f1c40f;
+      font-size: 12px;
+      z-index: 1;
+    }
+
+    /* Hero Slideshow */
+    .hero-slideshow {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+      overflow: hidden;
+    }
+
+    .hero-slideshow .slide {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover !important;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+    }
+
+    .hero-slideshow .slide.active {
+      opacity: 1;
+      z-index: 1;
+    }
   </style>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link
@@ -1381,7 +1477,7 @@
     <!-- Header/Sidebar -->
     <header id="header">
       <div class="profile">
-        <img src="homepage_logo/betterpic.png" alt="Shreyas Chaudhary" class="img-fluid">
+        <img src="homepage_logo/0E1A7089.jpg" alt="Shreyas Chaudhary" class="img-fluid">
         <h1><a href="#about">Shreyas Chaudhary</a></h1>
         <div class="social-links mt-3">
           <a href="https://github.com/shreyas463" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
@@ -1391,6 +1487,18 @@
             title="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
           <a href="mailto:shreyasc@cpp.edu" title="Email"><i class="fas fa-envelope"></i></a>
         </div>
+
+        <div class="theme-switch-wrapper mt-4 d-flex justify-content-center align-items-center">
+          <span class="theme-label me-2 text-white-50 small">Theme</span>
+          <label class="theme-switch" for="checkbox">
+            <input type="checkbox" id="checkbox" />
+            <div class="slider round">
+              <i class="fas fa-sun sun-icon"></i>
+              <i class="fas fa-moon moon-icon"></i>
+            </div>
+          </label>
+        </div>
+
       </div>
 
       <nav id="navbar" class="nav-menu navbar">
@@ -1413,7 +1521,14 @@
     <!-- Main Content -->
     <main id="main">
       <!-- Hero Section -->
-      <section id="hero" class="d-flex align-items-center" style="background-image: url('assets/img/shreyaS.png');">
+      <section id="hero" class="d-flex align-items-center">
+        <div class="hero-slideshow">
+          <img src="assets/img/shreyaS.png" alt="Hero Background" class="slide active">
+          <img src="homepage_logo/2025.1.png" alt="Hero Background" class="slide">
+          <img src="homepage_logo/2025.2.png" alt="Hero Background" class="slide">
+          <img src="homepage_logo/2025.3.png" alt="Hero Background" class="slide">
+          <video src="homepage_logo/IMG_1912.MOV" class="slide" muted autoplay loop playsinline></video>
+        </div>
         <div class="hero-overlay"></div>
         <div class="container">
           <div class="row">
@@ -1608,13 +1723,13 @@
               <div class="resume-item pb-0">
                 <h4>SHREYAS CHAUDHARY</h4>
                 <p>Software engineer with experience across SDET, backend, and full-stack engineering, focused on
-                    building reliable systems, scalable automation, and AI-assisted developer workflows. I’ve worked on
-                    enterprise healthcare platforms, user-facing web apps, and intelligent document-processing tools,
-                    using Java, Python, Selenium, REST APIs, CI/CD, React, Next.js, Firebase, AWS, and modern AI coding
-                    tools. Strong at turning ambiguous problems into clean, testable solutions, improving release
-                    quality, and shipping software that is dependable, maintainable, and built for real users. Seeking
-                    SDET, backend, or full-stack roles where I can bring ownership, speed, and strong engineering
-                    judgment to high-impact products.</p>
+                  building reliable systems, scalable automation, and AI-assisted developer workflows. I’ve worked on
+                  enterprise healthcare platforms, user-facing web apps, and intelligent document-processing tools,
+                  using Java, Python, Selenium, REST APIs, CI/CD, React, Next.js, Firebase, AWS, and modern AI coding
+                  tools. Strong at turning ambiguous problems into clean, testable solutions, improving release
+                  quality, and shipping software that is dependable, maintainable, and built for real users. Seeking
+                  SDET, backend, or full-stack roles where I can bring ownership, speed, and strong engineering
+                  judgment to high-impact products.</p>
               </div>
 
               <h3 class="resume-title">Education</h3>
