@@ -1,25 +1,3 @@
-# Photos
-*.jpg
-*.jpeg
-*.png
-*.gif
-*.bmp
-*.tiff
-*.webp
-*.ico
-*.JPG
-*.PNG
-*.JPEG
-
-# Videos
-*.mp4
-*.mov
-*.MOV
-*.avi
-*.mkv
-*.wmv
-*.flv
-*.webm
-
 # Environment variables
 .env
+node_modules/
