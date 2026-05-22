@@ -617,52 +617,341 @@
       }
     }
 
-    /* Skills section formatting */
-    #portfolio-main .skills.section-bg {
-      background: #d4e4f0 !important;
-    }
-
-    #portfolio-main .progress {
-      height: auto !important;
-      display: block !important;
-      background: #fff !important;
-      overflow: visible !important;
-      margin-bottom: 15px !important;
-      padding: 15px 20px !important;
-      border-radius: 4px !important;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05) !important;
-    }
-
-    #portfolio-main .skill {
-      font-weight: 600 !important;
-      padding: 0 !important;
-      margin: 0 0 8px 0 !important;
-      text-transform: uppercase !important;
-      display: block !important;
-      color: #272829 !important;
-      font-size: 14px !important;
-    }
-
-    #portfolio-main .skill .val {
-      float: right !important;
-      font-style: normal !important;
-      color: #149ddd !important;
-      font-weight: 600 !important;
-    }
-
-    #portfolio-main .progress-bar-wrap {
-      background: #dce8f8 !important;
-      height: 10px !important;
-      border-radius: 4px !important;
+    /* Skills section — sleek bento grid */
+    #portfolio-main .skills-v2 {
+      position: relative !important;
+      padding: 88px 0 108px !important;
+      font-family: 'Inter', 'Open Sans', sans-serif !important;
+      background: linear-gradient(165deg, #b8d4e8 0%, #c9e2f0 22%, #d8ebf4 48%, #aec9de 100%) !important;
       overflow: hidden !important;
-      margin-top: 5px !important;
     }
 
-    #portfolio-main .progress-bar {
-      height: 10px !important;
-      background-color: #149ddd !important;
-      transition: width 0.9s ease !important;
-      border-radius: 4px !important;
+    #portfolio-main .skills-v2::before,
+    #portfolio-main .skills-v2::after {
+      content: "" !important;
+      position: absolute !important;
+      border-radius: 50% !important;
+      pointer-events: none !important;
+    }
+
+    #portfolio-main .skills-v2::before {
+      top: -140px !important;
+      right: -100px !important;
+      width: 480px !important;
+      height: 480px !important;
+      background: radial-gradient(circle, rgba(20, 157, 221, 0.28) 0%, transparent 68%) !important;
+    }
+
+    #portfolio-main .skills-v2::after {
+      bottom: -160px !important;
+      left: -80px !important;
+      width: 420px !important;
+      height: 420px !important;
+      background: radial-gradient(circle, rgba(23, 59, 108, 0.15) 0%, transparent 70%) !important;
+    }
+
+    #portfolio-main .skills-v2 .container {
+      position: relative !important;
+      z-index: 1 !important;
+    }
+
+    #portfolio-main .skills-v2 .section-title h2 {
+      letter-spacing: 0.12em !important;
+    }
+
+    #portfolio-main .skills-v2 .section-title p {
+      max-width: 560px !important;
+      margin-left: auto !important;
+      margin-right: auto !important;
+      font-size: 15px !important;
+      line-height: 1.7 !important;
+      color: #475569 !important;
+      font-style: normal !important;
+    }
+
+    #portfolio-main .skills-highlights {
+      display: flex !important;
+      flex-wrap: wrap !important;
+      justify-content: center !important;
+      gap: 10px !important;
+      margin-bottom: 28px !important;
+    }
+
+    #portfolio-main .skills-highlight {
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 9px !important;
+      padding: 11px 20px !important;
+      border-radius: 999px !important;
+      background: rgba(255, 255, 255, 0.72) !important;
+      backdrop-filter: blur(12px) !important;
+      -webkit-backdrop-filter: blur(12px) !important;
+      border: 1px solid rgba(255, 255, 255, 0.9) !important;
+      color: #1e3a5f !important;
+      font-size: 13px !important;
+      font-weight: 600 !important;
+      letter-spacing: 0.02em !important;
+      box-shadow: 0 2px 12px rgba(15, 23, 42, 0.06), inset 0 1px 0 rgba(255, 255, 255, 0.8) !important;
+      transition: transform 0.25s ease, box-shadow 0.25s ease !important;
+    }
+
+    #portfolio-main .skills-highlight:hover {
+      transform: translateY(-2px) !important;
+      box-shadow: 0 8px 24px rgba(20, 157, 221, 0.15) !important;
+    }
+
+    #portfolio-main .skills-highlight i {
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      width: 28px !important;
+      height: 28px !important;
+      border-radius: 50% !important;
+      background: linear-gradient(135deg, #149ddd 0%, #0d7bb8 100%) !important;
+      color: #fff !important;
+      font-size: 13px !important;
+    }
+
+    #portfolio-main .skills-filter-track {
+      display: flex !important;
+      justify-content: center !important;
+      margin-bottom: 40px !important;
+    }
+
+    #portfolio-main .skills-filters {
+      display: inline-flex !important;
+      flex-wrap: wrap !important;
+      justify-content: center !important;
+      gap: 6px !important;
+      padding: 6px !important;
+      border-radius: 999px !important;
+      background: rgba(255, 255, 255, 0.55) !important;
+      backdrop-filter: blur(14px) !important;
+      -webkit-backdrop-filter: blur(14px) !important;
+      border: 1px solid rgba(255, 255, 255, 0.85) !important;
+      box-shadow: 0 4px 24px rgba(15, 23, 42, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.9) !important;
+    }
+
+    #portfolio-main .skills-filter-btn {
+      border: none !important;
+      padding: 11px 26px !important;
+      border-radius: 999px !important;
+      font-size: 12px !important;
+      font-weight: 600 !important;
+      letter-spacing: 0.08em !important;
+      text-transform: uppercase !important;
+      cursor: pointer !important;
+      background: transparent !important;
+      color: #64748b !important;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    }
+
+    #portfolio-main .skills-filter-btn:hover:not(.active) {
+      color: #173b6c !important;
+      background: rgba(255, 255, 255, 0.6) !important;
+    }
+
+    #portfolio-main .skills-filter-btn.active {
+      background: linear-gradient(135deg, #149ddd 0%, #0e8ec4 100%) !important;
+      color: #fff !important;
+      box-shadow: 0 4px 16px rgba(20, 157, 221, 0.4) !important;
+    }
+
+    #portfolio-main .skills-bento {
+      display: grid !important;
+      grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+      grid-template-rows: repeat(2, auto) !important;
+      gap: 20px !important;
+      align-items: stretch !important;
+    }
+
+    #portfolio-main .skill-category {
+      display: flex !important;
+      flex-direction: column !important;
+      height: 100% !important;
+      min-height: 220px !important;
+      background: rgba(255, 255, 255, 0.78) !important;
+      backdrop-filter: blur(16px) !important;
+      -webkit-backdrop-filter: blur(16px) !important;
+      border-radius: 20px !important;
+      padding: 28px 26px 26px !important;
+      border: 1px solid rgba(255, 255, 255, 0.95) !important;
+      box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04), 0 12px 40px rgba(15, 23, 42, 0.07) !important;
+      transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.35s ease !important;
+      position: relative !important;
+      overflow: hidden !important;
+      animation: skillCardReveal 0.6s cubic-bezier(0.4, 0, 0.2, 1) backwards !important;
+    }
+
+    #portfolio-main .skill-category:nth-child(1) { animation-delay: 0.05s !important; }
+    #portfolio-main .skill-category:nth-child(2) { animation-delay: 0.1s !important; }
+    #portfolio-main .skill-category:nth-child(3) { animation-delay: 0.15s !important; }
+    #portfolio-main .skill-category:nth-child(4) { animation-delay: 0.2s !important; }
+    #portfolio-main .skill-category:nth-child(5) { animation-delay: 0.25s !important; }
+    #portfolio-main .skill-category:nth-child(6) { animation-delay: 0.3s !important; }
+
+    @keyframes skillCardReveal {
+      from {
+        opacity: 0;
+        transform: translateY(16px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    #portfolio-main .skill-category::before {
+      content: "" !important;
+      position: absolute !important;
+      top: 0 !important;
+      left: 0 !important;
+      width: 100% !important;
+      height: 3px !important;
+      background: linear-gradient(90deg, var(--cat-accent, #149ddd), transparent) !important;
+      opacity: 0.85 !important;
+    }
+
+    #portfolio-main .skill-category::after {
+      content: "" !important;
+      position: absolute !important;
+      bottom: -40px !important;
+      right: -40px !important;
+      width: 140px !important;
+      height: 140px !important;
+      border-radius: 50% !important;
+      background: var(--cat-accent, #149ddd) !important;
+      opacity: 0.07 !important;
+      pointer-events: none !important;
+      transition: opacity 0.35s ease, transform 0.35s ease !important;
+    }
+
+    #portfolio-main .skill-category:hover {
+      transform: translateY(-5px) !important;
+      box-shadow: 0 2px 4px rgba(15, 23, 42, 0.04), 0 20px 48px rgba(20, 157, 221, 0.14) !important;
+    }
+
+    #portfolio-main .skill-category:hover::after {
+      opacity: 0.12 !important;
+      transform: scale(1.15) !important;
+    }
+
+    #portfolio-main .skill-category.is-hidden {
+      display: none !important;
+    }
+
+    #portfolio-main .skill-category.is-revealed {
+      animation: skillCardReveal 0.45s cubic-bezier(0.4, 0, 0.2, 1) backwards !important;
+    }
+
+    #portfolio-main .skill-category-header {
+      display: flex !important;
+      align-items: flex-start !important;
+      gap: 16px !important;
+      margin-bottom: 22px !important;
+      position: relative !important;
+      z-index: 1 !important;
+    }
+
+    #portfolio-main .skill-category-icon {
+      width: 52px !important;
+      height: 52px !important;
+      border-radius: 14px !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      font-size: 23px !important;
+      color: #fff !important;
+      background: var(--cat-accent, #149ddd) !important;
+      background: linear-gradient(145deg, var(--cat-accent, #149ddd) 0%, #0d6e9e 100%) !important;
+      flex-shrink: 0 !important;
+      box-shadow: 0 8px 20px rgba(20, 157, 221, 0.25) !important;
+    }
+
+    #portfolio-main .skill-category h3 {
+      font-size: 17px !important;
+      font-weight: 700 !important;
+      color: #0f172a !important;
+      margin: 0 0 6px 0 !important;
+      letter-spacing: -0.02em !important;
+    }
+
+    #portfolio-main .skill-category-desc {
+      font-size: 13px !important;
+      color: #64748b !important;
+      margin: 0 !important;
+      line-height: 1.55 !important;
+      font-weight: 400 !important;
+    }
+
+    #portfolio-main .skill-chips {
+      display: flex !important;
+      flex-wrap: wrap !important;
+      gap: 9px !important;
+      margin-top: auto !important;
+      position: relative !important;
+      z-index: 1 !important;
+    }
+
+    #portfolio-main .skill-chip {
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 7px !important;
+      padding: 9px 15px !important;
+      border-radius: 999px !important;
+      font-size: 12.5px !important;
+      font-weight: 600 !important;
+      color: #334155 !important;
+      background: rgba(255, 255, 255, 0.85) !important;
+      border: 1px solid rgba(226, 232, 240, 0.9) !important;
+      box-shadow: 0 1px 3px rgba(15, 23, 42, 0.04) !important;
+      transition: all 0.28s cubic-bezier(0.4, 0, 0.2, 1) !important;
+      cursor: default !important;
+    }
+
+    #portfolio-main .skill-chip i {
+      font-size: 14px !important;
+      color: var(--cat-accent, #149ddd) !important;
+      transition: color 0.28s ease !important;
+    }
+
+    #portfolio-main .skill-chip:hover {
+      background: var(--cat-accent, #149ddd) !important;
+      background: linear-gradient(135deg, var(--cat-accent, #149ddd) 0%, #0d6e9e 100%) !important;
+      color: #fff !important;
+      border-color: transparent !important;
+      transform: translateY(-2px) scale(1.02) !important;
+      box-shadow: 0 6px 18px rgba(20, 157, 221, 0.35) !important;
+    }
+
+    #portfolio-main .skill-chip:hover i {
+      color: #fff !important;
+    }
+
+    @media (max-width: 991px) {
+      #portfolio-main .skills-bento {
+        grid-template-columns: repeat(3, 1fr) !important;
+      }
+    }
+
+    @media (max-width: 767px) {
+      #portfolio-main .skills-bento {
+        grid-template-columns: repeat(2, 1fr) !important;
+      }
+    }
+
+    @media (max-width: 575px) {
+      #portfolio-main .skills-bento {
+        grid-template-columns: 1fr !important;
+      }
+
+      #portfolio-main .skills-filters {
+        border-radius: 20px !important;
+      }
+
+      #portfolio-main .skills-filter-btn {
+        padding: 10px 18px !important;
+      }
     }
 
     /* Resume section formatting */
@@ -1507,6 +1796,7 @@
   <script defer src="js/background.js"></script>
   <script defer src="js/stars.js"></script>
   <script defer src="js/slider.js"></script>
+  <script defer src="js/skills.js"></script>
   <script defer src="js/main.js"></script>
 </head>
 
@@ -1903,161 +2193,126 @@
         </div>
       </section>
       <!-- Skills Section -->
-      <section id="skills" class="skills section-bg">
+      <section id="skills" class="skills skills-v2">
         <div class="container">
-          <div class="section-title">
+          <div class="section-title" data-aos="fade-up">
             <h2>Skills</h2>
-            <p>Following is the list of skills I possess:</p>
+            <p>Tools and technologies I use to build, test, and ship production software — organized by what I do with them.</p>
           </div>
 
-          <div class="row skills-content">
-            <div class="col-lg-6" data-aos="fade-up">
-              <div class="progress">
-                <span class="skill">PYTHON <i class="val">90%</i></span>
-                <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"
-                    style="width: 90%"></div>
-                </div>
-              </div>
+          <div class="skills-highlights" data-aos="fade-up" data-aos-delay="50">
+            <span class="skills-highlight"><i class="bi bi-layers"></i> Full-Stack Engineering</span>
+            <span class="skills-highlight"><i class="bi bi-shield-check"></i> SDET &amp; QA Automation</span>
+            <span class="skills-highlight"><i class="bi bi-cloud"></i> Cloud &amp; CI/CD</span>
+            <span class="skills-highlight"><i class="bi bi-stars"></i> AI-Assisted Development</span>
+          </div>
 
-              <div class="progress">
-                <span class="skill">JAVA <i class="val">90%</i></span>
-                <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"
-                    style="width: 90%"></div>
-                </div>
-              </div>
-
-              <div class="progress">
-                <span class="skill">JAVASCRIPT <i class="val">80%</i></span>
-                <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"
-                    style="width: 80%"></div>
-                </div>
-              </div>
-
-              <div class="progress">
-                <span class="skill">TYPESCRIPT <i class="val">80%</i></span>
-                <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"
-                    style="width: 80%"></div>
-                </div>
-              </div>
-
-              <div class="progress">
-                <span class="skill">WEB DEVELOPMENT (REACT, HTML, CSS) <i class="val">80%</i></span>
-                <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"
-                    style="width: 80%"></div>
-                </div>
-              </div>
-
-              <div class="progress">
-                <span class="skill">AWS S3 <i class="val">75%</i></span>
-                <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"
-                    style="width: 75%"></div>
-                </div>
-              </div>
-
-              <div class="progress">
-                <span class="skill">Claude Code <i class="val">70%</i></span>
-                <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"
-                    style="width: 70%"></div>
-                </div>
-              </div>
-
-              <div class="progress">
-                <span class="skill">AWS LAMBDA <i class="val">50%</i></span>
-                <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"
-                    style="width: 50%"></div>
-                </div>
-              </div>
-
-              <div class="progress">
-                <span class="skill">SPRING BOOT <i class="val">70%</i></span>
-                <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"
-                    style="width: 70%"></div>
-                </div>
-              </div>
+          <div class="skills-filter-track" data-aos="fade-up" data-aos-delay="100">
+            <div class="skills-filters" role="tablist" aria-label="Filter skills by focus">
+              <button type="button" class="skills-filter-btn active" data-filter="all" role="tab" aria-selected="true">All</button>
+              <button type="button" class="skills-filter-btn" data-filter="build" role="tab" aria-selected="false">Build</button>
+              <button type="button" class="skills-filter-btn" data-filter="test" role="tab" aria-selected="false">Test</button>
+              <button type="button" class="skills-filter-btn" data-filter="ship" role="tab" aria-selected="false">Ship</button>
             </div>
+          </div>
 
-            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-              <div class="progress">
-                <span class="skill">GIT <i class="val">80%</i></span>
-                <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"
-                    style="width: 80%"></div>
+          <div class="skills-bento" data-aos="fade-up" data-aos-delay="150">
+            <article class="skill-category" data-groups="build" style="--cat-accent: #3776ab;">
+              <div class="skill-category-header">
+                <div class="skill-category-icon"><i class="bi bi-code-slash"></i></div>
+                <div>
+                  <h3>Languages &amp; Core</h3>
+                  <p class="skill-category-desc">Foundation for backend services, automation, and application logic.</p>
                 </div>
               </div>
+              <div class="skill-chips">
+                <span class="skill-chip"><i class="fab fa-python"></i> Python</span>
+                <span class="skill-chip"><i class="fab fa-java"></i> Java</span>
+                <span class="skill-chip"><i class="fab fa-js"></i> JavaScript</span>
+                <span class="skill-chip"><i class="bi bi-braces"></i> TypeScript</span>
+              </div>
+            </article>
 
-              <div class="progress">
-                <span class="skill">SYSTEM DESIGNING <i class="val">70%</i></span>
-                <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"
-                    style="width: 70%"></div>
+            <article class="skill-category" data-groups="build" style="--cat-accent: #61dafb;">
+              <div class="skill-category-header">
+                <div class="skill-category-icon"><i class="bi bi-window"></i></div>
+                <div>
+                  <h3>Frontend &amp; UI</h3>
+                  <p class="skill-category-desc">Responsive interfaces and modern web experiences.</p>
                 </div>
               </div>
+              <div class="skill-chips">
+                <span class="skill-chip"><i class="fab fa-react"></i> React</span>
+                <span class="skill-chip"><i class="bi bi-lightning"></i> Next.js</span>
+                <span class="skill-chip"><i class="bi bi-wind"></i> Tailwind CSS</span>
+                <span class="skill-chip"><i class="fab fa-html5"></i> HTML &amp; CSS</span>
+              </div>
+            </article>
 
-              <div class="progress">
-                <span class="skill">PLAYWRIGHT <i class="val">75%</i></span>
-                <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"
-                    style="width: 75%"></div>
+            <article class="skill-category" data-groups="build" style="--cat-accent: #6db33f;">
+              <div class="skill-category-header">
+                <div class="skill-category-icon"><i class="bi bi-hdd-network"></i></div>
+                <div>
+                  <h3>Backend &amp; APIs</h3>
+                  <p class="skill-category-desc">Server-side apps, REST APIs, and scalable services.</p>
                 </div>
               </div>
+              <div class="skill-chips">
+                <span class="skill-chip"><i class="bi bi-flower1"></i> Spring Boot</span>
+                <span class="skill-chip"><i class="bi bi-box"></i> Django</span>
+                <span class="skill-chip"><i class="bi bi-arrow-left-right"></i> REST APIs</span>
+                <span class="skill-chip"><i class="bi bi-diagram-3"></i> System Design</span>
+              </div>
+            </article>
 
-              <div class="progress">
-                <span class="skill">SELENIUM <i class="val">80%</i></span>
-                <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"
-                    style="width: 80%"></div>
+            <article class="skill-category" data-groups="test" style="--cat-accent: #e34c26;">
+              <div class="skill-category-header">
+                <div class="skill-category-icon"><i class="bi bi-bug"></i></div>
+                <div>
+                  <h3>QA &amp; Automation</h3>
+                  <p class="skill-category-desc">End-to-end testing for reliable releases in complex systems.</p>
                 </div>
               </div>
+              <div class="skill-chips">
+                <span class="skill-chip"><i class="bi bi-robot"></i> Selenium</span>
+                <span class="skill-chip"><i class="bi bi-play-circle"></i> Playwright</span>
+                <span class="skill-chip"><i class="bi bi-check2-square"></i> Manual &amp; Regression</span>
+                <span class="skill-chip"><i class="bi bi-clipboard-data"></i> Test Strategy</span>
+              </div>
+            </article>
 
-              <div class="progress">
-                <span class="skill">DJANGO <i class="val">70%</i></span>
-                <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"
-                    style="width: 70%"></div>
+            <article class="skill-category" data-groups="ship" style="--cat-accent: #ff9900;">
+              <div class="skill-category-header">
+                <div class="skill-category-icon"><i class="bi bi-cloud-upload"></i></div>
+                <div>
+                  <h3>Cloud &amp; Data</h3>
+                  <p class="skill-category-desc">Storage, serverless, and data layers in the cloud.</p>
                 </div>
               </div>
+              <div class="skill-chips">
+                <span class="skill-chip"><i class="fab fa-aws"></i> AWS S3</span>
+                <span class="skill-chip"><i class="bi bi-lightning-charge"></i> AWS Lambda</span>
+                <span class="skill-chip"><i class="bi bi-database"></i> NoSQL</span>
+                <span class="skill-chip"><i class="bi bi-hdd-stack"></i> Cosmos DB</span>
+              </div>
+            </article>
 
-              <div class="progress">
-                <span class="skill">NO SQL <i class="val">80%</i></span>
-                <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"
-                    style="width: 80%"></div>
+            <article class="skill-category" data-groups="ship build test" style="--cat-accent: #149ddd;">
+              <div class="skill-category-header">
+                <div class="skill-category-icon"><i class="bi bi-tools"></i></div>
+                <div>
+                  <h3>DevOps &amp; Workflow</h3>
+                  <p class="skill-category-desc">Version control, pipelines, and AI-powered dev tooling.</p>
                 </div>
               </div>
-
-              <div class="progress">
-                <span class="skill">REACT <i class="val">90%</i></span>
-                <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"
-                    style="width: 90%"></div>
-                </div>
+              <div class="skill-chips">
+                <span class="skill-chip"><i class="fab fa-git-alt"></i> Git</span>
+                <span class="skill-chip"><i class="bi bi-arrow-repeat"></i> CI/CD</span>
+                <span class="skill-chip"><i class="bi bi-box-seam"></i> Docker</span>
+                <span class="skill-chip"><i class="bi bi-cpu"></i> Claude Code</span>
+                <span class="skill-chip"><i class="bi bi-send"></i> Postman</span>
               </div>
-
-              <div class="progress">
-                <span class="skill">NEXT.JS <i class="val">90%</i></span>
-                <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"
-                    style="width: 90%"></div>
-                </div>
-              </div>
-
-              <div class="progress">
-                <span class="skill">TAILWIND CSS <i class="val">95%</i></span>
-                <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"
-                    style="width: 95%"></div>
-                </div>
-              </div>
-            </div>
+            </article>
           </div>
         </div>
       </section>
