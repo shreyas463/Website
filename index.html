@@ -49,7 +49,7 @@
     }
 
     #portfolio-main .section-bg {
-      background: #f5f8fd !important;
+      background: #d4e4f0 !important;
     }
 
     #portfolio-main .section-title h2 {
@@ -340,9 +340,6 @@
       min-height: auto !important;
     }
 
-    #portfolio-main .resume {
-      padding-bottom: 100px !important;
-    }
 
     #portfolio-main .container {
       overflow: visible !important;
@@ -353,7 +350,7 @@
     }
 
     #portfolio-main .section-bg {
-      background: #f5f8fd !important;
+      background: #d4e4f0 !important;
     }
 
     #portfolio-main .about .content h3 {
@@ -399,17 +396,66 @@
       text-decoration: underline !important;
     }
 
-    /* Testimonials section styling */
-    #portfolio-main .testimonials {
-      padding: 50px 0 !important;
-      background: #fff !important;
+    /* About — background only */
+    #portfolio-main .about {
+      background: linear-gradient(160deg, #c5dff0 0%, #d0e8f4 28%, #d8e8f2 55%, #c0d9ec 100%) !important;
     }
 
+    /* Testimonials & Resume — shared lively section background */
+    #portfolio-main .testimonials,
+    #portfolio-main .resume {
+      position: relative !important;
+      padding: 80px 0 100px !important;
+      background: linear-gradient(160deg, #c5dff0 0%, #d0e8f4 28%, #d8e8f2 55%, #c0d9ec 100%) !important;
+      overflow: hidden !important;
+    }
+
+    #portfolio-main .testimonials::before,
+    #portfolio-main .resume::before {
+      content: "" !important;
+      position: absolute !important;
+      top: -120px !important;
+      right: -80px !important;
+      width: 420px !important;
+      height: 420px !important;
+      border-radius: 50% !important;
+      background: radial-gradient(circle, rgba(20, 157, 221, 0.18) 0%, transparent 70%) !important;
+      pointer-events: none !important;
+    }
+
+    #portfolio-main .testimonials::after,
+    #portfolio-main .resume::after {
+      content: "" !important;
+      position: absolute !important;
+      bottom: -100px !important;
+      left: -60px !important;
+      width: 360px !important;
+      height: 360px !important;
+      border-radius: 50% !important;
+      background: radial-gradient(circle, rgba(20, 157, 221, 0.12) 0%, transparent 70%) !important;
+      pointer-events: none !important;
+    }
+
+    #portfolio-main .testimonials .container,
+    #portfolio-main .resume .container {
+      position: relative !important;
+      z-index: 1 !important;
+      background: transparent !important;
+    }
+
+    #portfolio-main .testimonials .section-title h2,
+    #portfolio-main .resume .section-title h2 {
+      color: #173b6c !important;
+    }
+
+    /* Testimonials section styling */
     #portfolio-main .testimonial-item {
       padding: 30px !important;
-      background: #fff !important;
-      border-radius: 8px !important;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1) !important;
+      background: rgba(255, 255, 255, 0.92) !important;
+      backdrop-filter: blur(6px) !important;
+      border-radius: 12px !important;
+      border-left: 4px solid #149ddd !important;
+      box-shadow: 0 8px 24px rgba(20, 157, 221, 0.1), 0 2px 8px rgba(15, 23, 42, 0.06) !important;
       margin-bottom: 20px !important;
       max-width: 100% !important;
       overflow: visible !important;
@@ -573,7 +619,7 @@
 
     /* Skills section formatting */
     #portfolio-main .skills.section-bg {
-      background: #f5f8fd !important;
+      background: #d4e4f0 !important;
     }
 
     #portfolio-main .progress {
@@ -620,16 +666,6 @@
     }
 
     /* Resume section formatting */
-    #portfolio-main .resume {
-      padding-bottom: 100px !important;
-      background: #f8fafc !important;
-      /* Soft background to highlight cards */
-    }
-
-    #portfolio-main .resume .container {
-      background: transparent !important;
-    }
-
     #portfolio-main .resume-title {
       font-size: 28px !important;
       font-weight: 800 !important;
@@ -638,18 +674,22 @@
       color: #0f172a !important;
       letter-spacing: 1px !important;
       text-transform: uppercase !important;
+      padding-bottom: 12px !important;
+      border-bottom: 3px solid #149ddd !important;
+      display: inline-block !important;
     }
 
     #portfolio-main .resume-item {
       padding: 25px 30px 25px 30px !important;
       margin-bottom: 30px !important;
       margin-top: 0 !important;
-      border-left: 3px solid #149ddd !important;
+      border-left: 4px solid #149ddd !important;
       position: relative !important;
       overflow: visible !important;
-      background: #ffffff !important;
+      background: rgba(255, 255, 255, 0.92) !important;
+      backdrop-filter: blur(6px) !important;
       border-radius: 0 12px 12px 0 !important;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04) !important;
+      box-shadow: 0 8px 24px rgba(20, 157, 221, 0.1), 0 2px 8px rgba(15, 23, 42, 0.06) !important;
       transition: all 0.3s ease !important;
       border-right: 1px solid #f1f5f9 !important;
       border-top: 1px solid #f1f5f9 !important;
@@ -720,7 +760,7 @@
       font-weight: 600 !important;
       color: #0284c7 !important;
       margin-bottom: 15px !important;
-      background: #f0f9ff !important;
+      background: #cce5f2 !important;
       padding: 6px 16px !important;
       display: inline-block !important;
       border-radius: 20px !important;
@@ -785,7 +825,7 @@
     /* Portfolio items visibility */
     #portfolio-main .portfolio.section-bg {
       padding: 60px 0 !important;
-      background: #f5f8fd !important;
+      background: #d4e4f0 !important;
     }
 
     #portfolio-main .portfolio-item {
@@ -1095,7 +1135,7 @@
     /* Ensure equal height for all items */
     #portfolio-main .publications,
     #portfolio-main .certifications {
-      background: #f5f8fd !important;
+      background: #d4e4f0 !important;
     }
 
     #portfolio-main .publications .row,
@@ -1123,7 +1163,7 @@
     /* Contact section styling */
     #portfolio-main .contact {
       padding: 60px 0 !important;
-      background: #f5f8fd !important;
+      background: #d4e4f0 !important;
     }
 
     #portfolio-main .contact .info {
@@ -1140,7 +1180,7 @@
       align-items: flex-start !important;
       padding: 20px !important;
       margin-bottom: 15px !important;
-      background: #f8fafc !important;
+      background: #dceaf2 !important;
       border-radius: 10px !important;
       transition: all 0.3s ease !important;
       border: 1px solid #e9ecef !important;
@@ -1504,6 +1544,8 @@
         <ul>
           <li><a class="nav-link scrollto active" href="#hero"><i class="bi bi-house"></i> <span>Home</span></a></li>
           <li><a class="nav-link scrollto" href="#about"><i class="bi bi-person"></i> <span>About</span></a></li>
+          <li><a class="nav-link scrollto" href="#testimonials"><i class="bi bi-chat-quote"></i>
+              <span>Testimonials</span></a></li>
           <li><a class="nav-link scrollto" href="#resume"><i class="bi bi-file-earmark-text"></i>
               <span>Resume</span></a></li>
           <li><a class="nav-link scrollto" href="#skills"><i class="bi bi-bar-chart"></i> <span>Skills</span></a></li>
@@ -1751,6 +1793,20 @@
             </div>
             <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
               <h3 class="resume-title">Professional Experience</h3>
+              <div class="resume-item">
+                <h4>Test Engineer 1, Quality Assurance</h4>
+                <h5>March 2026 – Present</h5>
+                <p><em>GlobalLogic - Walgreens Boots Alliance, Chicago</em></p>
+                <ul>
+                  <li>Develop and maintain automation scripts for legacy and newly released Walgreens features using
+                    Selenium WebDriver, Postman, and Cosmos DB validations, improving test coverage and framework
+                    reliability across pharmacy workflows.</li>
+                  <li>Collaborate with developers, product owners, UAT teams, and release managers to identify,
+                    reproduce, and resolve defects across Walgreens applications, triage critical issues using HAR/log
+                    evidence and Databricks-based IDI validations, and ensure weekly releases complete successfully through
+                    thorough regression and manual testing.</li>
+                </ul>
+              </div>
               <div class="resume-item">
                 <h4>Software Development Engineer in Test Intern</h4>
                 <h5>August 2025 – March 2026</h5>
