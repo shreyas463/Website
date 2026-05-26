@@ -2038,8 +2038,8 @@
                 <h1>Shreyas Chaudhary</h1>
                 <div class="hero-text-carousel">
                   <p class="hero-line line-1">I'm a <span>Software Engineer</span></p>
-                  <p class="hero-line line-2"><span>Software Development Engineer in Test, Quality Assurance</span></p>
-                  <p class="hero-line line-3"><span>Looking for full-time opportunities in software development - backend, full-stack, or forward-deployed enginner roles</span></p>
+                  <p class="hero-line line-2"><span>Currently working as a Software Development Engineer in Test, Quality Assurance at Walgreens Boots Alliance</span></p>
+                  <p class="hero-line line-3">Looking for full-time opportunities in <span>software development</span> — backend, full-stack, or forward-deployed engineer roles</p>
                 </div>
               </div>
             </div>
@@ -2049,17 +2049,21 @@
       <style>
         .hero-text-carousel {
           position: relative;
-          height: 50px;
+          min-height: 110px;
         }
 
         .hero-line {
           position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
           opacity: 0;
-          animation-duration: 8s;
+          animation-duration: 12s;
           animation-iteration-count: infinite;
           font-size: 24px;
           color: #fff;
           margin: 0;
+          line-height: 1.45;
         }
 
         .hero-line span {
@@ -2076,19 +2080,23 @@
           animation-name: fadeText2;
         }
 
+        .line-3 {
+          animation-name: fadeText3;
+        }
+
         @keyframes fadeText1 {
 
           0%,
-          5% {
+          3% {
             opacity: 0;
           }
 
-          10%,
-          45% {
+          8%,
+          28% {
             opacity: 1;
           }
 
-          50%,
+          33%,
           100% {
             opacity: 0;
           }
@@ -2097,13 +2105,30 @@
         @keyframes fadeText2 {
 
           0%,
-          50%,
-          55% {
+          30% {
             opacity: 0;
           }
 
-          60%,
-          95% {
+          36%,
+          61% {
+            opacity: 1;
+          }
+
+          66%,
+          100% {
+            opacity: 0;
+          }
+        }
+
+        @keyframes fadeText3 {
+
+          0%,
+          63% {
+            opacity: 0;
+          }
+
+          69%,
+          94% {
             opacity: 1;
           }
 
