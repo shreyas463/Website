@@ -1,0 +1,14 @@
+# Netlify runs the Next.js app natively via the official Next runtime,
+# which Netlify auto-installs when it detects the @netlify/plugin-nextjs entry.
+# This gives us SSR, the live GitHub API feed, and next/image optimization.
+
+[build]
+  command = "npm run build"
+  publish = ".next"
+
+[build.environment]
+  # Match the local toolchain; Next.js 16 requires Node 20+.
+  NODE_VERSION = "22"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
