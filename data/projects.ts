@@ -72,6 +72,32 @@ export const projects: Project[] = [
     ],
   },
   {
+    id: "spendwise",
+    title: "SpendWise Desktop",
+    problem:
+      "Personal-finance apps demand cloud accounts and hand your bank data to third parties.",
+    solution:
+      "A local-first, fully offline desktop app that imports bank and credit-card CSVs and turns them into categorized analytics, budgets, and a natural-language query interface — every byte processed on your own machine.",
+    categories: ["Full Stack", "Automation"],
+    stack: ["TypeScript", "Electron", "React", "Vite", "Tailwind CSS", "Recharts"],
+    features: [
+      "Smart CSV import with merchant extraction and ~150 auto-categorization rules",
+      "Interactive dashboards, budgets with alerts, and exportable charts",
+      "Natural-language query interface over your transactions",
+    ],
+    image: "/projects/spendwise/preview.png",
+    github: "https://github.com/shreyas463/spendwise-desktop",
+    demo: "https://shreyas463.github.io/spendwise-desktop/",
+    featured: true,
+    architecture: [
+      { component: "Electron shell", detail: "Cross-platform desktop runtime" },
+      { component: "React + Vite UI", detail: "Dashboards, analytics, budgets" },
+      { component: "CSV engine", detail: "Multi-format parsing + merchant extraction" },
+      { component: "Rule engine", detail: "~150 built-in auto-categorization rules" },
+      { component: "Local store", detail: "Offline JSON / localStorage — no cloud" },
+    ],
+  },
+  {
     id: "formula1won",
     title: "Formula1Won",
     problem:
@@ -102,8 +128,9 @@ export const projects: Project[] = [
       "Desktop app packaged with Electron",
       "Low-latency updates via Socket.io rooms",
     ],
-    image: "/projects/livesketch/4.1.png",
+    image: "/projects/livesketch/4.3.png",
     github: "https://github.com/shreyas463/LiveSketch",
+    demo: "https://live-sketch.vercel.app",
     featured: true,
   },
   {
