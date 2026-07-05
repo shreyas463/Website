@@ -10,7 +10,7 @@ import { SectionHeading } from "@/components/ui/section-heading";
 import { Reveal } from "@/components/ui/reveal";
 import { cn } from "@/lib/utils";
 
-function ProjectCard({ project, featured }: { project: Project; featured: boolean }) {
+function ProjectCard({ project }: { project: Project }) {
   return (
     <motion.article
       layout
@@ -18,17 +18,14 @@ function ProjectCard({ project, featured }: { project: Project; featured: boolea
       animate={{ opacity: 1, scale: 1 }}
       exit={{ opacity: 0, scale: 0.97 }}
       transition={{ duration: 0.25 }}
-      className={cn(
-        "group flex flex-col overflow-hidden rounded-xl border border-line bg-surface transition-colors hover:border-line-bright",
-        featured && "lg:col-span-2",
-      )}
+      className="group flex h-full flex-col overflow-hidden rounded-xl border border-line bg-surface transition-colors hover:border-line-bright"
     >
-      <div className={cn("relative overflow-hidden", featured ? "aspect-[2.2/1]" : "aspect-[1.7/1]")}>
+      <div className="relative aspect-[1.7/1] overflow-hidden">
         <Image
           src={project.image}
           alt={`${project.title} screenshot`}
           fill
-          sizes={featured ? "(max-width: 1024px) 100vw, 640px" : "(max-width: 640px) 100vw, 400px"}
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 380px"
           className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
           unoptimized={project.image.endsWith(".gif")}
         />
@@ -54,7 +51,7 @@ function ProjectCard({ project, featured }: { project: Project; featured: boolea
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={`${project.title} live demo`}
-                className="transition-colors hover:text-accent"
+                className="transition-colors hover:text-accent-2"
               >
                 <ExternalLink size={17} />
               </a>
@@ -62,48 +59,23 @@ function ProjectCard({ project, featured }: { project: Project; featured: boolea
           </div>
         </div>
 
-        <p className="mt-2 text-sm leading-relaxed text-muted">
+        <p className="mt-2 line-clamp-3 text-sm leading-relaxed text-muted">
           <span className="text-foreground/80">{project.problem}</span> {project.solution}
         </p>
 
         <ul className="mt-4 space-y-1.5">
-          {project.features.slice(0, featured ? 3 : 2).map((f) => (
+          {project.features.slice(0, 2).map((f) => (
             <li key={f} className="flex gap-2 text-xs leading-relaxed text-muted">
               <span className="text-accent" aria-hidden>
                 ▹
               </span>
-              {f}
+              <span className="line-clamp-1">{f}</span>
             </li>
           ))}
         </ul>
 
-        {featured && project.architecture ? (
-          <div className="mt-4 rounded-lg border border-line bg-raised p-4">
-            <p className="mb-2 font-mono text-[11px] uppercase tracking-widest text-accent">
-              Architecture
-            </p>
-            <div className="flex flex-wrap items-center gap-x-1 gap-y-2">
-              {project.architecture.map((a, i) => (
-                <span key={a.component} className="flex items-center gap-1">
-                  <span
-                    title={a.detail}
-                    className="cursor-help rounded border border-line bg-surface px-2 py-1 font-mono text-[11px] text-muted transition-colors hover:border-accent hover:text-foreground"
-                  >
-                    {a.component}
-                  </span>
-                  {i < project.architecture!.length - 1 ? (
-                    <span className="text-line-bright" aria-hidden>
-                      →
-                    </span>
-                  ) : null}
-                </span>
-              ))}
-            </div>
-          </div>
-        ) : null}
-
         <div className="mt-auto flex flex-wrap gap-1.5 pt-5">
-          {project.stack.map((t) => (
+          {project.stack.slice(0, 4).map((t) => (
             <span
               key={t}
               className="rounded-md border border-line bg-raised px-2 py-1 font-mono text-[11px] text-muted"
@@ -140,7 +112,7 @@ export function Projects() {
         <SectionHeading
           index="03"
           title="Featured Projects"
-          subtitle="Engineering case studies — each one a real problem, a shipped solution, and the architecture behind it."
+          subtitle="Selected work — each one a real problem, a shipped solution, and the stack behind it."
         />
 
         <Reveal>
@@ -184,7 +156,7 @@ export function Projects() {
         <motion.div layout className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
           <AnimatePresence mode="popLayout">
             {visible.map((p) => (
-              <ProjectCard key={p.id} project={p} featured={Boolean(p.featured && filter === "All" && !query)} />
+              <ProjectCard key={p.id} project={p} />
             ))}
           </AnimatePresence>
         </motion.div>

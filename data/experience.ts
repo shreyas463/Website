@@ -107,6 +107,23 @@ export const experience: Experience[] = [
     technologies: ["React Native", "Expo", "ROS2", "GPS", "YOLO", "CNNs", "PyTorch"],
   },
   {
+    id: "calsys",
+    company: "Cal Poly Pomona",
+    client: "CALSys Lab",
+    role: "Computer Science Researcher",
+    start: "Jan 2025",
+    end: "May 2025",
+    location: "Pomona, CA",
+    summary:
+      "Cyber-threat intelligence research: turning unstructured dark-web content into structured data for ML pipelines.",
+    bullets: [
+      "Built Python + Selenium automation to collect and process data through Tor-based browsers from dark-web forums and marketplaces.",
+      "Helped develop a cyberinfrastructure pipeline transforming unstructured threat content into structured PostgreSQL datasets usable for threat intelligence and ML workflows.",
+      "Improved the existing threat-intelligence model with new features, identified data gaps, and contributed to a research paper abstract.",
+    ],
+    technologies: ["Python", "Selenium", "PostgreSQL", "Tor", "GitLab"],
+  },
+  {
     id: "method-swe",
     company: "Method, Inc.",
     role: "Software Engineering Intern",
@@ -119,6 +136,20 @@ export const experience: Experience[] = [
       "Accelerated quiz rollout by 30% by engineering secure 3-role workflows (admin/author/learner) with Google SSO, OAuth 2.0, JWT access control, and REST APIs over Firestore.",
     ],
     technologies: ["React", "Node.js", "Firebase", "Firestore", "OAuth 2.0", "REST APIs"],
+  },
+  {
+    id: "quantum",
+    company: "Quantum Integrators",
+    role: "SAP Intern",
+    start: "Feb 2023",
+    end: "Jun 2023",
+    location: "Bangalore, India",
+    summary: "SAP systems integration and data analysis across B4P, B4D, and B4 environments.",
+    bullets: [
+      "Integrated, debugged, and tested system components across SAP landscapes; documented and validated new features.",
+      "Analyzed datasets using SAP BW S/4HANA and investigated technical issues across environments.",
+    ],
+    technologies: ["SAP BW S/4HANA", "Eclipse"],
   },
 ];
 
