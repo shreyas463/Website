@@ -61,6 +61,17 @@ export function Hero() {
         className="pointer-events-none absolute inset-0 bg-gradient-to-r from-background via-background/70 to-background/20"
         aria-hidden
       />
+      {/* Red glow to warm up the cyan scene */}
+      <div
+        className="pointer-events-none absolute right-0 top-1/4 h-[30rem] w-[30rem] rounded-full blur-3xl"
+        style={{ background: "radial-gradient(circle, rgba(244,63,94,0.22) 0%, transparent 68%)" }}
+        aria-hidden
+      />
+      <div
+        className="pointer-events-none absolute -left-24 bottom-0 h-80 w-80 rounded-full blur-3xl"
+        style={{ background: "radial-gradient(circle, rgba(244,63,94,0.12) 0%, transparent 70%)" }}
+        aria-hidden
+      />
 
       <div className="relative z-10 mx-auto w-full max-w-6xl px-5 pb-16 pt-28">
         <div className="max-w-3xl">

@@ -13,6 +13,8 @@
   --accent: #22d3ee;
   --accent-dim: #0e7490;
   --accent-glow: rgba(34, 211, 238, 0.14);
+  --accent-2: #f43f5e;
+  --accent-2-glow: rgba(244, 63, 94, 0.16);
   --grid-line: rgba(139, 152, 169, 0.06);
 }
 
@@ -27,6 +29,8 @@
   --accent: #0891b2;
   --accent-dim: #0e7490;
   --accent-glow: rgba(8, 145, 178, 0.1);
+  --accent-2: #e11d48;
+  --accent-2-glow: rgba(225, 29, 72, 0.1);
   --grid-line: rgba(12, 20, 32, 0.05);
 }
 
@@ -40,6 +44,7 @@
   --color-muted: var(--muted);
   --color-accent: var(--accent);
   --color-accent-dim: var(--accent-dim);
+  --color-accent-2: var(--accent-2);
   --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
   --font-mono: var(--font-geist-mono), ui-monospace, monospace;
 }
