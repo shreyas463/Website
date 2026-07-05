@@ -5,7 +5,7 @@ export interface Experience {
   role: string;
   start: string;
   end: string;
-  location: string;
+  location?: string;
   summary: string;
   bullets: string[];
   technologies: string[];
@@ -24,25 +24,27 @@ export const experience: Experience[] = [
     location: "Chicago, IL",
     current: true,
     summary:
-      "Engineering and quality automation for RxI — the pharmacy inventory platform behind ~8,000 Walgreens locations and 9M+ daily customers.",
+      "Engineering and quality automation for RxI — the pharmacy inventory platform behind 8,000 Walgreens stores and 9M+ daily patients.",
     bullets: [
-      "Automated 120+ RxI pharmacy inventory features — quarantine entry, stock adjustments, audits, receiving, exception handling, and DSCSA compliance — enabling consistent regression coverage before weekly releases, using Java, Selenium WebDriver, and Cucumber BDD.",
-      "Validate features end-to-end across UI workflows, REST APIs, and backend data systems using Postman, Cosmos DB, Azure Storage, and Databricks pipeline checks, keeping API responses, database records, and inventory events accurate across release and UAT environments.",
-      "Partner with product, engineering, QA, and UAT teams to investigate defects and flag release blockers early, contributing to smoother deployments across handheld, desktop, and corporate platforms.",
+      "Architected a Java/Selenium + Cucumber BDD framework of 300+ end-to-end scenarios across DSCSA compliance, audits, returns, and stock-management workflows for Walgreens' RxI pharmacy-inventory platform.",
+      "Improved automated test coverage by 65% by adding Java integration tests to the Azure DevOps CI/CD pipeline, catching inventory-workflow regressions on every build before release.",
+      "Cut manual validation time by 6 weeks by building an automated multi-layer validation pipeline that cross-checked API responses (Postman), stored records (Cosmos DB, Azure Storage), and Databricks output against functional, performance, audit, and access-control standards.",
+      "Drove alignment on quality standards and test plans across 14+ releases serving 9M+ customers by presenting testing strategies to product managers, external clients, and business teams.",
+      "Led defect and bug-triage meetings across Agile/Scrum sprints — identifying root causes, prioritizing high-impact issues, and contributing quality input in design and code reviews.",
     ],
     technologies: [
       "Java",
       "Selenium",
       "Cucumber BDD",
+      "Azure DevOps",
       "Postman",
       "Cosmos DB",
-      "Azure",
+      "Azure Storage",
       "Databricks",
-      "REST APIs",
+      "CI/CD",
     ],
     details: [
-      "Started on this team as an SDET intern and converted to full-time; my largest contribution has been expanding automation and validation coverage for enterprise pharmacy systems.",
-      "Workflows covered include stock management, receiving, returns, audits, quarantine, and DSCSA regulatory compliance.",
+      "Started on this team as an SDET intern and converted to full-time; my largest contribution has been expanding automation and validation coverage for enterprise pharmacy systems used across handheld, desktop, and corporate platforms.",
     ],
   },
   {
@@ -63,92 +65,60 @@ export const experience: Experience[] = [
     technologies: ["Java", "Selenium", "Cucumber", "Postman", "Cosmos DB", "Azure", "Databricks"],
   },
   {
-    id: "method",
-    company: "Method",
+    id: "method-fullstack",
+    company: "Method, Inc.",
     role: "Full-Stack Engineering Intern",
     start: "Jun 2025",
     end: "Aug 2025",
     location: "Charlotte, NC",
     summary:
-      "Built TechDash, an internal technology catalog and project discovery platform for a global consulting firm.",
+      "Built TechDash, a technology-discovery platform unifying Method's fragmented catalogs into one searchable, AI-powered model.",
     bullets: [
-      "Developed full-stack catalog and project-management modules — projects, technologies, tools, clients, timelines, and ownership in one place — using React, Next.js, TypeScript, Firebase, and Firestore, including Google Gemini-powered natural-language search.",
-      "Built authentication and access control with Firebase Auth, protected routes, and role-based permissions for admins, editors, viewers, and project leads.",
-      "Delivered a secure MVP that improved project discovery and knowledge sharing across Method's and GlobalLogic's 44,000+ employees, working in an agile team with designers and PMs.",
+      "Cut internal technology-discovery time by 60% for Method's 500-engineer org by building and shipping TechDash — a platform that unified 5 fragmented catalog types into one searchable model with Google Gemini-powered natural-language search.",
+      "Designed and enforced organization-wide authorization by modeling a 3-tier RBAC scheme (admin/editor/viewer) with Firebase Auth middleware, server-protected routes, and indexed Firestore queries, making unauthorized access the default-hard path.",
+      "Delivered real-time CRUD, cross-catalog entity linking, and multi-filter search by engineering full-stack modules in React, Next.js, TypeScript, and Node.js/Express backed by Firestore on Google Cloud Functions.",
     ],
     technologies: [
       "React",
       "Next.js",
       "TypeScript",
+      "Node.js",
+      "Express",
       "Firebase",
       "Firestore",
       "Google Gemini",
-      "Node.js",
+      "GCP",
     ],
   },
   {
     id: "av-lab",
     company: "Cal Poly Pomona",
-    client: "Autonomous Vehicle Laboratory",
-    role: "Research Assistant",
+    client: "Autonomous Systems Lab",
+    role: "Computer Science Researcher",
     start: "Aug 2024",
     end: "May 2025",
     location: "Pomona, CA",
     summary:
-      "Autonomous campus ride-sharing research: mobile app, perception, and mapping for a self-driving campus vehicle.",
+      "Autonomous campus ride-sharing research — perception, mapping, and a mobile app for a self-driving campus vehicle.",
     bullets: [
-      "Built a campus autonomous ride-sharing mobile app in React Native and Expo with real-time GPS tracking and YOLO-based obstacle detection.",
-      "Published two papers at the 2025 ASEE PSW Conference covering CNN-based end-to-end vehicle control and equitable AV deployment frameworks.",
-      "Implemented outdoor mapping with SLAM Toolbox and RViz2 on ROS2, improving localization accuracy and reducing collisions during testing.",
+      "Reduced vehicle-location update latency by 30% across 10+ simulated campus routes by building a React Native/Expo autonomous ride-sharing app integrating ROS2, GPS tracking, and YOLO-based perception.",
+      "Authored two ASEE Conference papers on autonomous vehicles — End-to-End Networks for Vehicle Control and Toward Equitable AV Deployment — covering CNN-based vehicle control and equitable AV deployment frameworks.",
     ],
-    technologies: ["React Native", "Expo", "ROS2", "YOLO", "SLAM", "Python", "PyTorch"],
+    technologies: ["React Native", "Expo", "ROS2", "GPS", "YOLO", "CNNs", "PyTorch"],
   },
   {
-    id: "calsys",
-    company: "Cal Poly Pomona",
-    client: "CALSys Lab",
-    role: "Computer Science Researcher",
-    start: "Jan 2025",
-    end: "May 2025",
-    location: "Pomona, CA",
-    summary:
-      "Cyber-threat intelligence research: turning unstructured dark-web content into structured data for ML pipelines.",
-    bullets: [
-      "Built Python + Selenium automation to collect and process data through Tor-based browsers from dark-web forums and marketplaces.",
-      "Helped develop a cyberinfrastructure pipeline transforming unstructured threat content into structured PostgreSQL datasets usable for threat intelligence and ML workflows.",
-      "Improved the existing threat-intelligence model with new features, identified data gaps, and contributed to a research paper abstract.",
-    ],
-    technologies: ["Python", "Selenium", "PostgreSQL", "Tor", "GitLab"],
-  },
-  {
-    id: "globallogic-swe",
-    company: "GlobalLogic",
+    id: "method-swe",
+    company: "Method, Inc.",
     role: "Software Engineering Intern",
     start: "Jun 2024",
-    end: "Aug 2024",
-    location: "Austin, TX",
+    end: "Jul 2024",
     summary:
-      "Full-stack features for GLX, the company's internal learning platform used by 44,000+ employees worldwide.",
+      "Full-stack features for an enterprise learning portal used by 44,000+ employees.",
     bullets: [
-      "Built a gamified quiz platform feature — creation, publishing, and response tracking — using React, Node.js, Firebase Functions, and Firestore, contributing to a 30% faster quiz rollout for training modules.",
-      "Implemented real-time data workflows with Firestore and REST APIs so quiz content and responses updated live across the platform.",
-      "Integrated Google SSO with OAuth 2.0 and JWT-based role access for learners, admins, and authors, contributing to a 25% improvement in learner engagement.",
+      "Lifted learner engagement by 25% across 44,000+ employees by building a gamified quiz platform (React, Node.js, Firebase Functions, Firestore) with assessments, skill-mastery tracking, and leaderboards inside an enterprise learning portal.",
+      "Accelerated quiz rollout by 30% by engineering secure 3-role workflows (admin/author/learner) with Google SSO, OAuth 2.0, JWT access control, and REST APIs over Firestore.",
     ],
     technologies: ["React", "Node.js", "Firebase", "Firestore", "OAuth 2.0", "REST APIs"],
-  },
-  {
-    id: "quantum",
-    company: "Quantum Integrators",
-    role: "SAP Intern",
-    start: "Feb 2023",
-    end: "Jun 2023",
-    location: "Bangalore, India",
-    summary: "SAP systems integration and data analysis across B4P, B4D, and B4 environments.",
-    bullets: [
-      "Integrated, debugged, and tested system components across SAP landscapes; documented and validated new features.",
-      "Analyzed datasets using SAP BW S/4HANA and investigated technical issues across environments.",
-    ],
-    technologies: ["SAP BW S/4HANA", "Eclipse"],
   },
 ];
 

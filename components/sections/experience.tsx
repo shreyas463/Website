@@ -45,10 +45,12 @@ function ExperienceCard({
               {item.start} — {item.end}
             </p>
           </div>
-          <p className="mt-1 flex items-center gap-1.5 text-xs text-muted">
-            <MapPin size={11} aria-hidden />
-            {item.location}
-          </p>
+          {item.location ? (
+            <p className="mt-1 flex items-center gap-1.5 text-xs text-muted">
+              <MapPin size={11} aria-hidden />
+              {item.location}
+            </p>
+          ) : null}
 
           <p className="mt-4 text-sm leading-relaxed text-muted">{item.summary}</p>
 
