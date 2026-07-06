@@ -23,28 +23,28 @@ export interface Project {
 
 export const projects: Project[] = [
   {
-    id: "stock-analysis",
-    title: "Stock Analysis Platform",
+    id: "basis",
+    title: "Basis",
     problem:
-      "Retail investors juggle separate tools for charts, portfolio tracking, and market news.",
+      "Most retail investors buy on hype and can't say why they own what they own.",
     solution:
-      "A Robinhood-style full-stack trading dashboard with live market data, portfolio simulation, and interactive charting.",
+      "An evidence-based investing workbench: deep stock research, honest statistical forecasts, and a $100k paper-trading engine with exact accounting — so you can practice a disciplined process before a single real dollar moves.",
     categories: ["Full Stack", "Backend"],
-    stack: ["Next.js", "Flask", "Python", "TypeScript", "Vercel"],
+    stack: ["Next.js", "Flask", "Python", "Firebase", "Alpha Vantage"],
     features: [
-      "Live quotes and interactive price charts",
-      "Simulated portfolio with buy/sell flows",
-      "Flask REST API backend with market-data integration",
+      "Forecast Lab benchmarks statistical models (Damped Holt, AR) against a naive baseline by MAPE",
+      "$100k paper-trading engine with exact accounting and real-time P/L",
+      "Deep stock research with technical alerts (RSI, moving averages)",
     ],
-    image: "/projects/stockerr/5.gif",
+    image: "/projects/basis/preview.png",
     github: "https://github.com/shreyas463/Stock-Analysis-platform",
-    demo: "https://stock-analysis-platform-bay.vercel.app",
+    demo: "https://basis-retr.onrender.com/welcome",
     featured: true,
     architecture: [
-      { component: "Next.js frontend", detail: "Charting UI, portfolio views, auth" },
-      { component: "Flask API", detail: "Quotes, orders, portfolio endpoints" },
-      { component: "Market data service", detail: "Third-party stock data integration" },
-      { component: "Vercel", detail: "Frontend hosting and CI" },
+      { component: "Next.js frontend", detail: "Research, forecast lab, paper-trading UI" },
+      { component: "Flask API", detail: "Quotes, forecasts, orders, portfolio endpoints" },
+      { component: "Forecast engine", detail: "Statistical models benchmarked by MAPE" },
+      { component: "Firebase", detail: "Auth and real-time portfolio state" },
     ],
   },
   {
@@ -77,11 +77,11 @@ export const projects: Project[] = [
     problem:
       "Personal-finance apps demand cloud accounts and hand your bank data to third parties.",
     solution:
-      "A local-first, fully offline desktop app that imports bank and credit-card CSVs and turns them into categorized analytics, budgets, and a natural-language query interface — every byte processed on your own machine.",
+      "A local-first, fully offline desktop app that imports bank and credit-card statements (CSV or PDF) and turns them into categorized analytics, budgets, and a natural-language query interface — every byte processed on your own machine.",
     categories: ["Full Stack", "Automation"],
     stack: ["TypeScript", "Electron", "React", "Vite", "Tailwind CSS", "Recharts"],
     features: [
-      "Smart CSV import with merchant extraction and ~150 auto-categorization rules",
+      "Smart CSV / PDF statement import with merchant extraction and ~150 auto-categorization rules",
       "Interactive dashboards, budgets with alerts, and exportable charts",
       "Natural-language query interface over your transactions",
     ],
