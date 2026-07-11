@@ -221,13 +221,24 @@ export function Contact() {
                   </>
                 ) : status === "sent" ? (
                   "Sent — thank you!"
-                ) : (
+                ) : FORM_ENDPOINT ? (
                   <>
                     <Send size={15} aria-hidden />
                     Send Message
                   </>
+                ) : (
+                  <>
+                    <Mail size={15} aria-hidden />
+                    Send via Email App
+                  </>
                 )}
               </button>
+              {!FORM_ENDPOINT ? (
+                <p className="mt-2.5 text-center text-xs text-muted">
+                  Opens your email app with the message pre-filled — or copy my
+                  address from the left.
+                </p>
+              ) : null}
             </form>
           </Reveal>
         </div>
