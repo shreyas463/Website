@@ -197,18 +197,33 @@ export default function HeroScene() {
     () => !window.matchMedia("(prefers-reduced-motion: reduce)").matches,
   );
 
+  // Stop the render loop entirely once the hero is scrolled out of view —
+  // otherwise the GPU keeps drawing a scene nobody can see for the whole
+  // (very long) page, which costs real battery on laptops.
+  const wrapRef = useRef<HTMLDivElement>(null);
+  const [inView, setInView] = useState(true);
+  useEffect(() => {
+    const el = wrapRef.current;
+    if (!el) return;
+    const io = new IntersectionObserver(([entry]) => setInView(entry.isIntersecting));
+    io.observe(el);
+    return () => io.disconnect();
+  }, []);
+
   return (
-    <Canvas
-      camera={{ position: [0, 0, 7.5], fov: 45 }}
-      dpr={[1, 1.75]}
-      gl={{ antialias: true, alpha: true, powerPreference: "high-performance" }}
-      frameloop={animate ? "always" : "demand"}
-      aria-hidden
-      className="!absolute inset-0"
-    >
-      <ambientLight intensity={0.4} />
-      <pointLight position={[4, 4, 6]} intensity={40} color="#67e8f9" />
-      <Network config={config} animate={animate} />
-    </Canvas>
+    <div ref={wrapRef} className="absolute inset-0">
+      <Canvas
+        camera={{ position: [0, 0, 7.5], fov: 45 }}
+        dpr={[1, 1.75]}
+        gl={{ antialias: true, alpha: true, powerPreference: "high-performance" }}
+        frameloop={!inView ? "never" : animate ? "always" : "demand"}
+        aria-hidden
+        className="!absolute inset-0"
+      >
+        <ambientLight intensity={0.4} />
+        <pointLight position={[4, 4, 6]} intensity={40} color="#67e8f9" />
+        <Network config={config} animate={animate && inView} />
+      </Canvas>
+    </div>
   );
 }
