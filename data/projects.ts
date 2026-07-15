@@ -53,22 +53,23 @@ export const projects: Project[] = [
     problem:
       "Job seekers rarely get objective feedback on how a resume reads to screeners and ATS systems.",
     solution:
-      "A web app that builds professional resumes and scores them with AI-driven analysis and improvement suggestions.",
+      "A resume analyzer and builder that scores across impact, skills, structure, ATS readiness, and writing — every check visible, matched against any job description, with a step-by-step builder and live PDF export. Runs entirely client-side, no sign-up.",
     categories: ["AI", "Full Stack"],
-    stack: ["React", "Next.js", "AI/LLM", "Vercel"],
+    stack: ["Next.js", "TypeScript", "Tailwind CSS", "pdf.js", "Firebase"],
     features: [
-      "Guided resume builder with clean templates",
-      "AI analysis with actionable improvement suggestions",
-      "Instant scoring across content and structure",
+      "Transparent scoring across 5 weighted categories with a letter grade (A+ to D)",
+      "Job-description keyword matching and ATS-readiness analysis",
+      "Step-by-step resume builder with templates and client-side PDF export",
     ],
-    image: "/projects/resume/3.1.png",
+    image: "/projects/resume/preview.png",
     github: "https://github.com/shreyas463/AI-Powered-Resume-Analyzer",
-    demo: "https://ai-powered-resume-analyzer-63ld-5m0dx1zd9.vercel.app/",
+    demo: "https://aipoweredresume.netlify.app/",
     featured: true,
     architecture: [
-      { component: "Next.js app", detail: "Builder UI and analysis dashboard" },
-      { component: "LLM analysis layer", detail: "Resume parsing, scoring, suggestions" },
-      { component: "Vercel", detail: "Deployment and serverless functions" },
+      { component: "Next.js app", detail: "Builder and analyzer UI" },
+      { component: "pdf.js", detail: "Client-side PDF text extraction" },
+      { component: "Scoring engine", detail: "5-category weighted scoring, in-browser" },
+      { component: "Firebase", detail: "Optional auth and saved resumes" },
     ],
   },
   {
