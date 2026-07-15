@@ -9,6 +9,7 @@ import { Architecture } from "@/components/sections/architecture";
 import { Publications } from "@/components/sections/publications";
 import { GitHubActivity } from "@/components/sections/github-activity";
 import { Contact } from "@/components/sections/contact";
+import { Chatbot } from "@/components/ui/chatbot";
 
 export default function Home() {
   return (
@@ -26,6 +27,7 @@ export default function Home() {
         <Contact />
       </main>
       <Footer />
+      <Chatbot />
     </>
   );
 }
