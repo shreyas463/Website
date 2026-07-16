@@ -55,7 +55,7 @@ export const projects: Project[] = [
     problem:
       "World Cup predictions are usually hype — not evidence, and rarely honest about uncertainty.",
     solution:
-      "A full-stack machine-learning app that rates all 48 nations from 49k real historical internationals, predicts any match, folds in fan sentiment, and runs thousands of Monte Carlo tournament simulations to estimate every team's odds of lifting the trophy.",
+      "A full-stack machine-learning app that predicts the 2026 World Cup. It rates all 48 nations from 49k real historical internationals, predicts any match, folds in fan sentiment, and runs thousands of Monte Carlo tournament simulations to estimate every team's odds of lifting the trophy.",
     categories: ["AI", "Full Stack"],
     stack: ["Python", "FastAPI", "scikit-learn", "React", "TypeScript", "Tailwind CSS"],
     features: [

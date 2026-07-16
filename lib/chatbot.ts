@@ -50,7 +50,7 @@ const INTENTS: Intent[] = [
   {
     id: "projects",
     suggestion: "Show me his projects",
-    keywords: ["project", "projects", "built", "build", "portfolio", "apps", "application", "side project", "basis", "spendwise", "resume analyzer", "livesketch", "made"],
+    keywords: ["project", "projects", "built", "build", "portfolio", "apps", "application", "side project", "basis", "spendwise", "resume analyzer", "livesketch", "racklab", "rack lab", "world cup", "fifa", "predictor", "data center", "simulator", "made"],
     answer: () => {
       const feat = projects.filter((p) => p.featured).slice(0, 5);
       return {
@@ -75,8 +75,8 @@ const INTENTS: Intent[] = [
     keywords: ["ai", "ml", "machine learning", "artificial intelligence", "model", "models", "pytorch", "yolo", "cnn", "cnns", "llm", "gemini", "forecasting", "deep learning", "computer vision"],
     answer: () => ({
       paragraphs: [
-        "On the AI/ML side: CNN-based end-to-end vehicle control and YOLO perception for autonomous vehicles, LLM features with Google Gemini (natural-language search at Method), and statistical forecasting in Basis.",
-        "Tools: PyTorch, TensorFlow, OpenCV, YOLO, Google Gemini, and LLM APIs.",
+        "On the AI/ML side: a 2026 World Cup predictor trained on 49k real international matches (Elo ratings, a validated match-outcome model, and Monte Carlo tournament simulation), CNN-based end-to-end vehicle control and YOLO perception for autonomous vehicles, LLM features with Google Gemini (natural-language search at Method), and statistical forecasting in Basis.",
+        "Tools: PyTorch, TensorFlow, scikit-learn, OpenCV, YOLO, Google Gemini, and LLM APIs.",
       ],
     }),
   },
