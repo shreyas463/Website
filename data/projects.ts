@@ -73,23 +73,6 @@ export const projects: Project[] = [
     ],
   },
   {
-    id: "autoresearch",
-    title: "autoresearch-macos",
-    problem:
-      "ML architecture search is slow and manual, and ad-hoc experiments are hard to compare fairly.",
-    solution:
-      "An autonomous research harness where an AI agent rewrites the training code and iterates overnight — every experiment capped at a fixed 5-minute budget and scored by a single metric, so architecture changes compete on a level field. A macOS / Apple-Silicon fork of nanochat.",
-    categories: ["AI", "Research"],
-    stack: ["Python", "PyTorch", "nanochat", "Apple Silicon"],
-    features: [
-      "An agent edits the training code and runs ~12 experiments per hour, unattended",
-      "Fixed 5-minute budget and a single val_bpb metric for fair architecture comparisons",
-      "macOS / Apple-Silicon (MPS) optimized — no FlashAttention or distributed setup required",
-    ],
-    image: "/projects/autoresearch/preview.png",
-    github: "https://github.com/shreyas463/autoresearch-macos",
-  },
-  {
     id: "basis",
     title: "Basis",
     problem:
