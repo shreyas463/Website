@@ -33,6 +33,31 @@ const linkedinHandle = profile.social.linkedin
 
 const current = experience[0];
 
+// Builds a dedicated, detailed intent for a single project, sourced from the
+// same projects data so it never drifts out of sync.
+function projectIntent(id: string, keywords: string[], suggestion: string): Intent {
+  return {
+    id,
+    suggestion,
+    keywords,
+    answer: () => {
+      const p = projects.find((x) => x.id === id);
+      if (!p) {
+        return { paragraphs: ["That one isn't listed right now — try “show me his projects”."] };
+      }
+      return {
+        paragraphs: [`${p.problem} ${p.solution}`],
+        bullets: p.features,
+        links: [
+          ...(p.demo ? [{ label: "Live demo", href: p.demo }] : []),
+          { label: "Source on GitHub", href: p.github },
+          { label: "See it in the projects grid", href: "#projects" },
+        ],
+      };
+    },
+  };
+}
+
 // Ordered by specificity — earlier intents win ties.
 const INTENTS: Intent[] = [
   {
@@ -47,10 +72,20 @@ const INTENTS: Intent[] = [
       links: [{ label: "See experience", href: "#experience" }],
     }),
   },
+  projectIntent(
+    "racklab",
+    ["racklab", "rack lab", "data center", "datacenter", "3d simulator", "server hall", "cooling"],
+    "Tell me about RackLAB",
+  ),
+  projectIntent(
+    "wc2026",
+    ["world cup", "world cup predictor", "fifa", "predictor", "wc2026", "monte carlo"],
+    "Tell me about the World Cup Predictor",
+  ),
   {
     id: "projects",
     suggestion: "Show me his projects",
-    keywords: ["project", "projects", "built", "build", "portfolio", "apps", "application", "side project", "basis", "spendwise", "resume analyzer", "livesketch", "racklab", "rack lab", "world cup", "fifa", "predictor", "data center", "simulator", "made"],
+    keywords: ["project", "projects", "built", "build", "portfolio", "apps", "application", "side project", "basis", "spendwise", "resume analyzer", "livesketch", "made"],
     answer: () => {
       const feat = projects.filter((p) => p.featured).slice(0, 5);
       return {
