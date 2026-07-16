@@ -15,6 +15,7 @@ export interface Project {
   stack: string[];
   features: string[];
   image: string;
+  video?: string;
   github: string;
   demo?: string;
   featured?: boolean;
@@ -36,7 +37,8 @@ export const projects: Project[] = [
       "Real-time power chain — utility grid, UPS batteries and diesel generator with realistic timing",
       "Pure, unit-tested simulation core (27 Vitest tests) with CI/CD to the web",
     ],
-    image: "/projects/racklab/demo.gif",
+    image: "/projects/racklab/poster.jpg",
+    video: "/projects/racklab/demo.mp4",
     github: "https://github.com/shreyas463/rackLAB",
     demo: "https://shreyas463.github.io/rackLAB/",
     featured: true,
@@ -61,7 +63,8 @@ export const projects: Project[] = [
       "Monte Carlo simulates the full 48-team tournament thousands of times for each team's title odds",
       "Live match predictor, the real recorded bracket, and a fan-sentiment model — deployed static",
     ],
-    image: "/projects/wc2026/demo.gif",
+    image: "/projects/wc2026/poster.jpg",
+    video: "/projects/wc2026/demo.mp4",
     github: "https://github.com/shreyas463/2026-fifa-world-cup-final-predictor",
     demo: "https://shreyas463.github.io/2026-fifa-world-cup-final-predictor/",
     featured: true,
@@ -86,7 +89,8 @@ export const projects: Project[] = [
       "$100k paper-trading engine with exact accounting and real-time P/L",
       "Deep stock research with technical alerts (RSI, moving averages)",
     ],
-    image: "/projects/basis/demo.gif",
+    image: "/projects/basis/poster.jpg",
+    video: "/projects/basis/demo.mp4",
     github: "https://github.com/shreyas463/Stock-Analysis-platform",
     demo: "https://basis-retr.onrender.com/welcome",
     featured: true,
@@ -111,7 +115,8 @@ export const projects: Project[] = [
       "Job-description keyword matching and ATS-readiness analysis",
       "Step-by-step resume builder with templates and client-side PDF export",
     ],
-    image: "/projects/resume/demo.gif",
+    image: "/projects/resume/poster.jpg",
+    video: "/projects/resume/demo.mp4",
     github: "https://github.com/shreyas463/AI-Powered-Resume-Analyzer",
     demo: "https://aipoweredresume.netlify.app/",
     featured: true,
@@ -136,7 +141,8 @@ export const projects: Project[] = [
       "Interactive dashboards, budgets with alerts, and exportable charts",
       "Natural-language query interface over your transactions",
     ],
-    image: "/projects/spendwise/demo.gif",
+    image: "/projects/spendwise/poster.jpg",
+    video: "/projects/spendwise/demo.mp4",
     github: "https://github.com/shreyas463/spendwise-desktop",
     demo: "https://shreyas463.github.io/spendwise-desktop/",
     featured: true,

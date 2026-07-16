@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { ExternalLink, Search } from "lucide-react";
@@ -9,6 +9,44 @@ import { projects, projectCategories, type Project, type ProjectCategory } from 
 import { SectionHeading } from "@/components/ui/section-heading";
 import { Reveal } from "@/components/ui/reveal";
 import { cn } from "@/lib/utils";
+
+// Loads and plays the demo clip only when the card nears the viewport, so
+// off-screen videos never download — keeping the page light and low-CPU.
+function LazyVideo({ src, poster, title }: { src: string; poster: string; title: string }) {
+  const ref = useRef<HTMLVideoElement>(null);
+  const [active, setActive] = useState(false);
+
+  useEffect(() => {
+    const el = ref.current;
+    if (!el || active) return;
+    const io = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setActive(true);
+          io.disconnect();
+        }
+      },
+      { rootMargin: "300px" },
+    );
+    io.observe(el);
+    return () => io.disconnect();
+  }, [active]);
+
+  return (
+    <video
+      ref={ref}
+      src={active ? src : undefined}
+      poster={poster}
+      autoPlay
+      muted
+      loop
+      playsInline
+      preload="none"
+      aria-label={`${title} demo`}
+      className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+    />
+  );
+}
 
 function ProjectCard({ project }: { project: Project }) {
   return (
@@ -21,14 +59,18 @@ function ProjectCard({ project }: { project: Project }) {
       className="group flex h-full flex-col overflow-hidden rounded-xl border border-line bg-surface transition-colors hover:border-line-bright"
     >
       <div className="relative aspect-[1.7/1] overflow-hidden">
-        <Image
-          src={project.image}
-          alt={`${project.title} screenshot`}
-          fill
-          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 380px"
-          className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
-          unoptimized={project.image.endsWith(".gif")}
-        />
+        {project.video ? (
+          <LazyVideo src={project.video} poster={project.image} title={project.title} />
+        ) : (
+          <Image
+            src={project.image}
+            alt={`${project.title} screenshot`}
+            fill
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 380px"
+            className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+            unoptimized={project.image.endsWith(".gif")}
+          />
+        )}
         <div className="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent" aria-hidden />
       </div>
 
