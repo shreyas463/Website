@@ -23,6 +23,73 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    id: "racklab",
+    title: "RackLAB",
+    problem:
+      "Cloud infrastructure is invisible — most engineers never see how a data center physically stays alive.",
+    solution:
+      "A walkable, first-person 3D data-center simulator. Explore server halls in a thermal view, trigger cooling and power failures, and watch a live power chain (grid → UPS → generator) respond — all driven by a pure, unit-tested simulation core.",
+    categories: ["Cloud", "Research"],
+    stack: ["TypeScript", "Three.js", "React Three Fiber", "Zustand", "Vite", "Vitest"],
+    features: [
+      "First-person exploration of 6 openable racks and 36 live-simulated servers with a thermal view",
+      "Real-time power chain — utility grid, UPS batteries and diesel generator with realistic timing",
+      "Pure, unit-tested simulation core (27 Vitest tests) with CI/CD to the web",
+    ],
+    image: "/projects/racklab/preview.png",
+    github: "https://github.com/shreyas463/rackLAB",
+    demo: "https://shreyas463.github.io/rackLAB/",
+    featured: true,
+    architecture: [
+      { component: "sim/ core", detail: "Pure, testable simulation model (thermal, power, load)" },
+      { component: "Zustand store", detail: "Fixed-timestep tick and world state" },
+      { component: "React Three Fiber", detail: "First-person 3D rendering of the facility" },
+      { component: "React HUD", detail: "NOC dashboards, missions, beginner/engineer modes" },
+    ],
+  },
+  {
+    id: "wc2026",
+    title: "World Cup 2026 Predictor",
+    problem:
+      "World Cup predictions are usually hype — not evidence, and rarely honest about uncertainty.",
+    solution:
+      "A full-stack machine-learning app that rates all 48 nations from 49k real historical internationals, predicts any match, folds in fan sentiment, and runs thousands of Monte Carlo tournament simulations to estimate every team's odds of lifting the trophy.",
+    categories: ["AI", "Full Stack"],
+    stack: ["Python", "FastAPI", "scikit-learn", "React", "TypeScript", "Tailwind CSS"],
+    features: [
+      "Trained on 49k real internationals (1872–2026) with chronological train/val/test — ~0.61 accuracy",
+      "Monte Carlo simulates the full 48-team tournament thousands of times for each team's title odds",
+      "Live match predictor, the real recorded bracket, and a fan-sentiment model — deployed static",
+    ],
+    image: "/projects/wc2026/preview.png",
+    github: "https://github.com/shreyas463/2026-fifa-world-cup-final-predictor",
+    demo: "https://shreyas463.github.io/2026-fifa-world-cup-final-predictor/",
+    featured: true,
+    architecture: [
+      { component: "FastAPI backend", detail: "Match, simulation, bracket and sentiment endpoints" },
+      { component: "ML pipeline", detail: "Elo replay + a validated classifier on real results" },
+      { component: "Monte Carlo engine", detail: "Full 48-team tournament simulated thousands of times" },
+      { component: "React frontend", detail: "9 pages with Recharts; static-export build" },
+    ],
+  },
+  {
+    id: "autoresearch",
+    title: "autoresearch-macos",
+    problem:
+      "ML architecture search is slow and manual, and ad-hoc experiments are hard to compare fairly.",
+    solution:
+      "An autonomous research harness where an AI agent rewrites the training code and iterates overnight — every experiment capped at a fixed 5-minute budget and scored by a single metric, so architecture changes compete on a level field. A macOS / Apple-Silicon fork of nanochat.",
+    categories: ["AI", "Research"],
+    stack: ["Python", "PyTorch", "nanochat", "Apple Silicon"],
+    features: [
+      "An agent edits the training code and runs ~12 experiments per hour, unattended",
+      "Fixed 5-minute budget and a single val_bpb metric for fair architecture comparisons",
+      "macOS / Apple-Silicon (MPS) optimized — no FlashAttention or distributed setup required",
+    ],
+    image: "/projects/autoresearch/preview.png",
+    github: "https://github.com/shreyas463/autoresearch-macos",
+  },
+  {
     id: "basis",
     title: "Basis",
     problem:
