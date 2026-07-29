@@ -54,8 +54,8 @@ export const profile = {
     focus:
       "Currently focused on backend, full-stack, and forward-deployed engineering roles where I can own technically complex systems in production.",
     timeline: [
-      { year: "2026", event: "SDE at GlobalLogic — Walgreens pharmacy inventory (RxI)" },
-      { year: "2025", event: "M.S. Computer Science, Cal Poly Pomona (4.0 GPA) · Full-stack intern at Method" },
+      { year: "2026", event: "Shipping DSCSA-compliant releases of Walgreens RxI — 8,000 stores, 9M+ daily patients" },
+      { year: "2025", event: "M.S. Computer Science, Cal Poly Pomona (4.0 GPA) · Full-stack intern at Method · Joined GlobalLogic as SDE" },
       { year: "2024", event: "SWE intern at GlobalLogic · Autonomous vehicle research at Cal Poly" },
       { year: "2023", event: "B.E. Computer Science · Started M.S. in California" },
     ],

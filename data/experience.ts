@@ -19,18 +19,17 @@ export const experience: Experience[] = [
     company: "GlobalLogic",
     client: "Walgreens Boots Alliance",
     role: "Software Development Engineer",
-    start: "Mar 2026",
+    start: "Aug 2025",
     end: "Present",
     location: "Chicago, IL",
     current: true,
     summary:
-      "Engineering and quality automation for RxI — the pharmacy inventory platform behind 8,000 Walgreens stores and 9M+ daily patients.",
+      "Engineering and validation automation for RxI — the pharmacy inventory platform behind 8,000 Walgreens stores and 9M+ daily patients.",
     bullets: [
-      "Architected a Java/Selenium + Cucumber BDD framework of 300+ end-to-end scenarios across DSCSA compliance, audits, returns, and stock-management workflows for Walgreens' RxI pharmacy-inventory platform.",
-      "Improved automated test coverage by 65% by adding Java integration tests to the Azure DevOps CI/CD pipeline, catching inventory-workflow regressions on every build before release.",
-      "Cut manual validation time by 6 weeks by building an automated multi-layer validation pipeline that cross-checked API responses (Postman), stored records (Cosmos DB, Azure Storage), and Databricks output against functional, performance, audit, and access-control standards.",
-      "Drove alignment on quality standards and test plans across 14+ releases serving 9M+ customers by presenting testing strategies to product managers, external clients, and business teams.",
-      "Led defect and bug-triage meetings across Agile/Scrum sprints — identifying root causes, prioritizing high-impact issues, and contributing quality input in design and code reviews.",
+      "Built an automated validation system for Walgreens' RxI pharmacy-inventory platform (8,000 stores, 9M+ daily patients) that cross-checks REST API responses against Cosmos DB, Azure Storage, and Databricks outputs, catching data discrepancies before release and cutting 6 weeks of manual verification per cycle.",
+      "Architected a Java/Selenium and Cucumber BDD framework of 300+ end-to-end scenarios covering DSCSA federal compliance, audits, returns, and stock-management workflows, and wired it into the Azure DevOps CI/CD pipeline — raising automated coverage 65% and blocking regressions on every build.",
+      "Shipped 14+ releases of a highly regulated, high-availability system serving 9M+ patients daily, owning functional, performance, audit, and access-control verification under DSCSA pharmaceutical-traceability requirements.",
+      "Drove root-cause analysis and prioritization across Agile sprints with engineers and product managers, and contributed design and code reviews while presenting release strategy to external clients and business stakeholders.",
     ],
     technologies: [
       "Java",
@@ -44,25 +43,9 @@ export const experience: Experience[] = [
       "CI/CD",
     ],
     details: [
-      "Started on this team as an SDET intern and converted to full-time; my largest contribution has been expanding automation and validation coverage for enterprise pharmacy systems used across handheld, desktop, and corporate platforms.",
+      "The platform spans handheld, desktop, and corporate pharmacy systems, covering RxI workflows end to end — receiving, returns, audits, quarantine, and compliance.",
+      "Day to day I work across the frontend, API, and backend layers to verify data accuracy between environments, and partner with developers, QA, product, and UAT stakeholders to investigate defects and validate business requirements ahead of each release.",
     ],
-  },
-  {
-    id: "globallogic-sdet",
-    company: "GlobalLogic",
-    client: "Walgreens Boots Alliance",
-    role: "SDET Intern",
-    start: "Aug 2025",
-    end: "Mar 2026",
-    location: "Chicago, IL",
-    summary:
-      "Test automation for Walgreens RxI pharmacy inventory workflows: receiving, returns, audits, quarantine, and compliance.",
-    bullets: [
-      "Developed and maintained automated test coverage for RxI workflows with Java, Selenium WebDriver, and Cucumber BDD, improving regression testing and release validation.",
-      "Performed frontend, API, and backend testing with Postman, Cosmos DB, Azure Storage, and Databricks to verify data accuracy across environments.",
-      "Collaborated with developers, QA, product, and UAT stakeholders to investigate defects and validate business requirements for feature releases.",
-    ],
-    technologies: ["Java", "Selenium", "Cucumber", "Postman", "Cosmos DB", "Azure", "Databricks"],
   },
   {
     id: "method-fullstack",
