@@ -14,7 +14,7 @@ A modern, engineering-themed portfolio built with Next.js, TypeScript, Tailwind 
 
 ```bash
 npm install
-npm run dev      # http://localhost:3000
+npm run dev      # serves on port 3000
 npm run build    # production build
 npm run lint
 ```
@@ -61,11 +61,17 @@ Copy `.env.example` to `.env.local`:
 
 The GitHub section calls the public GitHub API at build/revalidate time (hourly) and silently falls back to `data/github.ts` if unavailable — no token required.
 
-## Deployment (Vercel)
+## Deployment (Netlify)
+
+`netlify.toml` holds the build settings, so a new site needs no manual configuration:
+
+- `npm run build`, publishing `.next`
+- `NODE_VERSION = "22"` — Next.js 16 requires Node 20+
+- `@netlify/plugin-nextjs`, which Netlify auto-installs on detecting that entry — this runs the app natively, giving SSR, the live GitHub API feed, and `next/image` optimization
 
 1. Push to GitHub.
-2. Import the repo in Vercel — Next.js is auto-detected, zero config.
-3. Add `NEXT_PUBLIC_FORMSPREE_ENDPOINT` in Project → Settings → Environment Variables (optional).
+2. Create a new Netlify site from the repo — `netlify.toml` supplies the build command and publish directory.
+3. Add `NEXT_PUBLIC_FORMSPREE_ENDPOINT` under Site configuration → Environment variables (optional).
 4. Set your production domain, then update `siteUrl` in `data/profile.ts` so SEO metadata, sitemap, and JSON-LD point at it.
 
 ## Features
