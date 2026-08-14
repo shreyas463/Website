@@ -26,10 +26,9 @@ export const experience: Experience[] = [
     summary:
       "Engineering and validation automation for RxI — the pharmacy inventory platform behind 8,000 Walgreens stores and 9M+ daily patients.",
     bullets: [
-      "Built an automated validation system for Walgreens' RxI pharmacy-inventory platform (8,000 stores, 9M+ daily patients) that cross-checks REST API responses against Cosmos DB, Azure Storage, and Databricks outputs, catching data discrepancies before release and cutting 6 weeks of manual verification per cycle.",
-      "Architected a Java/Selenium and Cucumber BDD framework of 300+ end-to-end scenarios covering DSCSA federal compliance, audits, returns, and stock-management workflows, and wired it into the Azure DevOps CI/CD pipeline — raising automated coverage 65% and blocking regressions on every build.",
-      "Shipped 14+ releases of a highly regulated, high-availability system serving 9M+ patients daily, owning functional, performance, audit, and access-control verification under DSCSA pharmaceutical-traceability requirements.",
-      "Drove root-cause analysis and prioritization across Agile sprints with engineers and product managers, and contributed design and code reviews while presenting release strategy to external clients and business stakeholders.",
+      "Designed and built an automated data-validation service in Java for Walgreens' RxI pharmacy-inventory platform (8,000 stores, 9M+ daily patients) — a pipeline that reconciles REST API contracts against Cosmos DB, Azure Storage, and Databricks outputs, catching schema and data discrepancies before release and replacing 6 weeks of manual verification per cycle.",
+      "Built an automated end-to-end verification pipeline of 300+ scenarios (Java, Cucumber BDD) covering DSCSA federal compliance, audits, returns, and stock-management workflows, wired into Azure DevOps CI/CD — raising automated coverage 65% and blocking regressions on every build.",
+      "Shipped 14+ releases of a regulated, high-availability distributed system serving 9M+ patients daily — triaging production defects to root cause with backend engineers, contributing design and code reviews across Agile sprints, and presenting release readiness to external clients and stakeholders.",
     ],
     technologies: [
       "Java",

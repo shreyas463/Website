@@ -35,7 +35,7 @@ export const projects: Project[] = [
     features: [
       "First-person exploration of 6 openable racks and 36 live-simulated servers with a thermal view",
       "Real-time power chain — utility grid, UPS batteries and diesel generator with realistic timing",
-      "Pure, unit-tested simulation core (27 Vitest tests) with CI/CD to the web",
+      "Pure, unit-tested simulation core (38 Vitest tests), with code-splitting that cut the initial payload 78% to a 64 kB gzip entry chunk",
     ],
     image: "/projects/racklab/poster.jpg",
     video: "/projects/racklab/demo.mp4",
@@ -134,11 +134,11 @@ export const projects: Project[] = [
     solution:
       "An evidence-based investing workbench: deep stock research, honest statistical forecasts, and a $100k paper-trading engine with exact accounting — so you can practice a disciplined process before a single real dollar moves.",
     categories: ["Full Stack", "Backend"],
-    stack: ["Next.js", "Flask", "Python", "Firebase", "Alpha Vantage"],
+    stack: ["Next.js 15", "React 19", "TypeScript", "SQLite", "Drizzle ORM", "Tailwind CSS"],
     features: [
-      "Forecast Lab benchmarks statistical models (Damped Holt, AR) against a naive baseline by MAPE",
-      "$100k paper-trading engine with exact accounting and real-time P/L",
-      "Deep stock research with technical alerts (RSI, moving averages)",
+      "Forecast Lab benchmarks statistical models (Damped Holt, AR) against a naive baseline by MAPE, surfacing a prediction only when it wins",
+      "Ledger-correct paper trading — every buy, sell, and balance update reconciles exactly, and invalid trades are rejected before they touch state",
+      "$100k paper-trading engine with real-time P/L, deep stock research, and technical alerts (RSI, moving averages)",
     ],
     image: "/projects/basis/poster.jpg",
     video: "/projects/basis/demo.mp4",
@@ -146,10 +146,11 @@ export const projects: Project[] = [
     demo: "https://basis-retr.onrender.com/welcome",
     featured: true,
     architecture: [
-      { component: "Next.js frontend", detail: "Research, forecast lab, paper-trading UI" },
-      { component: "Flask API", detail: "Quotes, forecasts, orders, portfolio endpoints" },
-      { component: "Forecast engine", detail: "Statistical models benchmarked by MAPE" },
-      { component: "Firebase", detail: "Auth and real-time portfolio state" },
+      { component: "Next.js 15 app", detail: "Research, forecast lab, paper-trading UI" },
+      { component: "Route handlers", detail: "Quotes, forecasts, orders, portfolio endpoints" },
+      { component: "Forecast engine", detail: "Walk-forward validation against a naive baseline" },
+      { component: "SQLite + Drizzle", detail: "Typed schema and migrations behind the trade ledger" },
+      { component: "Docker + CI/CD", detail: "Containerized build and deploy on every push" },
     ],
   },
   {
