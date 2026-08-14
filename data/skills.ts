@@ -24,7 +24,7 @@ export const skillCategories: SkillCategory[] = [
     title: "Languages",
     description: "Core languages for services, automation, and application logic.",
     icon: Code2,
-    skills: ["TypeScript", "JavaScript", "Python", "Java", "SQL", "Go"],
+    skills: ["TypeScript", "JavaScript", "Python", "Java", "SQL", "Go", "Solidity"],
   },
   {
     id: "frontend",
