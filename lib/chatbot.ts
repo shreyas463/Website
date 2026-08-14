@@ -128,11 +128,11 @@ const INTENTS: Intent[] = [
   },
   {
     id: "backend",
-    keywords: ["backend", "back-end", "api", "apis", "server", "flask", "spring", "spring boot", "fastapi", "node", "database", "databases", "sql"],
+    keywords: ["backend", "back-end", "api", "apis", "server", "flask", "spring", "spring boot", "fastapi", "node", "go", "golang", "database", "databases", "sql"],
     answer: () => ({
       paragraphs: [
-        "Backend: he builds services in Node.js, Spring Boot, FastAPI, and Flask, with REST and GraphQL APIs — for example the Flask API powering Basis and the Firebase/Firestore backends at Method.",
-        "Data stores: PostgreSQL, Firestore, Cosmos DB, and MongoDB.",
+        "Backend: he builds services in Node.js, Go, Spring Boot, and Flask, with REST and GraphQL APIs — for example Tally, a high-throughput event counting service in Go, and the Firebase/Firestore backends at Method.",
+        "Data stores: PostgreSQL, SQLite/Drizzle, Firestore, Cosmos DB, and MongoDB.",
       ],
     }),
   },

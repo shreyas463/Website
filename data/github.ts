@@ -41,7 +41,7 @@ export const fallbackRepos: Repo[] = [
   },
   {
     name: "Stock-Analysis-platform",
-    description: "Basis — evidence-based investing workbench, Next.js + Flask.",
+    description: "Basis — evidence-based investing workbench, Next.js 15 + SQLite/Drizzle.",
     url: "https://github.com/shreyas463/Stock-Analysis-platform",
     language: "TypeScript",
     stars: 1,

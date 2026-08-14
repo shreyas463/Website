@@ -24,7 +24,7 @@ export const skillCategories: SkillCategory[] = [
     title: "Languages",
     description: "Core languages for services, automation, and application logic.",
     icon: Code2,
-    skills: ["Python", "Java", "TypeScript", "JavaScript", "SQL"],
+    skills: ["TypeScript", "JavaScript", "Python", "Java", "SQL", "Go"],
   },
   {
     id: "frontend",
@@ -52,7 +52,7 @@ export const skillCategories: SkillCategory[] = [
     title: "Testing & Automation",
     description: "Quality engineering for enterprise release pipelines.",
     icon: ShieldCheck,
-    skills: ["Selenium", "Cucumber BDD", "TestNG", "JUnit", "Appium", "JMeter", "Postman"],
+    skills: ["Selenium", "Playwright", "Cucumber BDD", "TestNG", "JUnit", "Appium", "JMeter", "Postman"],
   },
   {
     id: "cloud",
