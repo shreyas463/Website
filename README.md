@@ -79,3 +79,8 @@ The GitHub section calls the public GitHub API at build/revalidate time (hourly)
 - Full SEO: metadata, Open Graph, sitemap, robots, JSON-LD Person schema
 - Accessible: semantic HTML, keyboard navigation, focus states, reduced-motion support, skip link
 - Custom 404 and error boundary
+
+## Links
+
+- [LinkedIn](https://www.linkedin.com/in/shreyaschaudharysc/)
+- [GitHub](https://github.com/shreyas463)
