@@ -1,5 +1,7 @@
 # Shreyas Chaudhary — Portfolio
 
+![The portfolio hero: the name, headline and calls to action over an interactive 3D node network](docs/banner.jpg)
+
 A modern, engineering-themed portfolio built with Next.js, TypeScript, Tailwind CSS, and Three.js. The hero features an interactive 3D distributed-system node network rendered with React Three Fiber, and every section is driven by typed data models — updating content never means touching components.
 
 ## Featured projects
