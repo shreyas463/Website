@@ -50,6 +50,57 @@ export const projects: Project[] = [
     ],
   },
   {
+    id: "walletlens",
+    title: "WalletLens",
+    problem:
+      "Subscription trackers like Rocket Money charge a fee — or take a cut of the savings — just to tell you where your money already went.",
+    solution:
+      "A free, open-source alternative. It links a bank through Plaid, reads the rhythm of each merchant's charges to find what recurs, projects the next 30 days of cash, and learns when you get paid — so the thing that finds your wasted money isn't itself a subscription.",
+    categories: ["Full Stack", "Automation"],
+    stack: ["Next.js 16", "TypeScript", "PostgreSQL", "Plaid", "Tailwind CSS"],
+    features: [
+      "Recurrence engine detects subscriptions from charge rhythm rather than a list of known merchants — it catches rent and the gym, not just Netflix",
+      "30-day forward calendar of every charge and deposit, with projected cash on hand and payday prediction",
+      "Encrypted Plaid access tokens, bcrypt + JWT auth, and 188 tests over the detection engine",
+    ],
+    image: "/projects/walletlens/poster.jpg",
+    github: "https://github.com/shreyas463/WalletLens",
+    demo: "https://wallet-lens-woad.vercel.app",
+    featured: true,
+    architecture: [
+      { component: "Next.js App Router", detail: "Server components and route handlers" },
+      { component: "recurrence.ts", detail: "Interval detection over merchant-grouped transactions" },
+      { component: "insights.ts", detail: "Aggregates, category breakdown, 30-day forecast" },
+      { component: "Plaid + crypto.ts", detail: "Bank sync with encrypted access tokens" },
+      { component: "PostgreSQL", detail: "Accounts, transactions, and derived insights" },
+    ],
+  },
+  {
+    id: "tally",
+    title: "Tally",
+    problem:
+      "Counting a firehose of analytics events is trivial until scale — then you either block on the database or quietly start losing events.",
+    solution:
+      "An event counting and analytics service written from scratch in Go. It accepts events without ever waiting on Postgres, batches writes behind an in-process queue, and answers \"how many today?\" from per-minute rollups instead of scanning millions of rows.",
+    categories: ["Backend", "Cloud"],
+    stack: ["Go", "PostgreSQL", "gRPC", "Prometheus", "Grafana", "Docker"],
+    features: [
+      "Queue-and-batch ingest that never blocks the caller; graceful shutdown drains every accepted event",
+      "From-scratch HyperLogLog for unique-user counts — roughly 16 KB per event per day at ~1% error",
+      "Per-client rate limiting, queue-full backpressure (503 + Retry-After), Prometheus metrics and pprof profiling",
+    ],
+    image: "/projects/tally/poster.jpg",
+    github: "https://github.com/shreyas463/tally",
+    featured: true,
+    architecture: [
+      { component: "HTTP + gRPC ingest", detail: "Accepts events and returns immediately" },
+      { component: "In-process queue", detail: "Buffers with backpressure instead of blocking" },
+      { component: "Batch writers", detail: "Idempotent bulk inserts, so retries can't double-count" },
+      { component: "Minute rollups", detail: "Pre-aggregated counts for instant range queries" },
+      { component: "internal/hll", detail: "Hand-rolled HyperLogLog sketch per event per day" },
+    ],
+  },
+  {
     id: "wc2026",
     title: "World Cup 2026 Predictor",
     problem:
@@ -155,6 +206,30 @@ export const projects: Project[] = [
     ],
   },
   {
+    id: "freelycluely",
+    title: "FreelyCluely",
+    problem:
+      "Cluely charges a monthly subscription for an AI overlay that watches your screen and listens to your calls.",
+    solution:
+      "A self-hostable macOS replica. A frameless, always-on-top panel that macOS excludes from screen capture, transcribes both your microphone and the meeting's system audio locally with Whisper, and streams an answer from whichever model you plug in.",
+    categories: ["AI", "Full Stack"],
+    stack: ["Electron", "JavaScript", "Whisper", "macOS APIs"],
+    features: [
+      "Overlay excluded from screen sharing via setContentProtection — invisible to Zoom, OBS, and screen recording",
+      "Dual-channel capture labels your mic as You and system audio as Them, giving the model real conversational context",
+      "Local Whisper transcription with pluggable Claude / GPT-4o / Gemini backends and a zero-config mock provider",
+    ],
+    image: "/projects/freely/poster.jpg",
+    github: "https://github.com/shreyas463/DontPayFREELY",
+    featured: true,
+    architecture: [
+      { component: "Electron main", detail: "Frameless, always-on-top, content-protected window" },
+      { component: "Audio capture", detail: "Mic and system audio via the app's screen-recording grant" },
+      { component: "Local Whisper", detail: "On-device transcription with speaker labelling" },
+      { component: "Provider layer", detail: "Swappable LLM backends, streamed token by token" },
+    ],
+  },
+  {
     id: "formula1won",
     title: "Formula1Won",
     problem:
@@ -189,6 +264,23 @@ export const projects: Project[] = [
     github: "https://github.com/shreyas463/LiveSketch",
     demo: "https://live-sketch.vercel.app",
     featured: true,
+  },
+  {
+    id: "paysmart",
+    title: "PaySmart",
+    problem:
+      "Crowdfunding platforms ask backers to trust a middleman with the money — high fees, opaque spending, refunds at the platform's discretion.",
+    solution:
+      "An Ethereum crowdfunding contract that holds contributions in on-chain escrow. The campaign manager cannot move a single wei without majority approval from the people who paid in, and if the deadline passes with the target unmet, any contributor can reclaim their money.",
+    categories: ["Backend", "Research"],
+    stack: ["Solidity", "Ethereum", "Remix"],
+    features: [
+      "Contributor-majority voting gates every payment out of escrow",
+      "Automatic refunds once the deadline passes with the target unmet",
+      "Money leaves the contract in exactly two ways — a refund, or a payment the majority approved",
+    ],
+    image: "/projects/crowfund/poster.jpg",
+    github: "https://github.com/shreyas463/crowfund",
   },
   {
     id: "epidmi",

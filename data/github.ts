@@ -8,49 +8,49 @@ export interface Repo {
 
 /**
  * Static fallback shown when the GitHub API is unavailable or rate-limited.
- * Mirrors the featured repositories as of mid-2026.
+ * Mirrors the featured repositories as of August 2026.
  */
 export const fallbackRepos: Repo[] = [
   {
-    name: "Stock-Analysis-platform",
-    description: "Full-stack Robinhood-style trading dashboard — Next.js + Flask.",
-    url: "https://github.com/shreyas463/Stock-Analysis-platform",
+    name: "WalletLens",
+    description: "Free, open-source Rocket Money — Plaid sync and subscription detection.",
+    url: "https://github.com/shreyas463/WalletLens",
     language: "TypeScript",
     stars: 0,
+  },
+  {
+    name: "tally",
+    description: "High-throughput event counting service in Go with from-scratch HyperLogLog.",
+    url: "https://github.com/shreyas463/tally",
+    language: "Go",
+    stars: 0,
+  },
+  {
+    name: "rackLAB",
+    description: "Walkable 3D data-center simulator with live thermal and power chains.",
+    url: "https://github.com/shreyas463/rackLAB",
+    language: "TypeScript",
+    stars: 0,
+  },
+  {
+    name: "2026-fifa-world-cup-final-predictor",
+    description: "Knockout-stage World Cup predictor with an interactive bracket.",
+    url: "https://github.com/shreyas463/2026-fifa-world-cup-final-predictor",
+    language: "TypeScript",
+    stars: 1,
+  },
+  {
+    name: "Stock-Analysis-platform",
+    description: "Basis — evidence-based investing workbench, Next.js + Flask.",
+    url: "https://github.com/shreyas463/Stock-Analysis-platform",
+    language: "TypeScript",
+    stars: 1,
   },
   {
     name: "AI-Powered-Resume-Analyzer",
-    description: "Resume builder with AI-driven scoring and suggestions.",
+    description: "Resume builder with transparent scoring and ATS analysis.",
     url: "https://github.com/shreyas463/AI-Powered-Resume-Analyzer",
     language: "TypeScript",
-    stars: 0,
-  },
-  {
-    name: "LiveSketch",
-    description: "Real-time collaborative whiteboard — Electron + Socket.io.",
-    url: "https://github.com/shreyas463/LiveSketch",
-    language: "JavaScript",
-    stars: 0,
-  },
-  {
-    name: "Formula1Won",
-    description: "Self-driving car simulation with greedy pathfinding.",
-    url: "https://github.com/shreyas463/Formula1Won",
-    language: "Python",
-    stars: 0,
-  },
-  {
-    name: "BioSearch-CPP",
-    description: "Search engine for CPP Biology faculty research interests.",
-    url: "https://github.com/shreyas463/BioSearch-CPP",
-    language: "Python",
-    stars: 0,
-  },
-  {
-    name: "epidmi",
-    description: "Agent-based disease spread simulation.",
-    url: "https://github.com/shreyas463/epidmi",
-    language: "Python",
     stars: 0,
   },
 ];
