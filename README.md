@@ -57,14 +57,14 @@ All content is data, separated from presentation:
 
 Copy `.env.example` to `.env.local`:
 
-- `NEXT_PUBLIC_FORMSPREE_ENDPOINT` *(optional)* — a [Formspree](https://formspree.io) form endpoint for the contact form. When unset, the form falls back to opening the visitor's email client with a prefilled draft.
+- `NEXT_PUBLIC_FORMSPREE_ENDPOINT` *(optional)* — a Formspree form endpoint for the contact form. When unset, the form falls back to opening the visitor's email client with a prefilled draft.
 
 The GitHub section calls the public GitHub API at build/revalidate time (hourly) and silently falls back to `data/github.ts` if unavailable — no token required.
 
 ## Deployment (Vercel)
 
 1. Push to GitHub.
-2. Import the repo at [vercel.com/new](https://vercel.com/new) — Next.js is auto-detected, zero config.
+2. Import the repo in Vercel — Next.js is auto-detected, zero config.
 3. Add `NEXT_PUBLIC_FORMSPREE_ENDPOINT` in Project → Settings → Environment Variables (optional).
 4. Set your production domain, then update `siteUrl` in `data/profile.ts` so SEO metadata, sitemap, and JSON-LD point at it.
 
