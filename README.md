@@ -2,6 +2,33 @@
 
 A modern, engineering-themed portfolio built with Next.js, TypeScript, Tailwind CSS, and Three.js. The hero features an interactive 3D distributed-system node network rendered with React Three Fiber, and every section is driven by typed data models — updating content never means touching components.
 
+## Featured projects
+
+Card art is a real capture of each project running — no mockups.
+
+<table>
+  <tr>
+    <td width="50%">
+      <img src="public/projects/walletlens/poster.jpg" alt="WalletLens dashboard showing available cash, monthly spend, active subscriptions and net worth" width="100%">
+      <br><strong>WalletLens</strong> — subscription detection and a 30-day cash forecast over Plaid, built as a free alternative to Rocket Money.
+    </td>
+    <td width="50%">
+      <img src="public/projects/tally/poster.jpg" alt="Tally dashboard showing events today, a per-minute chart, and top events with unique-user counts" width="100%">
+      <br><strong>Tally</strong> — a high-throughput event counting service in Go, with unique-user counts from a from-scratch HyperLogLog.
+    </td>
+  </tr>
+  <tr>
+    <td width="50%">
+      <img src="public/projects/freely/poster.jpg" alt="FreelyCluely overlay showing status chips, hotkey bindings, meeting modes and the composer" width="100%">
+      <br><strong>FreelyCluely</strong> — a stealth macOS AI overlay that macOS excludes from screen sharing, transcribing locally with Whisper.
+    </td>
+    <td width="50%">
+      <img src="public/projects/crowfund/poster.jpg" alt="The PaySmart crowdfunding contract deployed in the Remix IDE" width="100%">
+      <br><strong>PaySmart</strong> — an Ethereum crowdfunding escrow where no payment leaves the contract without contributor majority approval.
+    </td>
+  </tr>
+</table>
+
 ## Stack
 
 - **Next.js** (App Router) + **React 19** + **TypeScript**
