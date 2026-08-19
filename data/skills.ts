@@ -38,7 +38,7 @@ export const skillCategories: SkillCategory[] = [
     title: "Backend",
     description: "APIs and services designed for correctness and scale.",
     icon: Server,
-    skills: ["Node.js", "Spring Boot", "FastAPI", "Flask", "REST APIs", "GraphQL"],
+    skills: ["Node.js", "Spring Boot", "FastAPI", "Flask", "REST APIs", "Swagger/OpenAPI", "GraphQL"],
   },
   {
     id: "ai-ml",
@@ -52,14 +52,14 @@ export const skillCategories: SkillCategory[] = [
     title: "Testing & Automation",
     description: "Quality engineering for enterprise release pipelines.",
     icon: ShieldCheck,
-    skills: ["Selenium", "Playwright", "Cucumber BDD", "TestNG", "JUnit", "Appium", "JMeter", "Postman"],
+    skills: ["Rest Assured", "JUnit", "Selenium", "Playwright", "Cucumber BDD", "TestNG", "JMeter", "Postman"],
   },
   {
     id: "cloud",
     title: "Cloud & DevOps",
     description: "Deploying and operating systems in the cloud.",
     icon: Cloud,
-    skills: ["AWS (Lambda, EC2, EKS, ECS)", "Azure DevOps", "Docker", "Kubernetes", "CI/CD", "Vercel"],
+    skills: ["Azure", "AWS (Lambda, EC2, EKS, ECS)", "GCP", "Jenkins", "Azure DevOps", "GitHub Actions", "Docker", "Kubernetes", "CI/CD"],
   },
   {
     id: "databases",
