@@ -118,11 +118,12 @@ const INTENTS: Intent[] = [
   {
     id: "testing",
     suggestion: "What's his testing / QA experience?",
-    keywords: ["testing", "test", "tests", "qa", "sdet", "automation", "selenium", "cucumber", "playwright", "quality", "bdd"],
+    keywords: ["testing", "test", "tests", "qa", "sdet", "automation", "selenium", "cucumber", "playwright", "quality", "bdd", "rest assured", "jenkins", "pipeline", "validation"],
     answer: () => ({
       paragraphs: [
-        "Quality engineering is a big part of his story. At GlobalLogic (Walgreens RxI) he architected a Java/Selenium + Cucumber BDD framework of 300+ end-to-end scenarios and lifted automated test coverage by 65% through the Azure DevOps CI/CD pipeline.",
-        "Testing tools: Selenium, Playwright, Cucumber/Gherkin (BDD), TestNG, JUnit, Appium, JMeter, and Postman.",
+        "Quality is built into how he ships. At GlobalLogic (Walgreens RxI) he designed an automated data-validation service in Java that reconciles REST API contracts (Rest Assured, Swagger/OpenAPI) against Cosmos DB, Azure Storage, and Databricks outputs — catching schema and data discrepancies before production and replacing 6 weeks of manual verification per cycle.",
+        "He also owns the build and deployment path: Jenkins and Azure DevOps CI/CD pipelines (Docker) that gate every build on 300+ automated Java scenarios covering DSCSA federal compliance, audits, returns, and stock management — raising automated coverage 65%.",
+        "Testing tools: Rest Assured, JUnit, Selenium, Playwright, Cucumber/Gherkin (BDD), TestNG, JMeter, and Postman.",
       ],
     }),
   },
