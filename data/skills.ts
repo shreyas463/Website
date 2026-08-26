@@ -24,21 +24,21 @@ export const skillCategories: SkillCategory[] = [
     title: "Languages",
     description: "Core languages for services, automation, and application logic.",
     icon: Code2,
-    skills: ["TypeScript", "JavaScript", "Python", "Java", "SQL", "Go", "Solidity"],
+    skills: ["Java", "Python", "JavaScript", "TypeScript", "Go", "SQL", "HTML/CSS"],
   },
   {
     id: "frontend",
     title: "Frontend",
     description: "Interfaces that are fast, accessible, and pleasant to use.",
     icon: Monitor,
-    skills: ["React", "Next.js", "React Native", "Tailwind CSS", "Electron", "Figma"],
+    skills: ["React", "Next.js", "React Native", "Three.js / R3F", "Zustand", "Tailwind CSS"],
   },
   {
     id: "backend",
     title: "Backend",
     description: "APIs and services designed for correctness and scale.",
     icon: Server,
-    skills: ["Node.js", "Spring Boot", "FastAPI", "Flask", "REST APIs", "Swagger/OpenAPI", "GraphQL"],
+    skills: ["Microservices", "REST APIs", "Spring Boot", "Node.js / Express", "Flask", "Swagger/OpenAPI", "GraphQL"],
   },
   {
     id: "ai-ml",
@@ -50,16 +50,16 @@ export const skillCategories: SkillCategory[] = [
   {
     id: "testing",
     title: "Testing & Automation",
-    description: "Quality engineering for enterprise release pipelines.",
+    description: "Automated regression, API, and data validation for enterprise release pipelines.",
     icon: ShieldCheck,
-    skills: ["Rest Assured", "JUnit", "Selenium", "Playwright", "Cucumber BDD", "TestNG", "JMeter", "Postman"],
+    skills: ["Rest Assured", "JUnit", "Selenium", "Postman", "Regression & Smoke Suites", "Page Object Model", "Vitest", "Playwright"],
   },
   {
     id: "cloud",
     title: "Cloud & DevOps",
     description: "Deploying and operating systems in the cloud.",
     icon: Cloud,
-    skills: ["Azure", "AWS (Lambda, EC2, EKS, ECS)", "GCP", "Jenkins", "Azure DevOps", "GitHub Actions", "Docker", "Kubernetes", "CI/CD"],
+    skills: ["Azure", "AWS", "GCP", "Docker", "Kubernetes", "Jenkins", "Azure DevOps", "GitHub Actions", "Linux"],
   },
   {
     id: "databases",
@@ -73,6 +73,6 @@ export const skillCategories: SkillCategory[] = [
     title: "Developer Tools",
     description: "The everyday toolkit, including AI-assisted development.",
     icon: Wrench,
-    skills: ["Git & GitHub", "Unix", "Jira", "Claude Code", "Cursor", "Firebase"],
+    skills: ["Git & GitHub", "Jira", "GitHub Copilot", "Claude Code", "Cursor", "Firebase"],
   },
 ];

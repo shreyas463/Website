@@ -56,8 +56,8 @@ const personJsonLd = {
   sameAs: [profile.social.github, profile.social.linkedin, profile.social.scholar],
   address: {
     "@type": "PostalAddress",
-    addressLocality: "Chicago",
-    addressRegion: "IL",
+    addressLocality: "San Mateo",
+    addressRegion: "CA",
     addressCountry: "US",
   },
   alumniOf: "California State Polytechnic University, Pomona",

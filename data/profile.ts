@@ -11,7 +11,7 @@ export const profile = {
     "Cloud Applications",
     "Test Automation",
   ],
-  location: "Chicago, IL, USA",
+  location: "San Mateo, CA, USA",
   email: "shreyaschaudhary3@gmail.com",
   schoolEmail: "shreyasc@cpp.edu",
   availability: "Open to software engineering opportunities",

@@ -122,8 +122,9 @@ const INTENTS: Intent[] = [
     answer: () => ({
       paragraphs: [
         "Quality is built into how he ships. At GlobalLogic (Walgreens RxI) he designed an automated data-validation service in Java that reconciles REST API contracts (Rest Assured, Swagger/OpenAPI) against Cosmos DB, Azure Storage, and Databricks outputs — catching schema and data discrepancies before production and replacing 6 weeks of manual verification per cycle.",
-        "He also owns the build and deployment path: Jenkins and Azure DevOps CI/CD pipelines (Docker) that gate every build on 300+ automated Java scenarios covering DSCSA federal compliance, audits, returns, and stock management — raising automated coverage 65%.",
-        "Testing tools: Rest Assured, JUnit, Selenium, Playwright, Cucumber/Gherkin (BDD), TestNG, JMeter, and Postman.",
+        "He also owns the build and deployment path: 300+ automated Java scenarios across new and legacy features, wired into Jenkins and Azure DevOps CI/CD gates (Docker, Linux) covering DSCSA compliance, audits, returns, and stock management — raising automated coverage 65%.",
+        "The suites span regression, smoke, and sanity coverage, built on the Page Object Model with reusable utility libraries, plus SQL-backed database validation and cross-browser checks across Chrome, Edge, and Firefox.",
+        "Testing tools: Rest Assured, JUnit, Selenium, Postman, Playwright, Vitest, and Jira for defect tracking.",
       ],
     }),
   },
