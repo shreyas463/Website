@@ -118,11 +118,13 @@ const INTENTS: Intent[] = [
   {
     id: "testing",
     suggestion: "What's his testing / QA experience?",
-    keywords: ["testing", "test", "tests", "qa", "sdet", "automation", "selenium", "cucumber", "playwright", "quality", "bdd"],
+    keywords: ["testing", "test", "tests", "qa", "sdet", "automation", "selenium", "cucumber", "playwright", "quality", "bdd", "rest assured", "jenkins", "pipeline", "validation"],
     answer: () => ({
       paragraphs: [
-        "Quality engineering is a big part of his story. At GlobalLogic (Walgreens RxI) he architected a Java/Selenium + Cucumber BDD framework of 300+ end-to-end scenarios and lifted automated test coverage by 65% through the Azure DevOps CI/CD pipeline.",
-        "Testing tools: Selenium, Playwright, Cucumber/Gherkin (BDD), TestNG, JUnit, Appium, JMeter, and Postman.",
+        "Quality is built into how he ships. At GlobalLogic (Walgreens RxI) he designed an automated data-validation service in Java that reconciles REST API contracts (Rest Assured, Swagger/OpenAPI) against Cosmos DB, Azure Storage, and Databricks outputs — catching schema and data discrepancies before production and replacing 6 weeks of manual verification per cycle.",
+        "He also owns the build and deployment path: 300+ automated Java scenarios across new and legacy features, wired into Jenkins and Azure DevOps CI/CD gates (Docker, Linux) covering DSCSA compliance, audits, returns, and stock management — raising automated coverage 65%.",
+        "The suites span regression, smoke, and sanity coverage, built on the Page Object Model with reusable utility libraries, plus SQL-backed database validation and cross-browser checks across Chrome, Edge, and Firefox.",
+        "Testing tools: Rest Assured, JUnit, Selenium, Postman, Playwright, Vitest, and Jira for defect tracking.",
       ],
     }),
   },
