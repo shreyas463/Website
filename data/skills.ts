@@ -38,7 +38,7 @@ export const skillCategories: SkillCategory[] = [
     title: "Backend",
     description: "APIs and services designed for correctness and scale.",
     icon: Server,
-    skills: ["Microservices", "REST APIs", "Spring Boot", "Node.js / Express", "Flask", "Swagger/OpenAPI", "GraphQL"],
+    skills: ["Microservices", "REST APIs", "gRPC", "Spring Boot", "Node.js / Express", "Flask", "Swagger/OpenAPI", "GraphQL"],
   },
   {
     id: "ai-ml",
@@ -63,10 +63,10 @@ export const skillCategories: SkillCategory[] = [
   },
   {
     id: "databases",
-    title: "Databases",
-    description: "Relational, document, and cloud-native data stores.",
+    title: "Data, Messaging & Observability",
+    description: "Data stores, event streams, and the metrics that keep them honest.",
     icon: Database,
-    skills: ["PostgreSQL", "Firestore", "Cosmos DB", "MongoDB", "Azure Storage", "Databricks"],
+    skills: ["PostgreSQL", "Cosmos DB", "Firestore", "MongoDB", "Redis", "Kafka", "Databricks", "Azure Storage", "Prometheus", "Grafana"],
   },
   {
     id: "tools",
