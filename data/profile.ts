@@ -15,7 +15,7 @@ export const profile = {
   email: "shreyaschaudhary3@gmail.com",
   schoolEmail: "shreyasc@cpp.edu",
   availability: "Open to software engineering opportunities",
-  currentRole: "Software Development Engineer @ GlobalLogic (Walgreens Boots Alliance)",
+  currentRole: "Software Engineer @ GlobalLogic (Walgreens Boots Alliance)",
   resumeUrl: "/resume.pdf",
   social: {
     github: "https://github.com/shreyas463",

@@ -29,7 +29,7 @@ export function About() {
                   <span className="text-accent">location</span>: &quot;{profile.location}&quot;
                 </p>
                 <p>
-                  <span className="text-accent">role</span>: &quot;SDE @ GlobalLogic&quot;
+                  <span className="text-accent">role</span>: &quot;SWE @ GlobalLogic&quot;
                 </p>
                 <p>
                   <span className="text-accent">status</span>:{" "}

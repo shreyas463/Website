@@ -83,11 +83,12 @@ export const projects: Project[] = [
     solution:
       "An event counting and analytics service written from scratch in Go. It accepts events without ever waiting on Postgres, batches writes behind an in-process queue, and answers \"how many today?\" from per-minute rollups instead of scanning millions of rows.",
     categories: ["Backend", "Cloud"],
-    stack: ["Go", "PostgreSQL", "gRPC", "Prometheus", "Grafana", "Docker"],
+    stack: ["Go", "PostgreSQL", "gRPC", "Kafka", "Prometheus", "Grafana", "Docker", "Kubernetes"],
     features: [
       "Queue-and-batch ingest that never blocks the caller; graceful shutdown drains every accepted event",
       "From-scratch HyperLogLog for unique-user counts — roughly 16 KB per event per day at ~1% error",
       "Per-client rate limiting, queue-full backpressure (503 + Retry-After), Prometheus metrics and pprof profiling",
+      "A Kafka durable mode that commits offsets only after inserts land, verified by a chaos script that kills a worker mid-batch — 0 events lost",
     ],
     image: "/projects/tally/poster.jpg",
     github: "https://github.com/shreyas463/tally",
@@ -95,7 +96,8 @@ export const projects: Project[] = [
     architecture: [
       { component: "HTTP + gRPC ingest", detail: "Accepts events and returns immediately" },
       { component: "In-process queue", detail: "Buffers with backpressure instead of blocking" },
-      { component: "Batch writers", detail: "Idempotent bulk inserts, so retries can't double-count" },
+      { component: "Batch writers", detail: "One atomic CTE inserts, deduplicates, and increments rollups, so replays can't double-count" },
+      { component: "Kafka durable mode", detail: "Offsets commit only after inserts land, so a crash replays instead of dropping" },
       { component: "Minute rollups", detail: "Pre-aggregated counts for instant range queries" },
       { component: "internal/hll", detail: "Hand-rolled HyperLogLog sketch per event per day" },
     ],
