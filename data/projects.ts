@@ -33,6 +33,8 @@ export const projects: Project[] = [
     categories: ["Cloud", "Research"],
     stack: ["TypeScript", "Three.js", "React Three Fiber", "Zustand", "Vite", "Vitest"],
     features: [
+      "Built a browser-based 3D simulation with 6 interactive racks and 36 servers, equipment inspectors, thermal views, and live dashboards; synchronized the scene and React interface through a shared Zustand store",
+      "Lazy-loaded and prefetched the 3D bundle; kept per-frame animation outside React state updates and separated the fixed-timestep simulation from rendering, with CSS design tokens and reduced-motion support",
       "First-person exploration of 6 openable racks and 36 live-simulated servers with a thermal view",
       "Real-time power chain — utility grid, UPS batteries and diesel generator with realistic timing",
       "Pure, unit-tested simulation core (38 Vitest tests), with code-splitting that cut the initial payload 78% to a 64 kB gzip entry chunk",
@@ -59,11 +61,14 @@ export const projects: Project[] = [
     categories: ["Full Stack", "Automation"],
     stack: ["Next.js 16", "TypeScript", "PostgreSQL", "Plaid", "Tailwind CSS"],
     features: [
+      "Built responsive spending dashboards and a transaction explorer with account/category filters, 50-row pagination, inline category editing, and reusable form, card, and loading components",
+      "Debounced search by 250 ms and guarded state updates with request IDs so stale responses cannot overwrite newer results; reset pagination with filter changes and kept category controls accessible on narrow screens",
       "Recurrence engine detects subscriptions from charge rhythm rather than a list of known merchants — it catches rent and the gym, not just Netflix",
       "30-day forward calendar of every charge and deposit, with projected cash on hand and payday prediction",
       "Encrypted Plaid access tokens, bcrypt + JWT auth, and 188 tests over the detection engine",
     ],
     image: "/projects/walletlens/poster.jpg",
+    video: "/projects/walletlens/demo.mp4",
     github: "https://github.com/shreyas463/WalletLens",
     demo: "https://wallet-lens-woad.vercel.app",
     featured: true,
@@ -91,6 +96,7 @@ export const projects: Project[] = [
       "A Kafka durable mode that commits offsets only after inserts land, verified by a chaos script that kills a worker mid-batch — 0 events lost",
     ],
     image: "/projects/tally/poster.jpg",
+    video: "/projects/tally/demo.mp4",
     github: "https://github.com/shreyas463/tally",
     featured: true,
     architecture: [
@@ -138,6 +144,8 @@ export const projects: Project[] = [
     categories: ["Full Stack", "Backend"],
     stack: ["Next.js 15", "React 19", "TypeScript", "SQLite", "Drizzle ORM", "Tailwind CSS"],
     features: [
+      "Built a stock-research workbench with sortable market tables, portfolio views, and interactive candlestick charts with range selection, indicator overlays, and crosshair readouts; reused typed UI components across screens",
+      "Managed server state with TanStack Query and memoized derived chart data; added responsive layouts, loading skeletons, retryable errors, empty states, and source labels for delayed or synthetic market data",
       "Forecast Lab benchmarks statistical models (Damped Holt, AR) against a naive baseline by MAPE, surfacing a prediction only when it wins",
       "Ledger-correct paper trading — every buy, sell, and balance update reconciles exactly, and invalid trades are rejected before they touch state",
       "$100k paper-trading engine with real-time P/L, deep stock research, and technical alerts (RSI, moving averages)",
@@ -223,6 +231,7 @@ export const projects: Project[] = [
       "Local Whisper transcription with pluggable Claude / GPT-4o / Gemini backends and a zero-config mock provider",
     ],
     image: "/projects/freely/poster.jpg",
+    video: "/projects/freely/demo.mp4",
     github: "https://github.com/shreyas463/DontPayFREELY",
     featured: true,
     architecture: [
