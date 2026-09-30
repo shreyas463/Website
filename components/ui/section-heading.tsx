@@ -4,21 +4,21 @@ interface SectionHeadingProps {
   index: string;
   title: string;
   subtitle?: string;
+  eyebrow?: string;
   className?: string;
 }
 
 /** Numbered section header in the style of an annotated spec document. */
-export function SectionHeading({ index, title, subtitle, className }: SectionHeadingProps) {
+export function SectionHeading({ index, title, subtitle, eyebrow, className }: SectionHeadingProps) {
   return (
-    <div className={cn("mb-12", className)}>
-      <p className="flex items-center gap-2 font-mono text-sm" aria-hidden>
-        <span className="inline-block h-3 w-0.5 rounded-full bg-accent-2" />
-        <span className="text-accent">
-          <span className="text-muted">{"//"}</span> {index}
-        </span>
+    <div className={cn("mb-12 grid gap-5 border-t border-line pt-5 md:grid-cols-[1fr_2fr]", className)}>
+      <p className="font-mono text-xs uppercase tracking-[.22em] text-accent" aria-hidden>
+        {index} <span className="mx-2 text-muted">✦</span> {eyebrow ?? "Portfolio chapter"}
       </p>
-      <h2 className="mt-2 text-3xl font-semibold tracking-tight sm:text-4xl">{title}</h2>
-      {subtitle ? <p className="mt-3 max-w-2xl text-muted">{subtitle}</p> : null}
+      <div>
+        <h2 className="display-type text-5xl leading-[.92] tracking-[-.04em] sm:text-7xl">{title}</h2>
+        {subtitle ? <p className="mt-5 max-w-2xl text-base leading-relaxed text-muted">{subtitle}</p> : null}
+      </div>
     </div>
   );
 }
