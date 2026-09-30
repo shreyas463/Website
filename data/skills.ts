@@ -31,7 +31,7 @@ export const skillCategories: SkillCategory[] = [
     title: "Frontend",
     description: "Interfaces that are fast, accessible, and pleasant to use.",
     icon: Monitor,
-    skills: ["React", "Next.js", "React Native", "Three.js / R3F", "Zustand", "Tailwind CSS"],
+    skills: ["React", "Next.js", "React Native", "Three.js / R3F", "Zustand", "TanStack Query", "Lightweight Charts", "Recharts", "Tailwind CSS", "Responsive Layouts"],
   },
   {
     id: "backend",
@@ -52,7 +52,7 @@ export const skillCategories: SkillCategory[] = [
     title: "Testing & Automation",
     description: "Automated regression, API, and data validation for enterprise release pipelines.",
     icon: ShieldCheck,
-    skills: ["Rest Assured", "JUnit", "Selenium", "Postman", "Regression & Smoke Suites", "Page Object Model", "Vitest", "Playwright"],
+    skills: ["Rest Assured", "JUnit", "Selenium", "Cucumber", "JMeter", "Postman", "Regression & Smoke Suites", "Page Object Model", "Vitest", "Playwright"],
   },
   {
     id: "cloud",
