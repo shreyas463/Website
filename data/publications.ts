@@ -79,7 +79,7 @@ export const certifications: Certification[] = [
     title: "Automation Pro I",
     issuer: "Workato",
     issued: "Apr 2025",
-    link: "https://verify.skilljar.com/c/szyktcq3wn3q",
+    link: "https://www.linkedin.com/in/shreyaschaudharysc/details/certifications/",
   },
   {
     id: "workato-2",
@@ -93,7 +93,7 @@ export const certifications: Certification[] = [
     title: "Automation Pro III",
     issuer: "Workato",
     issued: "May 2025",
-    link: "https://verify.skilljar.com/c/pgzf4vp5g67n",
+    link: "https://www.linkedin.com/in/shreyaschaudharysc/details/certifications/",
   },
   {
     id: "databricks-genai",
