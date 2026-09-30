@@ -3,35 +3,35 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 :root {
-  --background: #04070b;
-  --surface: #0a1017;
-  --surface-raised: #0e1620;
-  --border: #1a2532;
-  --border-bright: #27384b;
-  --foreground: #e6edf3;
-  --muted: #8b98a9;
-  --accent: #22d3ee;
-  --accent-dim: #0e7490;
-  --accent-glow: rgba(34, 211, 238, 0.14);
-  --accent-2: #f43f5e;
-  --accent-2-glow: rgba(244, 63, 94, 0.16);
-  --grid-line: rgba(139, 152, 169, 0.06);
+  --background: #171a18;
+  --surface: #202421;
+  --surface-raised: #292e29;
+  --border: #474d46;
+  --border-bright: #737b70;
+  --foreground: #f2eddf;
+  --muted: #b4b1a7;
+  --accent: #e8b44c;
+  --accent-dim: #aa7b20;
+  --accent-glow: rgba(232, 180, 76, 0.16);
+  --accent-2: #d9623f;
+  --accent-2-glow: rgba(217, 98, 63, 0.16);
+  --grid-line: rgba(242, 237, 223, 0.055);
 }
 
 .light {
-  --background: #f6f8fa;
-  --surface: #ffffff;
-  --surface-raised: #ffffff;
-  --border: #d9e1ea;
-  --border-bright: #c3cfdc;
-  --foreground: #0c1420;
-  --muted: #58697d;
-  --accent: #0891b2;
-  --accent-dim: #0e7490;
-  --accent-glow: rgba(8, 145, 178, 0.1);
-  --accent-2: #e11d48;
-  --accent-2-glow: rgba(225, 29, 72, 0.1);
-  --grid-line: rgba(12, 20, 32, 0.05);
+  --background: #f2eddf;
+  --surface: #f8f4e9;
+  --surface-raised: #e7dec9;
+  --border: #b9ae97;
+  --border-bright: #756b5d;
+  --foreground: #25251f;
+  --muted: #666257;
+  --accent: #386a5a;
+  --accent-dim: #2f584b;
+  --accent-glow: rgba(56, 106, 90, 0.12);
+  --accent-2: #c14f32;
+  --accent-2-glow: rgba(193, 79, 50, 0.12);
+  --grid-line: rgba(37, 37, 31, 0.055);
 }
 
 @theme inline {
@@ -72,6 +72,59 @@ body {
   color: var(--foreground);
   font-family: var(--font-sans);
   overflow-x: hidden;
+  text-rendering: optimizeLegibility;
+}
+
+.display-type {
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 500;
+}
+
+.hero-paper::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: .32;
+  background-image: radial-gradient(circle at 18% 24%, var(--accent-glow), transparent 27%), radial-gradient(circle at 83% 71%, var(--accent-2-glow), transparent 26%), repeating-linear-gradient(0deg, transparent, transparent 3px, var(--grid-line) 4px);
+}
+
+.ink-button, .paper-button {
+  display: inline-flex;
+  min-height: 2.8rem;
+  align-items: center;
+  justify-content: center;
+  gap: .55rem;
+  border: 1px solid var(--foreground);
+  padding: .7rem 1rem;
+  font-size: .78rem;
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  transition: transform .18s ease, box-shadow .18s ease, background-color .18s ease;
+}
+.ink-button { background: var(--foreground); color: var(--background); }
+.paper-button { background: var(--surface); color: var(--foreground); }
+.ink-button:hover, .paper-button:hover { transform: translate(-2px, -2px); box-shadow: 4px 4px 0 var(--accent); }
+
+.project-arrow {
+  display: inline-flex;
+  width: 2.8rem;
+  height: 2.8rem;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--foreground);
+  background: var(--surface);
+  transition: background-color .18s ease, color .18s ease;
+}
+.project-arrow:hover { background: var(--foreground); color: var(--background); }
+
+.portrait-frame::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  box-shadow: inset 0 0 80px rgba(0, 0, 0, .18);
 }
 
 ::selection {
@@ -91,6 +144,8 @@ body {
     linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
   background-size: 48px 48px;
 }
+
+section:not(.hero-paper) { position: relative; }
 
 /* Thin scrollbars in terminal/palette */
 .thin-scroll {

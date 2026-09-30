@@ -71,7 +71,7 @@ const personJsonLd = {
 };
 
 /** Applies the saved theme before first paint to avoid a flash. */
-const themeScript = `(function(){try{var t=localStorage.getItem("theme");if(t==="light")document.documentElement.classList.add("light");}catch(e){}})();`;
+const themeScript = `(function(){try{var t=localStorage.getItem("theme");if(t!=="dark")document.documentElement.classList.add("light");}catch(e){document.documentElement.classList.add("light");}})();`;
 
 export default function RootLayout({
   children,
