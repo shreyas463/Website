@@ -52,7 +52,11 @@ export function Navbar() {
         className="mx-auto flex h-16 max-w-[1440px] items-center justify-between px-5 sm:px-8 lg:px-12"
       >
         <Link
-          href="#"
+          href="/"
+          onClick={(event) => {
+            event.preventDefault();
+            window.location.assign("/");
+          }}
           className="display-type text-xl italic tracking-tight"
           aria-label={`${profile.name} — home`}
         >
