@@ -30,7 +30,7 @@ export const profile = {
     highlights: [
       {
         label: "Scale",
-        text: "Ship for pharmacy systems serving ~8,000 Walgreens locations and 9M+ daily customers",
+        text: "Built distributed systems powering 8,000+ pharmacies nationwide",
       },
       {
         label: "Research",

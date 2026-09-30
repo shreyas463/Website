@@ -41,16 +41,12 @@ export function Hero() {
           </div>
 
           <div className="relative mx-auto w-full max-w-[560px] lg:mx-0 lg:justify-self-end">
-            <div className="absolute -left-8 top-12 z-20 -rotate-6 border border-line bg-[#e8b44c] px-4 py-2 font-mono text-xs font-bold uppercase tracking-widest text-[#231f1a] shadow-[4px_5px_0_var(--foreground)]">Systems thinker</div>
+            <div className="absolute -left-8 top-12 z-20 -rotate-6 border border-line bg-[#e8b44c] px-4 py-2 font-mono text-xs font-bold uppercase tracking-widest text-[#231f1a] shadow-[4px_5px_0_var(--foreground)]">Builder</div>
             <div className="portrait-frame relative ml-auto aspect-[4/5] w-[85%] overflow-hidden border-2 border-foreground bg-surface shadow-[14px_16px_0_var(--accent)] sm:w-[78%]">
               <Image src={profile.photo} alt={`Portrait of ${profile.name}`} fill priority sizes="(max-width: 1024px) 78vw, 470px" className="object-cover grayscale-[18%] contrast-[1.03]" />
               <div className="absolute inset-x-0 bottom-0 flex items-end justify-between bg-gradient-to-t from-black/70 to-transparent p-5 pt-20 text-white">
                 <div><p className="font-mono text-[10px] uppercase tracking-[.24em] text-white/70">Currently</p><p className="mt-1 text-sm font-medium">{profile.currentRole}</p></div><ArrowUpRight size={20} />
               </div>
-            </div>
-            <div className="absolute -bottom-6 left-0 z-20 w-52 rotate-3 border border-line bg-surface p-4 shadow-[6px_7px_0_var(--foreground)]">
-              <p className="font-mono text-[10px] uppercase tracking-[.2em] text-accent">Current signal</p>
-              <p className="mt-2 text-sm leading-snug">8,000 stores. 9M+ daily customers. Quality owned end to end.</p>
             </div>
           </div>
         </div>
